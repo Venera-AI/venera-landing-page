@@ -1,0 +1,84 @@
+---
+import mem1 from '../images/team/mem-1.png';
+import mem2 from '../images/team/mem-2.png';
+import mem3 from '../images/team/mem-3.png';
+import mem4 from '../images/team/mem-4.png';
+import mem5 from '../images/team/mem-5.png';
+import mem6 from '../images/team/mem-6.png';
+import SectionHeader from './SectionHeader.astro';
+import { Image } from 'astro:assets';
+
+const members = [
+  {
+    img: mem1,
+    name: 'Charlie Sun',
+    pointers: [
+      'Masters Student in Artificial Intelligence',
+      'Extensive software and AI/ML background',
+    ],
+  },
+  {
+    img: mem2,
+    name: 'Minh Tran',
+    pointers: [
+      'Masters Student in Computer Vision',
+      'Experience in large-scale SaaS ML systems',
+    ],
+  },
+  {
+    img: mem3,
+    name: 'Amanda Manget',
+    pointers: [
+      'MIIPS*, Swartz Fellow',
+      '4+ years in Product & Business at med-techstartups through FDA',
+    ],
+  },
+  {
+    img: mem4,
+    name: 'Mahati Manda',
+    pointers: [
+      'Sophomore in Electrical and ComputerEngineering',
+      'AI/ML experience',
+    ],
+  },
+  {
+    img: mem5,
+    name: 'Nicolas Matthew Pranata',
+    pointers: ['MIIPS*', '2+ years in Medical Device Development'],
+  },
+  {
+    img: mem6,
+    name: 'Archita Jain',
+    pointers: ['Sophomore in ComputerScience', 'Full Stack development'],
+  },
+];
+---
+
+<section class='bg-white lg:py-32 px-4 md:px-10 2xl:px-0 py-20' id='team'>
+  <div class='container mx-auto'>
+    <SectionHeader>Meet our team</SectionHeader>
+    <p class='mb-16'>
+      Our team is dedicated to leveraging technology to drive innovation in
+      healthcare.
+    </p>
+    <div
+      class='grid md:grid-cols-2 grid-cols-1 gap-x-8 gap-y-16 overflow-x-hidden'
+    >
+      {
+        members.map(({ img, name, pointers }) => (
+          <div class='flex justify-start items-center'>
+            <Image src={img} alt={name} class='sm:w-1/4 w-1/3 mr-6' />
+            <div>
+              <h6 class='font-bold sm:text-3xl text-xl'>{name}</h6>
+              <ul class='list-disc pl-6'>
+                {pointers.map((pointer) => (
+                  <li>{pointer}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

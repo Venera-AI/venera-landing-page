@@ -1,0 +1,254 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../images/hero-img.png';
+import errorCostImage from '../images/error-cost-img.svg';
+import first from '../images/first.png';
+import second from '../images/second.png';
+import third from '../images/third.png';
+import SectionHeader from '../components/SectionHeader.astro';
+import Sample from '../components/Sample';
+import Team from '../components/Team.astro';
+
+const navItems = [
+  {
+    name: 'Home',
+    path: '/',
+  },
+  {
+    name: 'Why?',
+    path: '#why',
+  },
+  {
+    name: 'Sample',
+    path: '#sample',
+  },
+  {
+    name: 'Our team',
+    path: '#team',
+  },
+];
+
+const heroSection = {
+  title: 'Redefining Healthcare with AI',
+  description:
+    'Harnessing the latest in AI and NLP to reduce prescription errors and improve patient safety. Our platform analyzes prescriptions with unrivaled accuracy, catching potential mistakes before they reach the patient.',
+  img: heroImage,
+};
+
+const steps = [
+  {
+    img: first,
+    title: 'ML system considering all types of records',
+  },
+
+  {
+    img: second,
+    title: 'More accurate alerts',
+  },
+  {
+    img: third,
+    title: 'Better patient outcomes',
+  },
+];
+---
+
+<!doctype html>
+<html lang='en' class='scroll-smooth'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Document</title>
+  </head>
+  <body class='bg-bgPrimary text-textCopy font-light'>
+    <header class='h-screen relative'>
+      <div
+        class='flex flex-col gap-1 fixed top-6 left-6 mobile-nav-btn z-50 md:hidden'
+      >
+        <div class='w-9 h-1 bg-gray-600'></div>
+        <div class='w-9 h-1 bg-gray-600'></div>
+        <div class='w-9 h-1 bg-gray-600'></div>
+      </div>
+      <nav
+        class='container mx-auto flex md:justify-between items-center py-12 px-12 md:px-6 md:relative fixed top-0 left-0 md:bg-transparent bg-white h-screen md:h-auto w-4/5 md:w-auto md:flex-row flex-col justify-start z-40 md:gap-0 gap-8 -translate-x-full md:translate-x-0 nav-bar transition-transform'
+      >
+        <a class='font-bold text-3xl text-blue-600' href='/'>SafeRX</a>
+        <ul class='flex justify-end items-center gap-8 md:flex-row flex-col'>
+          {
+            navItems.map(({ name, path }) => {
+              return (
+                <li class='menu-item'>
+                  <a href={path}>{name}</a>
+                </li>
+              );
+            })
+          }
+          <li>
+            <a
+              href='/#contact'
+              class='bg-primary px-6 py-3 rounded-full text-white menu-item'
+              >Contact us</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div
+        class='absolute bottom-0 grid grid-cols-12 h-[90vh] sm:h-auto 2xl:max-w-[1440px] 2xl:w-full 2xl:-translate-x-1/2 2xl:left-1/2'
+      >
+        <div
+          class='col-span-full lg:col-span-4 lg:col-start-2 xl:col-start-2 xl:col-span-5 2xl:col-start-1 2xl:col-span-6 flex flex-col justify-end items-center px-2 gap-3 2xl:gap-6 2xl:mt-10 sm:mb-10 md:px-12 lg:items-start lg:justify-start xl:-translate-y-28'
+        >
+          <h1
+            class='xl:text-7xl font-bold text-primary lg:text-6xl text-3xl sm:text-5xl text-center lg:text-left'
+          >
+            {heroSection.title}
+          </h1>
+          <p class='lg:text-lg text-gray-600 text-center lg:text-left'>
+            {heroSection.description}
+          </p>
+          <a
+            class='bg-primary px-6 py-3 rounded-full text-white'
+            href='/#contact'>Discover more</a
+          >
+        </div>
+        <Image
+          src={heroSection.img}
+          alt='blah'
+          widths={[240, 400, 600, 800]}
+          class='h-auto object-contain max-h-[60vh] lg:max-h-[75vh] col-span-full lg:col-start-6 self-end xl:col-start-7 sm:col-start-2 sm:col-span-10 md:col-span-full 2xl:col-start-7'
+        />
+      </div>
+    </header>
+
+    <section class='bg-white lg:py-40 px-4 md:px-10 lg:px-0 py-20' id='why'>
+      <div
+        class='max-w-7xl mx-auto grid grid-cols-2 gap-y-16 lg:gap-y-8 gap-x-8'
+      >
+        <div class='lg:col-start-2 col-span-full lg:col-span-1 self-center'>
+          <h2 class='md:text-5xl text-4xl font-bold text-primary mb-8'>
+            The Cost of Errors
+          </h2>
+          <p class='mb-8'>
+            Prescription errors can lead to serious consequences for patients
+            and providers. Mistakes in dosage, drug interactions, or incorrect
+            medications can result in hospital readmissions, adverse effects, or
+            even life-threatening situations.
+          </p>
+          <div class='grid grid-cols-2 gap-y-6 xl:gap-x-0 gap-x-8'>
+            <div>
+              <h6
+                class='text-primary text-3xl md:text-4xl font-bold capitalize'
+              >
+                9000
+              </h6>
+              <p>prescription-related deaths/year</p>
+            </div>
+
+            <div>
+              <h6
+                class='text-primary text-3xl md:text-4xl font-bold capitalize'
+              >
+                1.5 MILLION
+              </h6>
+              <p>Suffering injuries & adverse affects</p>
+            </div>
+
+            <div>
+              <h6
+                class='text-primary text-3xl md:text-4xl font-bold capitalize'
+              >
+                $42 BILLION
+              </h6>
+              <p>Annual cost to the system</p>
+            </div>
+          </div>
+        </div>
+        <Image
+          src={errorCostImage}
+          alt=''
+          class='lg:col-start-1 col-span-full lg:col-span-1 lg:row-start-1 self-center md:max-w-[80%] max-w-full lg:max-w-full justify-self-center'
+        />
+      </div>
+    </section>
+
+    <section class='bg-bgPrimary lg:py-32 px-4 md:px-10 2xl:px-0 py-20'>
+      <div class='container mx-auto'>
+        <SectionHeader>How we're making a difference</SectionHeader>
+        <p class='max-w-5xl mb-16'>
+          Our AI platform is designed to enhance the prescription review
+          process, providing valuable insights to pharmacists and healthcare
+          professionals. By leveraging advanced NLP and machine learning
+          algorithms, we're able to identify potential errors and issues within
+          prescriptions, allowing for timely interventions and corrections.
+        </p>
+        <div
+          class='flex md:justify-between md:items-start md:max-w-5xl mx-auto md:flex-row flex-col items-center justify-start gap-8 max-w-sm'
+        >
+          {
+            steps.map(({ img, title }, index) => (
+              <div class='flex flex-col items-center gap-2 flex-1'>
+                <div class='w-12 h-12 bg-primary text-white border-blue-200 border-4 rounded-full flex items-center justify-center font-bold text-xl'>
+                  {index + 1}
+                </div>
+                <Image
+                  src={img}
+                  alt=''
+                  class='lg:h-64 md:w-auto md:h-48 w-36 h-auto'
+                />
+                <p class='text-center font-bold text-xl'>{title}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class='bg-white lg:py-32 px-4 md:px-10 2xl:px-0 py-20 text-center'>
+      <div class='max-w-4xl mx-auto'>
+        <SectionHeader> Transforming Healthcare with AI </SectionHeader>
+        <p>
+          Our platform is at the forefront of innovation, utilizing cutting-edge
+          AI and NLP technologies to address the challenges of prescription
+          accuracy. We're committed to improving patient outcomes and reducing
+          the burden on healthcare providers through the seamless integration of
+          intelligent automation and data-driven insights.
+        </p>
+      </div>
+    </section>
+
+    <section
+      class='bg-bgPrimary lg:py-32 px-4 md:px-10 2xl:px-0 py-20'
+      id='sample'
+    >
+      <div class='container mx-auto'>
+        <SectionHeader>Sample</SectionHeader>
+        <Sample client:visible />
+      </div>
+    </section>
+
+    <Team />
+  </body>
+
+  <style is:global>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+  </style>
+
+  <script>
+    document.querySelector('.mobile-nav-btn')?.addEventListener('click', () => {
+      document.querySelector('.nav-bar')?.classList.toggle('translate-x-0');
+    });
+
+    const menuItems = document.querySelectorAll('.menu-item');
+    for (const menuItem of menuItems) {
+      menuItem.addEventListener('click', () => {
+        if (
+          document
+            .querySelector('.nav-bar')
+            ?.classList.contains('-translate-x-full')
+        ) {
+          document.querySelector('.nav-bar')?.classList.remove('translate-x-0');
+        }
+      });
+    }
+  </script>
+</html>
