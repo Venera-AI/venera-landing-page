@@ -8,6 +8,7 @@ import third from '../images/third.png';
 import SectionHeader from '../components/SectionHeader.astro';
 import Sample from '../components/Sample';
 import Team from '../components/Team.astro';
+import Contact from '../components/Contact';
 
 const navItems = [
   {
@@ -227,6 +228,21 @@ const steps = [
     </section>
 
     <Team />
+
+    <section
+      class='bg-bgPrimary lg:py-32 px-4 md:px-10 2xl:px-0 py-20'
+      id='contact'
+    >
+      <div class='container mx-auto'>
+        <SectionHeader>Contact us</SectionHeader>
+        <p>
+          Have a question? Send us a message and we'll get back to you as soon
+          as possible.
+        </p>
+
+        <Contact client:visible />
+      </div>
+    </section>
   </body>
 
   <style is:global>
