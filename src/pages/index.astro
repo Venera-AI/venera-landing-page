@@ -9,6 +9,7 @@ import SectionHeader from '../components/SectionHeader.astro';
 import Sample from '../components/Sample';
 import Team from '../components/Team.astro';
 import Contact from '../components/Contact';
+import safeRx from '../images/safeRX.svg';
 
 const navItems = [
   {
@@ -59,7 +60,12 @@ const steps = [
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <meta name='generator' content={Astro.generator} />
-    <title>Document</title>
+    <link rel='icon' type='image/x-icon' href='favicon-main.svg' />
+    <title>SafeRX | Healthcare with AI</title>
+    <meta
+      name='description'
+      content='Significantly reduce prescription errors with the power of AI and large language models.'
+    />
   </head>
   <body class='bg-bgPrimary text-textCopy font-light'>
     <header class='h-screen relative'>
@@ -114,7 +120,7 @@ const steps = [
         </div>
         <Image
           src={heroSection.img}
-          alt='blah'
+          alt='Redefining Healthcare with AI'
           widths={[240, 400, 600, 800]}
           class='h-auto object-contain max-h-[60vh] lg:max-h-[75vh] col-span-full lg:col-start-6 self-end xl:col-start-7 sm:col-start-2 sm:col-span-10 md:col-span-full 2xl:col-start-7'
         />
@@ -166,7 +172,7 @@ const steps = [
         </div>
         <Image
           src={errorCostImage}
-          alt=''
+          alt='The Cost of Errors'
           class='lg:col-start-1 col-span-full lg:col-span-1 lg:row-start-1 self-center md:max-w-[80%] max-w-full lg:max-w-full justify-self-center'
         />
       </div>
@@ -193,7 +199,7 @@ const steps = [
                 </div>
                 <Image
                   src={img}
-                  alt=''
+                  alt={title}
                   class='lg:h-64 md:w-auto md:h-48 w-36 h-auto'
                 />
                 <p class='text-center font-bold text-xl'>{title}</p>
