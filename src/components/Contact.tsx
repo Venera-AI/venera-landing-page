@@ -67,7 +67,7 @@ const Contact = () => {
         className='rounded-md bg-primary text-white  py-2 px-8 mt-8 hover:bg-blue-700 transition-all disabled:cursor-not-allowed disabled:bg-gray-300 disabled:hover:bg-gray-300'
         disabled
       >
-        Send message
+        Send message!
       </button>
     </form>
   );
