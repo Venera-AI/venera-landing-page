@@ -69,7 +69,7 @@ function Sample() {
   return (
     <div className='grid grid-cols-2 lg:max-w-5xl mx-auto gap-8 md:max-w-3xl'>
       <div className='bg-white px-12 py-16 rounded-lg col-span-full lg:col-span-1'>
-        <h6 className='text-primary font-medium text-xl mb-3'>
+        <h6 className='text-primary font-medium text-lg mb-3'>
           Upload your CSV file
         </h6>
         <p className='text-gray-400 mb-8'>
@@ -118,7 +118,7 @@ function Sample() {
         </button>
       </div>
       <div className='bg-white relative rounded-lg px-12 py-16 col-span-full lg:col-start-2'>
-        <h6 className='text-primary font-medium text-xl mb-3'>Diagnosis</h6>
+        <h6 className='text-primary font-medium text-lg mb-3'>Diagnosis</h6>
         {renderAnalysisContent()}
       </div>
     </div>

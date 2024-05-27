@@ -1,30 +1,18 @@
-<p align="center">
-  <img width="400" src="https://drive.google.com/uc?export=view&id=19Wt0zKE2XZ-K8R-4uC5ZZBE25b-mrxak">
-</p>
+<div align="center">
+  <img width="195" alt="image" src="https://github.com/Venera-AI/venera-landing-page/assets/89487473/6955b0f3-527a-478d-b00f-138779e32c04">
+</div>
 
 # Venera AI - Landing Page
 
 This project is used to create the landing page for Venera AI Healthcare. At Venera AI, we're dedicated to transforming healthcare with cutting-edge AI technologies. The landing page shows public information such as our work, team, and vision for the future of healthcare
 
-- [Key Objectives](#key-objectives)
 - [Project Structure](#project-structure)
-  - [Versioning](#versioning)
   - [Project Language and Platform](#project-language-and-platform)
   - [Project Architecture](#project-architecture)
-    - [Component/View Structure](#component/view-structure)
-    - [React and Redux](#react-and-redux)
-    - [Data Fetching](#data-fetching)
-    - [Styling](#styling)
-    - [Time](#time)
-    - [Other](#other)
     - [Metrics](#metrics)
     - [Alerts and Logging](#alerts-and-logging)
 - [Running and Testing](#running-and-testing)
-  - [Logging in for the First Time](#logging-in-for-the-first-time)
   - [Feature Work](#feature-work)
-  - [Testing](#testing)
-- [Deployment and Releases](#deployment-and-releases)
-- [Troubleshooting](#troubleshooting)
 - [Service Maintainers](#service-maintainers)
 
 ## Project Structure

@@ -1,0 +1,111 @@
+---
+import Section from './Section.astro';
+import SectionHeader from './SectionHeader.astro';
+import lam from '@/images/team/lam.jpg';
+import binh from '@/images/team/binh.jpg';
+import minhAnh from '@/images/team/minh-anh.jpg';
+import minhDang from '@/images/team/minh-dang.jpg';
+import minh from '@/images/team/minh.png';
+import phuongAnh from '@/images/team/phuong-anh.png';
+import thai from '@/images/team/thai.jpg';
+import thong from '@/images/team/thong.jpg';
+import vy from '@/images/team/vy.jpg';
+import duc from '@/images/team/duc-nguyen.jpg';
+import vu from '@/images/team/vu-nguyen.jpg';
+import Card from './Card.astro';
+
+const members = [
+  {
+    name: 'Ariel Le',
+    title: 'Product Lead',
+    desc: 'Ariel is the Product Lead at Venera AI, spearheading AI-driven solutions for hospital system management. With extensive experience in product management, Ariel has led cross-functional teams to unveil cutting edge products that streamline operations and enhance patient outcomes. Previously, she held senior product roles at leading Cloud B2B SaaS companies such as Amazon, Skedulo Healthcare, and Hoiio. Ariel also holds a STEM MBA from Carnegie Mellon University, with a concentration in Tech Strategy and AI/ML, positioning her as a leader in driving innovation and efficiency in the industry.',
+    img: lam,
+  },
+  {
+    name: 'Minh Anh',
+    title: 'UX Designer',
+    desc: 'Minh Anh is a dedicated UX Designer and Researcher at Venera AI, bringing a unique blend of expertise in design, business, and market research to the team. With a Master’s degree in Human-Computer Interaction from Tufts University and a Bachelor’s degree in Business Administration, Minh Anh excels in creating user-centered designs that seamlessly integrate business objectives with innovative technology. Her extensive experience in the health tech sector further amplifies her ability to design impactful and user-friendly solutions, ensuring that Venera AI stays at the forefront of healthcare innovation.',
+    img: minhAnh,
+  },
+  {
+    name: 'Vy Dang',
+    title: 'UX/UI Intern',
+    desc: 'Vy is a sophomore majoring in Computer Science with a concentration in Human-Computer Interaction. Currently, she is an intern at Venera AI as a UX/UI Designer. With a strong interest in cognitive psychology and user experience design, she is dedicated to creating designs that are practical, accessible and aesthetically pleasing.',
+    img: vy,
+  },
+  {
+    name: 'Phuong Anh',
+    title: 'UI Designer',
+    desc: 'Phuong Anh is the UI Designer at Venera AI, holding a firm background in creating intuitive and visually appealing interfaces tailored for fintech & healthcare technologies. With over 3 years of experience, Phuong Anh has honed her skills in forming design guidelines, building prototypes to help users overcome difficulties during operations in any management system. Her portfolio showcases a keen understanding of building a user interface, translating complex data and numerous functionalities of the healthcare industry into seamless user experiences that enhance user engagement, provide efficiency.',
+    img: phuongAnh,
+  },
+  {
+    name: 'Minh Tran',
+    title: 'CTO',
+    desc: 'Minh Tran is the CTO of Venera AI, where he leads the Engineering Dept. Minh graduated with a Master of Science in Computer Vision at Carnegie Mellon University, where he collaborated with Meta Reality Labs to do research on imaging, camera and machine learning. Prior to CMU, Minh spent several years as a Senior Data Scientist at Actuate AI, where he designed and scaled the CCTV machine learning system to serve over one thousand facilities).',
+    img: minh,
+  },
+  {
+    name: 'Minh Dang',
+    title: 'AI Engineer',
+    desc: 'Pursuing an MS in Data Science degree at Columbia University, Minh has experiences in applying ML and AI in object detection, anomalies detection, and process mining.',
+    img: minhDang,
+  },
+  {
+    name: 'Thong Nguyen',
+    title: 'AI Engineer',
+    desc: 'Thong is a second-year computer science student at VNU - University of Science. My interests include AI, game development, and web development. I have a solid foundation in programming languages such as C/C++, JavaScript, and Python, and I am currently studying about AI.',
+    img: thong,
+  },
+  {
+    name: 'Thai Dao',
+    title: 'AI Engineer',
+    desc: 'Thai graduated from Hanoi Foreign Trade University. During my studies in the classroom, I simultaneously self-taught math, machine learning and deep learning. After graduating, I decided to work at an outsourcing technology company as an AI engineer. During my work, I worked on 2 projects at the same time and had the opportunity to work as a data engineer. After that, I moved to a quantitative finance product development company in Vietnam. Here I play the role of developing core, backend and data pipelines for the product.',
+    img: thai,
+  },
+  {
+    name: 'Binh Trinh',
+    title: 'Software Engineer Lead',
+    desc: 'Binh Trinh is the Software Engineer Lead at Venera, where he leads a team of four interns. His role encompasses setting up infrastructure, leading the team, and hands-on coding to develop MVPs. With a keen eye for product and design, Kyle excels in the startup environment where designs often need improvisation, enabling faster progress. His strong background in tech startups allows him to take projects from conception to reality.',
+    img: binh,
+  },
+  {
+    name: 'Vu Nguyen',
+    title: 'Software Engineer - Frontend',
+    desc: '',
+    img: vu,
+  },
+  {
+    name: 'Duc Nguyen',
+    title: 'Software Engineer - Backend',
+    desc: 'Duc Nguyen is currently at senior year at Dickinson College. His expertise lying in  backend technology and applying computer vision in radiology',
+    img: duc,
+  },
+];
+---
+
+<Section extraClasses='bg-[#F1F5F9]' id='about-us'>
+  <SectionHeader>Meet Our Team</SectionHeader>
+  <!-- <div class='grid lg:grid-cols-4 sm:grid-cols-6 grid-cols-1'> -->
+  <!-- <div
+      class='bg-yellow-300 h-[200px] xl:col-span-2 sm:col-span-3 lg:col-span-3 col-span-full'
+    >
+    </div> -->
+  <div
+    class='mt-24 md:px-4 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 sm:gap-4 px-12 md:gap-12 lg:gap-4'
+  >
+    {
+      members.map((member) => {
+        return (
+          <Card
+            name={member.name}
+            title={member.title}
+            image={member.img}
+            desc={member.desc}
+          />
+        );
+      })
+    }
+  </div>
+  <!-- </div> -->
+</Section>
