@@ -1,10 +1,10 @@
 ---
 import { Image } from 'astro:assets';
-import heroImage from '../images/first-img.png';
-import errorCostImage from '../images/second-img.png';
-import first from '../images/num1.png';
-import second from '../images/num2.png';
-import third from '../images/num3.png';
+import heroImage from '../images/hero-image.png';
+import errorCostImage from '../images/error-cost-img.png';
+import first from '../images/pic1.png';
+import second from '../images/pic2.png';
+import third from '../images/pic3.png';
 import SectionHeader from '../components/SectionHeader.astro';
 import Sample from '../components/Sample';
 import Team from '../components/Team.astro';
@@ -106,7 +106,7 @@ const steps = [
           class='col-span-full lg:col-span-4 lg:col-start-2 xl:col-start-2 xl:col-span-5 2xl:col-start-1 2xl:col-span-6 flex flex-col justify-end items-center px-2 gap-3 2xl:gap-6 2xl:mt-10 sm:mb-10 md:px-12 lg:items-start lg:justify-start xl:-translate-y-28'
         >
           <h1
-            class='xl:text-7xl font-bold text-primary lg:text-6xl text-3xl sm:text-5xl text-center lg:text-left font'
+            class='xl:text-7xl font-bold text-primary lg:text-6xl text-3xl sm:text-5xl text-center lg:text-left'
           >
             {heroSection.title}
           </h1>
@@ -122,7 +122,7 @@ const steps = [
           src={heroSection.img}
           alt='Redefining Healthcare with AI'
           widths={[240, 400, 600, 800]}
-          class='h-auto object-contain max-h-[60vh] lg:max-h-[75vh] col-span-full lg:col-start-7 self-start translate-y-[-23%] xl:col-start-8 sm:col-start-4 sm:col-span-8 md:col-span-full 2xl:col-start-7'
+          class='h-auto .object-scale-down max-h-[60vh] lg:max-h-[75vh] col-span-full lg:col-start-7 self-start translate-y-[-23%] xl:col-start-8 sm:col-start-4 sm:col-span-8 md:col-span-full 2xl:col-start-7'
         />
       </div>
     </header>
@@ -164,7 +164,7 @@ const steps = [
               <h6
                 class='text-primary text-3xl md:text-4xl font-bold capitalize'
               >
-                $42 BILLION
+                42 BILLION
               </h6>
               <p>Annual cost to the system</p>
             </div>
@@ -192,13 +192,17 @@ const steps = [
           class='flex md:justify-between md:items-start md:max-w-5xl mx-auto md:flex-row flex-col items-center justify-start gap-8 max-w-sm'
         >
           {
-            steps.map(({ img }, index) => (
+            steps.map(({ img, title }, index) => (
               <div class='flex flex-col items-center gap-2 flex-1'>
+                <div class='w-12 h-12 bg-primary text-white border-blue-200 border-4 rounded-full flex items-center justify-center font-bold text-xl'>
+                  {index + 1}
+                </div>
                 <Image
                   src={img}
-                  alt={`Step ${index + 1}`}
-                  class='lg:h-80 md:w-auto md:h-64 w-48 h-auto'
+                  alt={title}
+                  class='lg:h-64 md:w-auto md:h-48 w-36 h-auto'
                 />
+                <p class='text-center font-bold text-xl'>{title}</p>
               </div>
             ))
           }
@@ -206,8 +210,8 @@ const steps = [
       </div>
     </section>
 
-    <section class='bg-white lg:py-32 px-4 md:px-10 2xl:px-0 py-20 text-center'>
-      <div class='max-w-4xl mx-auto'>
+    <section class='h-screen bg-white lg:py-32 px-4 md:px-10 2xl:px-0 py-20 text-center flex items-center justify-center'>
+      <div class='max-w-4xl mx-auto flex items-center justify-center flex-col'>
         <SectionHeader> Transforming Healthcare with AI </SectionHeader>
         <p>
           Our platform is at the forefront of innovation, utilizing cutting-edge
