@@ -1,0 +1,22 @@
+---
+interface Props {
+  items: {
+    label: string;
+    href: string;
+  }[];
+}
+
+const { items } = Astro.props;
+---
+
+<ul class='capitalize font-semibold flex items-center justify-start gap-x-8'>
+  {
+    items.map((item) => (
+      <li class='py-3'>
+        <a class='hover:text-primary' href={item.href}>
+          {item.label}
+        </a>
+      </li>
+    ))
+  }
+</ul>
