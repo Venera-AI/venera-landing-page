@@ -507,6 +507,36 @@ const assistantFeatures = [
         class='lg:absolute bottom-0 right-0 relative'
       />
     </section>
+    <footer class='p-3'>
+      <div class='bg-[#1E293B] py-6 rounded-xl text-center'>
+        <div class='container flex text-white flex-col items-center gap-y-12'>
+          <Image src={logo} alt='Logo Footer' class='w-14 h-14' />
+          <p class='text-lg'>
+            Revolutionizing The Personalized Health Industry through the power
+            of AI Technology and Machine Learning.
+          </p>
+          <ul
+            class='flex gap-y-2 flex-row flex-wrap items-center justify-center gap-x-12'
+          >
+            <li
+              class='capitalize text-gray-400 hover:text-white font-extrabold text-lg'
+            >
+              <a href='/'>Homepage</a>
+            </li>
+            {
+              [...leftNavs, ...rightNavs].map((nav) => {
+                return (
+                  <li class='capitalize font-extrabold text-lg text-gray-400 hover:text-white'>
+                    <a href={nav.href}>{nav.label}</a>
+                  </li>
+                );
+              })
+            }
+          </ul>
+          <p>© 2024 SafeRX / Venera AI | VIAI</p>
+        </div>
+      </div>
+    </footer>
   </body>
 
   <style is:global>
