@@ -9,14 +9,18 @@ import feature1 from '@/images/feature-1.png';
 import feature2 from '@/images/feature-2.png';
 import feature3 from '@/images/feature-3.png';
 import aiAssistantFeatures from '@/images/assistant-features.png';
+import contactBg from '@/images/contact.svg';
 
 import '@/styles/globals.css';
 import MenuItems from '@/components/MenuItems.astro';
 import {
   ChartNoAxesCombined,
+  Contact,
   Flag,
   Folder,
+  LocateIcon,
   Mail,
+  MapPinHouse,
   Plus,
   Settings,
 } from 'lucide-react';
@@ -476,6 +480,33 @@ const assistantFeatures = [
       </div>
     </section>
     <Teams />
+    <section class='lg:h-screen h-auto relative pt-24 lg:pt-0'>
+      <div class='container flex h-full flex-col justify-center gap-y-12'>
+        <SectionHeader>Get In Touch</SectionHeader>
+        <p class='text-xl text-[#475569]'>
+          Send us a message and we'll get back to you as soon as possible.
+        </p>
+        <div class='flex items-start gap-x-16'>
+          <div class='flex flex-col gap-y-2'>
+            <MapPinHouse className='text-[#94A3B8]' />
+            <p class='font-bold'>Our Address</p>
+            <p>4008 Murray Ave</p>
+            <p>Pittsburgh, PA</p>
+          </div>
+          <div class='flex flex-col gap-y-2'>
+            <Contact className='text-[#94A3B8]' />
+            <p class='font-bold'>Our Contact Info</p>
+            <p>+1 (541) 908 9436</p>
+            <p>admin@viai.io</p>
+          </div>
+        </div>
+      </div>
+      <Image
+        src={contactBg}
+        alt='contact'
+        class='lg:absolute bottom-0 right-0 relative'
+      />
+    </section>
   </body>
 
   <style is:global>
