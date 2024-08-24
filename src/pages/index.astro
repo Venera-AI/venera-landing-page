@@ -8,14 +8,23 @@ import publicSector from '@/images/public-sector.png';
 import feature1 from '@/images/feature-1.png';
 import feature2 from '@/images/feature-2.png';
 import feature3 from '@/images/feature-3.png';
+import aiAssistantFeatures from '@/images/assistant-features.png';
 
 import '@/styles/globals.css';
 import MenuItems from '@/components/MenuItems.astro';
-import { Flag, Folder, Mail } from 'lucide-react';
+import {
+  ChartNoAxesCombined,
+  Flag,
+  Folder,
+  Mail,
+  Plus,
+  Settings,
+} from 'lucide-react';
 import SectionHeader from '@/components/SectionHeader.astro';
 import Section from '@/components/Section.astro';
 import Feature1Content from '@/components/Feature1Content.astro';
 import Feature3Content from '@/components/Feature3Content.astro';
+import { Progress } from '@/components/ui/progress';
 
 const leftNavs = [
   {
@@ -94,6 +103,27 @@ const features = [
     subtitle:
       'Command center dashboard to detect anomalies and track down root cause.',
     content: Feature3Content,
+  },
+];
+
+const assistantFeatures = [
+  {
+    icon: Plus,
+    title: 'Empathetic Interaction',
+    desscription:
+      'Engage in natural and informative conversations with our AI Health Assistant. Ask questions about your health.',
+  },
+  {
+    icon: Settings,
+    title: 'Natural Language Understanding',
+    desscription:
+      'Engage in natural and informative conversations with the AI Health Assistant, making it easy.',
+  },
+  {
+    icon: ChartNoAxesCombined,
+    title: 'Proactive Health Insights',
+    desscription:
+      'Benefit from proactive health insights derived from AI-driven predictive analytics  every single day.',
   },
 ];
 ---
@@ -280,6 +310,233 @@ const features = [
         }
       </div>
     </Section>
+    <section class='text-center'>
+      <div class='w-[98%] mx-auto bg-[#1E293B] text-white rounded-lg py-24'>
+        <div class='flex flex-col gap-y-8 container items-center'>
+          <div class='border py-2 px-4 border-white rounded-lg font-semibold'>
+            Health Revolution 4.0
+          </div>
+          <SectionHeader>AI Health Assistant Features</SectionHeader>
+          <p class='text-xl'>
+            Benefit from evidence-based insights derived from AI analysis of
+            your health metrics and historical data.
+          </p>
+          <Image src={aiAssistantFeatures} alt='AI Health Assitant Features' />
+          <div
+            class='grid lg:grid-cols-3 grid-cols-1 w-full md:w-full sm:w-5/6 md:grid-cols-2 gap-y-8 xl:gap-x-36 lg:gap-x-16 gap-x-8 text-center mt-6'
+          >
+            {
+              assistantFeatures.map((feature) => {
+                return (
+                  <div class='flex flex-col items-center gap-y-4'>
+                    <div class='bg-[#334155] p-3 rounded-lg'>
+                      <feature.icon />
+                    </div>
+                    <p class='font-extrabold text-xl'>{feature.title}</p>
+                    <p class='font-extralight'>{feature.desscription}</p>
+                  </div>
+                );
+              })
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='lg:py-36 py-24 text-center'>
+      <div class='flex flex-col gap-y-8 container items-center'>
+        <div class='border py-2 px-4 border-gray-900 rounded-lg font-semibold'>
+          How It Works
+        </div>
+        <SectionHeader>How Our AI LLM Works</SectionHeader>
+        <p class='text-xl'>
+          Leverage the power of AI to predict potential health issues. Receive
+          proactive recommendations for preventive care based on data analytics.
+        </p>
+        <div class='relative md:w-2/3 w-full mt-36 md:block hidden'>
+          <Progress value={87} className='h-1 ' />
+          <div
+            class='absolute left-0 top-1/2 rounded-md -translate-y-1/2 w-6 h-6 bg-primary'
+          >
+            <div
+              class='bg-white h-2 w-2 left-1/2 top-1/2 absolute -translate-x-1/2 -translate-y-1/2 rounded-sm'
+            >
+            </div>
+          </div>
+          <div
+            class='absolute left-1/3 top-1/2 rounded-md -translate-y-1/2 w-6 h-6 bg-primary'
+          >
+            <div
+              class='bg-white h-2 w-2 left-1/2 top-1/2 absolute -translate-x-1/2 -translate-y-1/2 rounded-sm'
+            >
+            </div>
+          </div>
+          <div
+            class='absolute left-2/3 top-1/2 rounded-md -translate-y-1/2 w-6 h-6 bg-primary'
+          >
+            <div
+              class='bg-white h-2 w-2 left-1/2 top-1/2 absolute -translate-x-1/2 -translate-y-1/2 rounded-sm'
+            >
+            </div>
+          </div>
+          <div
+            class='absolute right-0 top-1/2 rounded-md -translate-y-1/2 w-6 h-6 border-gray-400 border'
+          >
+            <div
+              class='bg-gray-200 h-2 w-2 left-1/2 top-1/2 absolute -translate-x-1/2 -translate-y-1/2 rounded-sm'
+            >
+            </div>
+          </div>
+          <div
+            class='absolute top-4 left-2 -translate-x-1/2 flex flex-col items-center w-[225px]'
+          >
+            <p class='font-extrabold'>User Input</p>
+            <p>Receive personalized health insight</p>
+          </div>
+          <div
+            class='absolute bottom-4 lg:top-4 left-1/3 -translate-x-1/2 flex flex-col items-center w-[225px]'
+          >
+            <p class='font-extrabold'>AI Algorithm</p>
+            <p>Analyze input & Metrics</p>
+          </div>
+          <div
+            class='absolute top-4 left-2/3 -translate-x-1/2 flex flex-col items-center w-[225px]'
+          >
+            <p class='font-extrabold'>AI Recommendation</p>
+            <p>Receive personalized health</p>
+          </div>
+
+          <div
+            class='absolute bottom-4 lg:top-4 right-2 translate-x-1/2 flex flex-col items-center w-[225px]'
+          >
+            <p class='font-extrabold'>Iterative Improvement</p>
+            <p>The AI learns from user interactions</p>
+          </div>
+        </div>
+
+        <div class='relative w-full sm:w-[80%] mt-12 md:hidden block text-left'>
+          <div
+            class='bg-secondary h-[80%] w-1 absolute top-1/2 -translate-y-1/2 left-2.5'
+          >
+            <div class='h-[87%] w-full bg-primary'></div>
+          </div>
+          <div class='flex flex-col justify-start gap-y-12'>
+            <div class='flex items-center gap-x-8'>
+              <div class='w-6 h-6 bg-primary relative rounded-md'>
+                <div
+                  class='bg-white h-2 w-2 left-1/2 top-1/2 absolute -translate-x-1/2 -translate-y-1/2 rounded-sm'
+                >
+                </div>
+              </div>
+              <div>
+                <p class='font-extrabold'>User Input</p>
+                <p>Receive personalized health insight</p>
+              </div>
+            </div>
+            <div class='flex items-center gap-x-8'>
+              <div class='w-6 h-6 bg-primary relative rounded-md'>
+                <div
+                  class='bg-white h-2 w-2 left-1/2 top-1/2 absolute -translate-x-1/2 -translate-y-1/2 rounded-sm'
+                >
+                </div>
+              </div>
+              <div>
+                <p class='font-extrabold'>AI Algorithms</p>
+                <p>Analyze input & Metrics</p>
+              </div>
+            </div>
+            <div class='flex items-center gap-x-8'>
+              <div class='w-6 h-6 bg-primary relative rounded-md'>
+                <div
+                  class='bg-white h-2 w-2 left-1/2 top-1/2 absolute -translate-x-1/2 -translate-y-1/2 rounded-sm'
+                >
+                </div>
+              </div>
+              <div>
+                <p class='font-extrabold'>AI Recommendation</p>
+                <p>Receive personalized health insights</p>
+              </div>
+            </div>
+            <div class='flex items-center gap-x-8'>
+              <div
+                class='w-6 h-6 border border-gray-400 bg-white relative rounded-md'
+              >
+                <div
+                  class='bg-gray-200 h-2 w-2 left-1/2 top-1/2 absolute -translate-x-1/2 -translate-y-1/2 rounded-sm'
+                >
+                </div>
+              </div>
+              <div>
+                <p class='font-extrabold'>Iterative Improvement</p>
+                <p>The AI learns from user interactions</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="bg-primary h-[500px]">
+            <div>
+
+            </div>
+          </div> -->
+          <!-- <div
+            class='absolute left-0 top-1/2 rounded-md -translate-y-1/2 w-6 h-6 bg-primary'
+          >
+            <div
+              class='bg-white h-2 w-2 left-1/2 top-1/2 absolute -translate-x-1/2 -translate-y-1/2 rounded-sm'
+            >
+            </div>
+          </div>
+          <div
+            class='absolute left-1/3 top-1/2 rounded-md -translate-y-1/2 w-6 h-6 bg-primary'
+          >
+            <div
+              class='bg-white h-2 w-2 left-1/2 top-1/2 absolute -translate-x-1/2 -translate-y-1/2 rounded-sm'
+            >
+            </div>
+          </div>
+          <div
+            class='absolute left-2/3 top-1/2 rounded-md -translate-y-1/2 w-6 h-6 bg-primary'
+          >
+            <div
+              class='bg-white h-2 w-2 left-1/2 top-1/2 absolute -translate-x-1/2 -translate-y-1/2 rounded-sm'
+            >
+            </div>
+          </div>
+          <div
+            class='absolute right-0 top-1/2 rounded-md -translate-y-1/2 w-6 h-6 border-gray-400 border'
+          >
+            <div
+              class='bg-gray-200 h-2 w-2 left-1/2 top-1/2 absolute -translate-x-1/2 -translate-y-1/2 rounded-sm'
+            >
+            </div>
+          </div>
+          <div
+            class='absolute top-4 left-2 -translate-x-1/2 flex flex-col items-center w-[225px]'
+          >
+            <p class='font-extrabold'>User Input</p>
+            <p>Receive personalized health insight</p>
+          </div>
+          <div
+            class='absolute bottom-4 lg:top-4 left-1/3 -translate-x-1/2 flex flex-col items-center w-[225px]'
+          >
+            <p class='font-extrabold'>AI Algorithm</p>
+            <p>Analyze input & Metrics</p>
+          </div>
+          <div
+            class='absolute top-4 left-2/3 -translate-x-1/2 flex flex-col items-center w-[225px]'
+          >
+            <p class='font-extrabold'>AI Recommendation</p>
+            <p>Receive personalized health</p>
+          </div>
+
+          <div
+            class='absolute bottom-4 lg:top-4 right-2 translate-x-1/2 flex flex-col items-center w-[225px]'
+          >
+            <p class='font-extrabold'>Iterative Improvement</p>
+            <p>The AI learns from user interactions</p>
+          </div> -->
+        </div>
+      </div>
+    </section>
   </body>
 
   <style is:global>
