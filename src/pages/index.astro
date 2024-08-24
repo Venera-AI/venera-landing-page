@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '@/images/logo.png';
+import aboutBg from '@/images/about-background.png';
 
 import '@/styles/globals.css';
 import MenuItems from '@/components/MenuItems.astro';
@@ -50,17 +51,17 @@ const mainNavs = [
       content='Significantly reduce prescription errors with the power of AI and large language models.'
     />
   </head>
-  <body class='bg-gray-200 text-gray-900 font-light'>
-    <header class='h-screen bg-primary'>
-      <nav
-        class='flex items-center justify-between bg-background fixed top-3 left-1/2 -translate-x-1/2 rounded-xl px-6 py-3 w-[98%]'
-      >
-        <MenuItems items={leftNavs} />
-        <a href='/'>
-          <Image src={logo} alt='Logo' class='w-14 h-14' />
-        </a>
-        <MenuItems items={rightNavs} />
-      </nav>
+  <body class='bg-white text-gray-900 font-light'>
+    <nav
+      class='z-10 flex items-center justify-between bg-background fixed top-3 left-1/2 -translate-x-1/2 rounded-xl px-6 py-3 w-[98%]'
+    >
+      <MenuItems items={leftNavs} />
+      <a href='/'>
+        <Image src={logo} alt='Logo' class='w-14 h-14' />
+      </a>
+      <MenuItems items={rightNavs} />
+    </nav>
+    <header class='h-screen bg-primary relative text-white'>
       <div
         class='container relative h-2/3 top-1/2 -translate-y-1/2 text-white grid grid-cols-2'
       >
@@ -125,7 +126,35 @@ const mainNavs = [
           </div>
         </div>
       </div>
+      <p class='absolute bottom-8 left-8'>
+        © 2024 SafeRX / Venera AI | VIAI | All rights reserved
+      </p>
     </header>
+    <section class='h-screen relative'>
+      <Image src={aboutBg} alt='random' class='absolute bottom-0 left-0' />
+      <Image
+        src={aboutBg}
+        alt='random'
+        class='absolute top-0 right-0 rotate-180'
+      />
+      <div
+        class='container absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'
+      >
+        <h3
+          class='font-extrabold text-7xl sm:text-9xl text-center sm:text-left'
+        >
+          Health <span class='text-primary'>.</span>
+        </h3>
+        <h3 class='font-extrabold text-7xl sm:text-9xl text-center my-12'>
+          Meets<span class='text-primary'>.</span>
+        </h3>
+        <h3
+          class='font-extrabold text-7xl sm:text-9xl text-center sm:text-right'
+        >
+          ML + AI<span class='text-primary'>.</span>
+        </h3>
+      </div>
+    </section>
   </body>
 
   <style is:global>
