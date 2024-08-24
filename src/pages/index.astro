@@ -2,6 +2,9 @@
 import { Image } from 'astro:assets';
 import logo from '@/images/logo.png';
 import aboutBg from '@/images/about-background.png';
+import professionals from '@/images/professionals.png';
+import patients from '@/images/patients.png';
+import publicSector from '@/images/public-sector.png';
 
 import '@/styles/globals.css';
 import MenuItems from '@/components/MenuItems.astro';
@@ -35,6 +38,33 @@ const mainNavs = [
   },
   ...leftNavs,
   ...rightNavs,
+];
+
+const audiences = [
+  {
+    icon: professionals,
+    bg: 'bg-[#FFF1F2]',
+    borderColor: 'border-[#FB7185]',
+    title: 'Professionals',
+    description:
+      'We reduce workload and leverage information resource, increasing the effectiveness of the diagnosis process.',
+  },
+  {
+    icon: patients,
+    bg: 'bg-[#EFF6FF]',
+    borderColor: 'border-[#60A5FA]',
+    title: 'Patients',
+    description:
+      'We manage electronic health records and provide personalized insights.',
+  },
+  {
+    icon: publicSector,
+    bg: 'bg-[#FAF5FF]',
+    borderColor: 'border-[#A855F7]',
+    title: 'Public Sector',
+    description:
+      'We detect anomalies in public health and track down the root cause.',
+  },
 ];
 ---
 
@@ -153,6 +183,45 @@ const mainNavs = [
         >
           ML + AI<span class='text-primary'>.</span>
         </h3>
+      </div>
+    </section>
+    <section class='lg:py-36 py-24'>
+      <div class='container'>
+        <div
+          class='flex md:items-center justify-between xl:gap-x-36 gap-x-16 flex-col md:flex-row items-start gap-y-4'
+        >
+          <div class='text-nowrap whitespace-nowrap'>
+            <div class='flex items-center gap-x-2 text-2xl font-bold'>
+              <span class='text-primary'>&#8729; </span>
+              <h3>Our Commitment</h3>
+            </div>
+            <h2 class='font-extrabold text-5xl mt-4'>Who We Serve</h2>
+          </div>
+          <p class='text-xl font-extralight'>
+            We're committed to improving patient outcomes and reducing the
+            burden on healthcare providers through the seamless integration of
+            intelligent automation and data-driven insights.
+          </p>
+        </div>
+        <div
+          class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 xl:gap-x-12 lg:mt-20 mt-9 gap-y-12'
+        >
+          {
+            audiences.map((audience) => {
+              return (
+                <div class='bg-[#F1F5F9] rounded-lg md:p-5 p-3 flex flex-col gap-y-5 pb-8'>
+                  <div
+                    class={`${audience.bg} ${audience.borderColor} flex items-center justify-center border rounded-lg aspect-square `}
+                  >
+                    <Image src={audience.icon} alt={audience.title} />
+                  </div>
+                  <h6 class='font-extrabold text-2xl'>{audience.title}</h6>
+                  <p class='font-extralight text-lg'>{audience.description}</p>
+                </div>
+              );
+            })
+          }
+        </div>
       </div>
     </section>
   </body>
