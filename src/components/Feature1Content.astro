@@ -1,0 +1,25 @@
+---
+import { Check } from 'lucide-react';
+
+const list = [
+  'Insights visualizes',
+  'diagnosis recommender',
+  'visual medial assistant',
+  'databasemanager',
+];
+---
+
+<ul class='flex flex-col md:gap-y-6 gap-y-4'>
+  {
+    list.map((item) => {
+      return (
+        <li class='flex gap-x-3 uppercase font-extrabold text-[#1E293B]'>
+          <div class='bg-green-500 text-white rounded-sm flex items-center justify-center px-[2px]'>
+            <Check className='text-xs' size={20} />
+          </div>
+          <span>{item}</span>
+        </li>
+      );
+    })
+  }
+</ul>

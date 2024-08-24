@@ -1,0 +1,15 @@
+---
+import { cn } from '@/lib/utils';
+
+interface Props {
+  extraClasses?: string;
+}
+
+const { extraClasses = '', ...restProps } = Astro.props;
+---
+
+<section class={cn('lg:py-36 py-24', extraClasses)} {...restProps}>
+  <div class='container'>
+    <slot />
+  </div>
+</section>
