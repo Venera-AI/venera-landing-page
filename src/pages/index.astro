@@ -10,6 +10,7 @@ import feature2 from '@/images/feature-2.png';
 import feature3 from '@/images/feature-3.png';
 import aiAssistantFeatures from '@/images/assistant-features.png';
 import contactBg from '@/images/contact.svg';
+import { ContactForm } from '@/components/ContactForm';
 
 import '@/styles/globals.css';
 import MenuItems from '@/components/MenuItems.astro';
@@ -507,6 +508,11 @@ const assistantFeatures = [
         class='lg:absolute bottom-0 right-0 relative'
       />
     </section>
+    <Section>
+      <SectionHeader extraClasses='mb-16'>Request a Demo</SectionHeader>
+      <ContactForm client:visible />
+    </Section>
+
     <footer class='p-3'>
       <div class='bg-[#1E293B] py-6 rounded-xl text-center'>
         <div class='container flex text-white flex-col items-center gap-y-12'>
