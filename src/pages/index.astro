@@ -11,6 +11,7 @@ import feature3 from '@/images/feature-3.png';
 import aiAssistantFeatures from '@/images/assistant-features.png';
 import contactBg from '@/images/contact.svg';
 import { ContactForm } from '@/components/ContactForm';
+import { MobileMenu } from '@/components/MobileMenu';
 
 import '@/styles/globals.css';
 import MenuItems from '@/components/MenuItems.astro';
@@ -149,19 +150,22 @@ const assistantFeatures = [
   </head>
   <body class='bg-white text-gray-900 font-light'>
     <nav
-      class='shadow-sm z-10 flex items-center justify-between bg-background fixed top-3 left-1/2 -translate-x-1/2 rounded-xl px-6 py-3 w-[98%]'
+      class='shadow-lg z-10 flex items-center justify-between bg-background fixed top-3 left-1/2 -translate-x-1/2 rounded-xl px-6 py-3 w-[98%]'
     >
       <MenuItems items={leftNavs} />
       <a href='/'>
-        <Image src={logo} alt='Logo' class='w-14 h-14' />
+        <Image src={logo} alt='Logo' class='rounded-md w-14 h-14' />
       </a>
       <MenuItems items={rightNavs} />
+      <MobileMenu client:media='(max-width: 640px)' />
     </nav>
     <header class='h-screen bg-primary relative text-white'>
       <div
         class='container relative h-2/3 top-1/2 -translate-y-1/2 text-white grid grid-cols-2'
       >
-        <div class='relative'>
+        <div
+          class='relative md:col-span-1 col-span-full md:text-left text-center'
+        >
           <div class='relative left-0 top-1/2 -translate-y-1/2'>
             <ul
               class='font-bold text-6xl capitalize flex flex-col gap-y-12 text-blue-300'
@@ -186,7 +190,7 @@ const assistantFeatures = [
             </ul>
           </div>
         </div>
-        <div class='relative font-thin'>
+        <div class='relative font-thin md:block hidden'>
           <div class='absolute top-0 left-0 w-60 text-lg'>
             <div class='flex items-center justify-start gap-x-2 font-bold mb-3'>
               <Flag />
@@ -208,9 +212,7 @@ const assistantFeatures = [
               <p>+541-908-9436</p>
             </div>
           </div>
-          <div
-            class='absolute bottom-1/2 -translate-x-1/2 right-0 w-60 text-lg'
-          >
+          <div class='absolute bottom-1/2 right-0 w-60 text-lg'>
             <div class='flex items-center justify-start gap-x-2 font-bold mb-3'>
               <Folder />
               <p>Our Resources</p>
@@ -251,7 +253,7 @@ const assistantFeatures = [
         </h3>
       </div>
     </section>
-    <section class='lg:py-36 py-24'>
+    <section class='lg:py-36 py-24' id='services'>
       <div class='container'>
         <div
           class='flex md:items-center justify-between xl:gap-x-36 gap-x-16 flex-col md:flex-row items-start gap-y-4'
@@ -290,7 +292,7 @@ const assistantFeatures = [
         </div>
       </div>
     </section>
-    <Section>
+    <Section id='features'>
       <SectionHeader extraClasses='text-center'>Our Core Features</SectionHeader
       >
       <div class='mt-28 flex flex-col lg:gap-y-24 gap-y-24 items-center'>
@@ -497,18 +499,18 @@ const assistantFeatures = [
           <div class='flex flex-col gap-y-2'>
             <Contact className='text-[#94A3B8]' />
             <p class='font-bold'>Our Contact Info</p>
-            <p>+1 (541) 908 9436</p>
-            <p>admin@viai.io</p>
+            <a href='tel:1 (541) 908 9436'>1 (541) 908 9436</a>
+            <a href='mailto:admin@viai.io'>admin@viai.io</a>
           </div>
         </div>
       </div>
       <Image
         src={contactBg}
         alt='contact'
-        class='lg:absolute bottom-0 right-0 relative'
+        class='lg:absolute bottom-0 right-0 relative -z-10'
       />
     </section>
-    <Section>
+    <Section id='contact'>
       <SectionHeader extraClasses='mb-16'>Request a Demo</SectionHeader>
       <ContactForm client:visible />
     </Section>
@@ -516,7 +518,7 @@ const assistantFeatures = [
     <footer class='p-3'>
       <div class='bg-[#1E293B] py-6 rounded-xl text-center'>
         <div class='container flex text-white flex-col items-center gap-y-12'>
-          <Image src={logo} alt='Logo Footer' class='w-14 h-14' />
+          <Image src={logo} alt='Logo Footer' class='rounded-md w-14 h-14' />
           <p class='text-lg'>
             Revolutionizing The Personalized Health Industry through the power
             of AI Technology and Machine Learning.

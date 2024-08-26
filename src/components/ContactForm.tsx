@@ -50,7 +50,7 @@ export const ContactForm = () => {
         setLoading(false);
       }}
     >
-      <FieldsContainer>
+      <FieldsContainer extraClasses='sm:col-span-1 col-span-full'>
         <label htmlFor='fullName'>Full Name</label>
         <Input
           placeholder='Akari Mizunashi'
@@ -60,7 +60,7 @@ export const ContactForm = () => {
         />
       </FieldsContainer>
 
-      <FieldsContainer>
+      <FieldsContainer extraClasses='sm:col-span-1 col-span-full'>
         <label htmlFor='jobPosition'>Job Position</label>
         <Input
           placeholder='Enter your job position...'
@@ -70,7 +70,7 @@ export const ContactForm = () => {
         />
       </FieldsContainer>
 
-      <FieldsContainer>
+      <FieldsContainer extraClasses='sm:col-span-1 col-span-full'>
         <label htmlFor='email'>Email Address</label>
         <Input
           placeholder='Enter your email address...'
@@ -81,7 +81,7 @@ export const ContactForm = () => {
         />
       </FieldsContainer>
 
-      <FieldsContainer>
+      <FieldsContainer extraClasses='sm:col-span-1 col-span-full'>
         <label htmlFor='phoneNumber'>Phone Number</label>
         <Input
           placeholder='Enter your phone number...'

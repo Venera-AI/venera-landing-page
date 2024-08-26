@@ -9,7 +9,9 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<ul class='capitalize font-semibold flex items-center justify-start gap-x-8'>
+<ul
+  class='sm:flex hidden capitalize font-semibold items-center justify-start gap-x-8'
+>
   {
     items.map((item) => (
       <li class='py-3'>
