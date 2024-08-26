@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import { useRef, useState, type ReactNode } from 'react';
 import { Input } from './ui/input';
 import { cn } from '@/lib/utils';
 import { Textarea } from './ui/textarea';
@@ -15,9 +15,11 @@ export const ContactForm = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   return (
     <form
+      ref={formRef}
       className='grid grid-cols-2 gap-x-8 gap-y-6'
       onSubmit={async (e) => {
         e.preventDefault();
@@ -41,7 +43,7 @@ export const ContactForm = () => {
         if (error) {
           setError(error.message);
         } else {
-          e.target?.reset();
+          formRef.current?.reset();
           setSuccessMessage(true);
           setTimeout(() => {
             setSuccessMessage(false);
