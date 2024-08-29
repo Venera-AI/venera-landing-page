@@ -1,0 +1,23 @@
+---
+import { cn } from '@/lib/utils';
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+  name: string;
+  title: string;
+  image: ImageMetadata;
+}
+
+const { name, title, image } = Astro.props;
+---
+
+<div class='rounded-xl bg-white px-4 py-5 pt-7 flex flex-col gap-y-5'>
+  <p class='font-extrabold text-xl leading-none'>{name}</p>
+  <p class='font-medium text-md text-[#475569] leading-none'>{title}</p>
+  <Image
+    src={image}
+    alt={name}
+    class='rounded-xl object-cover aspect-[1/1.4] w-full'
+  />
+</div>
