@@ -264,7 +264,7 @@ const assistantFeatures = [
             </div>
             <h2 class='font-extrabold text-5xl mt-4'>Who We Serve</h2>
           </div>
-          <p class='text-xl font-extralight'>
+          <p class='text-lg font-extralight'>
             We're committed to improving patient outcomes and reducing the
             burden on healthcare providers through the seamless integration of
             intelligent automation and data-driven insights.
@@ -324,7 +324,7 @@ const assistantFeatures = [
             Health Revolution 4.0
           </div>
           <SectionHeader>AI Health Assistant Features</SectionHeader>
-          <p class='text-xl'>
+          <p class='text-lg'>
             Benefit from evidence-based insights derived from AI analysis of
             your health metrics and historical data.
           </p>
@@ -339,7 +339,7 @@ const assistantFeatures = [
                     <div class='bg-[#334155] p-3 rounded-lg'>
                       <feature.icon />
                     </div>
-                    <p class='font-extrabold text-xl'>{feature.title}</p>
+                    <p class='font-extrabold text-lg'>{feature.title}</p>
                     <p class='font-extralight'>{feature.desscription}</p>
                   </div>
                 );
@@ -355,7 +355,7 @@ const assistantFeatures = [
           How It Works
         </div>
         <SectionHeader>How Our AI LLM Works</SectionHeader>
-        <p class='text-xl'>
+        <p class='text-lg'>
           Leverage the power of AI to predict potential health issues. Receive
           proactive recommendations for preventive care based on data analytics.
         </p>
@@ -485,7 +485,7 @@ const assistantFeatures = [
     <section class='lg:h-screen h-auto relative pt-24 lg:pt-0'>
       <div class='container flex h-full flex-col justify-center gap-y-12'>
         <SectionHeader>Get In Touch</SectionHeader>
-        <p class='text-xl text-[#475569]'>
+        <p class='text-lg text-[#475569]'>
           Send us a message and we'll get back to you as soon as possible.
         </p>
         <div class='flex items-start gap-x-16'>
@@ -545,27 +545,4 @@ const assistantFeatures = [
       </div>
     </footer>
   </body>
-
-  <style is:global>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-  </style>
-
-  <script>
-    document.querySelector('.mobile-nav-btn')?.addEventListener('click', () => {
-      document.querySelector('.nav-bar')?.classList.toggle('translate-x-0');
-    });
-
-    const menuItems = document.querySelectorAll('.menu-item');
-    for (const menuItem of menuItems) {
-      menuItem.addEventListener('click', () => {
-        if (
-          document
-            .querySelector('.nav-bar')
-            ?.classList.contains('-translate-x-full')
-        ) {
-          document.querySelector('.nav-bar')?.classList.remove('translate-x-0');
-        }
-      });
-    }
-  </script>
 </html>
