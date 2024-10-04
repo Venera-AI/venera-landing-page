@@ -78,7 +78,7 @@ const members = [
   {
     name: 'Duc Nguyen',
     title: 'Software Engineer - Backend',
-    desc: '',
+    desc: 'Duc Nguyen is currently at senior year at Dickinson College. His expertise lying in  backend technology and applying computer vision in radiology',
     img: duc,
   },
 ];
@@ -92,12 +92,17 @@ const members = [
     >
     </div> -->
   <div
-    class='mt-24 px-4 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 sm:gap-4'
+    class='mt-24 md:px-4 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 sm:gap-4 px-12 md:gap-12 lg:gap-4'
   >
     {
       members.map((member) => {
         return (
-          <Card name={member.name} title={member.title} image={member.img} />
+          <Card
+            name={member.name}
+            title={member.title}
+            image={member.img}
+            desc={member.desc}
+          />
         );
       })
     }
