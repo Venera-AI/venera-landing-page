@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "headline": "Meet Venera AI",
+    "subheadline": "Your fast & easy personal health companion",
+    "actionButton": {
+      "label": "Try for free"
+    }
+  },
+  "introduction": {
+    "headline": "Smarter Health, Simplified",
+    "body": "Venera AI goes beyond storing your health records, we help you understand them. With AI-powered insights, seamless data integration, and personalized guidance, we turn complex medical information into clear, actionable steps. Take control of your health with confidence, all in one place."
+  },
+  "functionalities": {
+    "headline": "Take control of your health, all in one place",
+    "items": [
+      {
+        "headline": "Upload your medical records effortlessly",
+        "body": "Easily upload your medical records by scanning documents, images, or syncing with patient portals.",
+        "image": ""
+      },
+      {
+        "headline": "",
+        "body": "",
+        "image": ""
+      },
+      {
+        "headline": "",
+        "body": "",
+        "image": ""
+      },
+      {
+        "headline": "",
+        "body": "",
+        "image": ""
+      }
+    ]
+  },
+  "why": {
+    "headline": "Why Venera AI?",
+    "items": [
+      {
+        "headline": "",
+        "body": "",
+        "image": ""
+      },
+      {
+        "headline": "",
+        "body": "",
+        "image": ""
+      },
+      {
+        "headline": "",
+        "body": "",
+        "image": ""
+      }
+    ]
+  },
+  "privacy": {
+    "headline": "",
+    "body": "",
+    "image": "",
+    "actionButton": {
+      "label": "",
+      "link": ""
+    }
+  },
+  "feedback": {
+    "headline": "",
+    "items": [
+      {
+        "name": "",
+        "image": "",
+        "body": ""
+      },
+      {
+        "name": "",
+        "image": "",
+        "body": ""
+      },
+      {
+        "name": "",
+        "image": "",
+        "body": ""
+      }
+    ]
+  },
+  "contact": {}
+}
