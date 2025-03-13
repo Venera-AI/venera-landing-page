@@ -28,6 +28,8 @@
     "eslint-config-next": "15.2.2",
     "eslint-config-prettier": "^10.1.1",
     "frontmatter-markdown-loader": "^3.7.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
     "prettier": "^3.5.3",
     "tailwindcss": "^4",
     "typescript": "^5"
