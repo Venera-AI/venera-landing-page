@@ -4,7 +4,7 @@ import home from "@/content/home.json";
 import "./styles/index.css";
 
 const poppins = Poppins({
-  weight: ["400", "700"],
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
 });
 
