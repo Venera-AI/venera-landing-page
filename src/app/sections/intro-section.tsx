@@ -5,7 +5,7 @@ const IntroSection: React.FC = () => {
       <nav className="w-full h-screen flex justify-between items-center px-6 py-4 bg-gradient-to-r from-[#83a3cb] to-[#5162b2] shadow-md">
         <div>
           <img src="assets/venera_logo.png" />{" "}
-          <span className="text-1xl font-bold text-white my-1">X AI </span>
+          <span className="text-1xl font-bold text-white my-1">Venera AI </span>
         </div>
         <div className="space-x-4">
           <button className="px-4 py-2 border border-white text-white bg-transparent rounded-md">
