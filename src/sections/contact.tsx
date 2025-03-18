@@ -10,18 +10,17 @@ const Contact: FC = () => {
     const [error, setError] = useState<string | null>(null)
     const [success, setSuccess] = useState<string | null>(null)
     const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault(); // Prevent form from refreshing the page
+        e.preventDefault();
 
         if (name && email && message) {
             try {
-                const messagesRef = collection(db, 'messages'); // Reference to the 'contacts' collection in Firestore
+                const messagesRef = collection(db, 'messages');
                 await addDoc(messagesRef, {
                     name,
                     email,
                     message
                 });
                 setSuccess("Message sent successfully!")
-                // Reset form values
                 setName('');
                 setEmail('');
                 setMessage('');
