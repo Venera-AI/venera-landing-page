@@ -69,22 +69,22 @@
     }
   },
   "feedback": {
-    "headline": "",
+    "headline": "Feedback from our users",
     "items": [
       {
-        "name": "",
+        "name": "Elvira Montanez",
         "image": "",
-        "body": ""
+        "body": "Venera AI has completely changed how I manage my health. I no longer have to dig through multiple portals to find my records—everything is in one place, and the AI explanations make it so easy to understand!"
       },
       {
-        "name": "",
+        "name": "Casper Berkley",
         "image": "",
-        "body": ""
+        "body": "As a caregiver, keeping track of my dad’s medical history used to be overwhelming. With Venera AI, I can access his records, monitor his vitals, and even get quick explanations of test results—all in seconds."
       },
       {
-        "name": "",
+        "name": "Daniel Gallego",
         "image": "",
-        "body": ""
+        "body": "The AI chatbot is a game-changer! I can ask questions about my lab results anytime and get clear, simple explanations without waiting for a doctor's appointment. It gives me peace of mind."
       }
     ]
   },
