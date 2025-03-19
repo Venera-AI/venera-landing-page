@@ -1,5 +1,5 @@
 import React from "react";
-const IntroSection: React.FC = () => {
+export default function IntroSection() {
   return (
     <div className="w-full min-h-screen bg-gray-100 flex flex-col items-center font-[Poppins]">
       <nav className="w-full h-screen flex justify-between items-center px-6 py-4 bg-gradient-to-r from-[#83a3cb] to-[#5162b2] shadow-md">
@@ -33,10 +33,7 @@ const IntroSection: React.FC = () => {
           </div>
         </div>
         <div className="relative w-full md:w-1/2 flex justify-center items-center mt-[2rem] md:mt-0">
-          {/* Circle - Centered behind the image */}
           <div className="absolute w-[400px] h-[400px] bg-gray-100 rounded-full opacity-10 top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
-
-          {/* Image and Buttons */}
           <div className="relative flex flex-col items-center z-10">
             <img
               alt="home screen"
@@ -66,6 +63,4 @@ const IntroSection: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default IntroSection;
+}
