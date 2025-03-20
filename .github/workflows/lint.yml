@@ -10,6 +10,9 @@ jobs:
   eslint:
     name: Run linter scanning
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
     permissions:
       contents: read
       security-events: write
@@ -18,16 +21,27 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+
       # Install all dev dependencies to get the matching ESLint version
-      - name: Install ESLint
-        run: npm install --only=dev
+      - name: Install dependencies
+        run: pnpm install -D
 
       - name: Run ESLint
-        run: npm run lint
+        run: pnpm lint
         continue-on-error: false
 
       - name: Run Prettier
-        run: npm run prettier
+        run: pnpm prettier
         continue-on-error: false
 
       ## Requires GitHub Advanced Security to be enabled
