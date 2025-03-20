@@ -45,17 +45,17 @@
       {
         "headline": "Advanced AI experts",
         "body": "Our team of experts brings over a decade of research and innovation in advanced AI technology, driving cutting-edge solutions in the field.",
-        "image": "images/ai-experts.gif"
+        "image": "/images/ai-experts.gif"
       },
       {
         "headline": "Dedicated team",
         "body": "Our expert engineers, data scientists, and mentors continuously refine our platform to lead in healthcare innovation.",
-        "image": "images/dedicated-team.gif"
+        "image": "/images/dedicated-team.gif"
       },
       {
         "headline": "Trusted medical experts",
         "body": "We collaborate with top healthcare and medical experts to ensure trusted, comprehensive support for our users.",
-        "image": "images/trusted-experts.gif"
+        "image": "/images/trusted-experts.gif"
       }
     ]
   },
