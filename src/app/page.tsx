@@ -1,12 +1,12 @@
 import FeedbackSection from "@/app/sections/feedback-section";
-import UsageSection from "@/app/sections/usage-section";
+import IntroSection from "@/app/sections/intro-section";
 
 export default function Home() {
   return (
     <main>
       <h1 className="sr-only">Home</h1>
       <FeedbackSection />
-      <UsageSection />
+      <IntroSection />
     </main>
   );
 }
