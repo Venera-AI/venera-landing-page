@@ -3,9 +3,9 @@ import React from "react";
 export default function IntroSection() {
   return (
     <div className="w-full h-screen bg-gray-100 flex flex-col items-center mb-10">
-      <nav className="w-full md:min-h-[90px] h-[140px] flex flex-wrap md:flex-nowrap justify-between items-center px-4 sm:px-6 py-3 bg-gradient-to-r from-[#83a3cb] to-[#5162b2] shadow-md">
+      <nav className="w-full md:min-h-[90px] h-[140px] flex md:flex-nowrap justify-between items-center px-4 sm:px-6 py-3 bg-gradient-to-r from-[#83a3cb] to-[#5162b2] shadow-md">
         {/* Logo Section */}
-        <div className="flex justify-center md:justify-start w-full sm:w-auto md:w-auto">
+        <div className="flex justify-center md:justify-start md:w-auto">
           <img
             src="assets/venera-logo.svg"
             className="w-[100px] sm:w-[120px] md:w-auto"
@@ -14,8 +14,8 @@ export default function IntroSection() {
         </div>
 
         {/* Buttons Section */}
-        <div className="flex md:flex-nowrap md:w-full md:gap-4 mt-2 md:mt-0 w-full md:w-auto items-center justify-end">
-          <button className="md:w-[160px] md:h-[55px] w-1/3 px-4 sm:px-5 py-2 sm:py-2.5 border border-white text-white bg-transparent rounded-md hover:bg-white hover:text-black text-sm">
+        <div className="flex md:flex-nowrap md:w-full md:gap-4 mt-2 md:mt-0 w-full md:w-auto justify-end">
+          <button className="md:w-[160px] mr-[10px] md:h-[55px] w-1/3 px-4 sm:px-5 py-2 sm:py-2.5 border border-white text-white bg-transparent rounded-md hover:bg-white hover:text-black text-sm">
             Log in
           </button>
           <button className="md:w-[160px] md:h-[55px] w-1/3 px-4 sm:px-5 py-2 sm:py-2.5 text-[#2d44ad] bg-white rounded-md hover:bg-[#2d44ad] hover:text-white text-sm">
@@ -61,7 +61,7 @@ export default function IntroSection() {
               <img
                 src="/assets/apple-logo.svg"
                 alt="button App store"
-                className="w-6 sm:w-8 h-5 md:h-8"
+                className="w-6 sm:w-8 h- md:h-8"
               />
               <div className="flex flex-col leading-tight">
                 <span className="text-sm md:text-base">Get it on</span>
