@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function WhySection() {
   return (
-    <section className="flex flex-col items-center justify-between py-16 px-8 md:p-16 bg-white">
-      <h2 className="text-4xl font-medium">{why.headline}</h2>
-      <div className="flex flex-col xl:flex-row justify-around">
+    <section className="flex flex-col items-center justify-center py-16 px-8 md:p-16 bg-white">
+      <h2 className="text-4xl font-medium text-center">{why.headline}</h2>
+      <div className="flex flex-col xl:flex-row justify-around mt-8">
         {why.items.map((item, index) => (
           <div key={index} className="flex flex-col items-center p-8">
             <Image
@@ -15,7 +15,7 @@ export default function WhySection() {
               width={100}
               height={100}
             />
-            <div className="flex gap-x-6">
+            <div className="flex gap-x-6 xl:max-w-none md:max-w-2/3">
               <div className="h-10 w-4 rounded-full bg-navyblue" />
               <div>
                 <h3 className="text-navyblue font-bold text-xl">
@@ -27,7 +27,7 @@ export default function WhySection() {
           </div>
         ))}
       </div>
-      <button className="bg-navyblue text-white px-16 py-5 text-xl rounded-2xl font-bold">
+      <button className="bg-navyblue text-white md:px-16 md:py-5 px-12 py-4 md:text-xl rounded-2xl font-bold mt-8">
         Meet our team
       </button>
     </section>
