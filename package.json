@@ -10,7 +10,8 @@
     "prettier:fix": "prettier --write .",
     "lint": "(next lint && npm run prettier) || npm run prettier",
     "lint:fix": "(next lint --fix && npm run prettier:fix) || npm run prettier:fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "deploy:staging": "firebase deploy -P staging"
   },
   "dependencies": {
     "next": "15.2.2",
@@ -23,8 +24,8 @@
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
     "eslint-config-prettier": "^10.1.1",
