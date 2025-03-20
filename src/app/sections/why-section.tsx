@@ -12,8 +12,9 @@ export default function WhySection() {
               className="size-76"
               src={item.image}
               alt={`${item.headline} image`}
-              width={100}
-              height={100}
+              // Same as size-76
+              width={304}
+              height={304}
             />
             <div className="flex gap-x-6 xl:max-w-none md:max-w-2/3">
               <div className="h-10 w-4 rounded-full bg-navyblue" />
