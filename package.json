@@ -10,7 +10,8 @@
     "prettier:fix": "prettier --write .",
     "lint": "(next lint && npm run prettier) || npm run prettier",
     "lint:fix": "(next lint --fix && npm run prettier:fix) || npm run prettier:fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "deploy:staging": "firebase deploy -P staging"
   },
   "dependencies": {
     "next": "15.2.2",

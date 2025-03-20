@@ -42,3 +42,7 @@ next-env.d.ts
 
 # eslint
 .eslintcache
+
+# firebase
+.firebase
+firebase-debug.log
