@@ -1,6 +1,7 @@
 {
   "projects": {
-    "default": "venera-business-staging",
+    "default": "venera-business-dev",
+    "dev": "venera-business-dev",
     "staging": "venera-business-staging"
   }
 }
