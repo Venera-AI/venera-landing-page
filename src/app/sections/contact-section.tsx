@@ -9,11 +9,35 @@ export default function ContactSection() {
   const [message, setMessage] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+  const [location, setLocation] = useState<{
+    ip: string;
+    city: string;
+    region: string;
+    country: string;
+  } | null>(null);
 
   const MESSAGES = {
     REQUIRED_FIELDS: "All fields are required!",
     SUCCESS: "Message sent successfully!",
     ERROR: "Failed to send message. Please try again.",
+  };
+
+  const fetchLocation = async () => {
+    const API_KEY = process.env.NEXT_PUBLIC_IP_INFO_TOKEN;
+    const url = `https://ipinfo.io?token=${API_KEY}`;
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      setLocation({
+        ip: data.ip,
+        city: data.city,
+        region: data.region,
+        country: data.country,
+      });
+    } catch (error) {
+      console.error("Error fetching location:", error);
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -28,7 +52,7 @@ export default function ContactSection() {
       setTimeout(() => setError(null), 5000);
       return;
     }
-
+    await fetchLocation();
     try {
       const messagesRef = collection(db, "messages");
       await addDoc(messagesRef, {
@@ -36,6 +60,7 @@ export default function ContactSection() {
         email: trimmedEmail,
         message: trimmedMessage,
         timestamp: serverTimestamp(),
+        location: location,
       });
 
       setSuccess(MESSAGES.SUCCESS);
