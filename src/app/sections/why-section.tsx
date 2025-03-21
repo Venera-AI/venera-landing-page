@@ -9,7 +9,7 @@ export default function WhySection() {
         {why.items.map((item, index) => (
           <div key={index} className="flex flex-col items-center p-8">
             <Image
-              className="size-76"
+              className="max-w-[250px] h-auto md:max-w-none size-76"
               src={item.image}
               alt={`${item.headline} image`}
               // Same as size-76
