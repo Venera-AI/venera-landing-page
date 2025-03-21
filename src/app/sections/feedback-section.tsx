@@ -1,4 +1,5 @@
 import { feedback } from "@/content/home.json";
+import Image from "next/image";
 
 export default function FeedbackSection() {
   return (
@@ -11,7 +12,14 @@ export default function FeedbackSection() {
             className="bg-lightblue rounded-[40px] px-10 py-8 flex flex-col items-center gap-y-6"
           >
             <div className="flex-1 flex flex-col gap-y-6 items-center">
-              <div className="size-20 rounded-full bg-gray-300"></div>
+              <div className="size-20 bg-gray-300 relative rounded-full overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={`${item.name} avatar`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <p className="text-center text-darkteal text-sm leading-relaxed">
                 {item.body}
               </p>
