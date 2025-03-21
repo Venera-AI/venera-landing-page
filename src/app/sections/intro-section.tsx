@@ -13,10 +13,11 @@ export default function IntroSection() {
         </p>
       </div>
       <Image
-        src={"/images/usage.webp"}
+        src={"/images/intro.webp"}
         alt="usage-image"
-        width={500}
-        height={500}
+        width={565}
+        height={511}
+        className="max-w-[300px] md:max-w-[450px]"
       />
     </section>
   );
