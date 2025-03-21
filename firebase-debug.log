@@ -1,0 +1,34 @@
+[debug] [2025-03-20T23:21:46.008Z] ----------------------------------------------------------------------
+[debug] [2025-03-20T23:21:46.011Z] Command:       /opt/homebrew/Cellar/node/23.6.1/bin/node /opt/homebrew/bin/firebase deploy -P staging
+[debug] [2025-03-20T23:21:46.011Z] CLI Version:   13.35.1
+[debug] [2025-03-20T23:21:46.012Z] Platform:      darwin
+[debug] [2025-03-20T23:21:46.012Z] Node Version:  v23.6.1
+[debug] [2025-03-20T23:21:46.012Z] Time:          Thu Mar 20 2025 19:21:46 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-03-20T23:21:46.012Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-20T23:21:46.099Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-20T23:21:46.100Z] > authorizing via signed-in user (hazel@viai.io)
+[debug] [2025-03-20T23:21:46.100Z] [iam] checking project venera-business-staging for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-03-20T23:21:46.100Z] Checked if tokens are valid: true, expires at: 1742516433883
+[debug] [2025-03-20T23:21:46.100Z] Checked if tokens are valid: true, expires at: 1742516433883
+[debug] [2025-03-20T23:21:46.101Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/venera-business-staging:testIamPermissions [none]
+[debug] [2025-03-20T23:21:46.101Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/venera-business-staging:testIamPermissions x-goog-quota-user=projects/venera-business-staging
+[debug] [2025-03-20T23:21:46.101Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/venera-business-staging:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-03-20T23:21:46.486Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/venera-business-staging:testIamPermissions 200
+[debug] [2025-03-20T23:21:46.486Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/venera-business-staging:testIamPermissions {}
+[debug] [2025-03-20T23:21:46.486Z] [iam] error while checking permissions, command may fail: Authorization failed. This account is missing the following required permissions on project venera-business-staging:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2025-03-20T23:21:46.487Z] Checked if tokens are valid: true, expires at: 1742516433883
+[debug] [2025-03-20T23:21:46.487Z] Checked if tokens are valid: true, expires at: 1742516433883
+[debug] [2025-03-20T23:21:46.487Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/venera-business-staging [none]
+[debug] [2025-03-20T23:21:46.843Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/venera-business-staging 403
+[debug] [2025-03-20T23:21:46.843Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/venera-business-staging {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-03-20T23:21:46.844Z] Request to https://firebase.googleapis.com/v1beta1/projects/venera-business-staging had HTTP Error: 403, The caller does not have permission
+[debug] [2025-03-20T23:21:46.901Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/venera-business-staging had HTTP Error: 403, The caller does not have permission
+    at responseToError (/opt/homebrew/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/opt/homebrew/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to get Firebase project venera-business-staging. Please make sure the project exists and your account has permission to access it.
