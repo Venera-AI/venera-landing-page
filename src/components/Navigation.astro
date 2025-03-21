@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets'
+import logo from '@/images/logo.png'
+import { MobileMenu } from '@/components/MobileMenu'
+import MenuItems from '@/components/MenuItems.astro'
+import '@/styles/globals.css'
+
+const leftNavs = [
+  {
+    label: 'services',
+    href: '/#services',
+  },
+  {
+    label: 'features',
+    href: '/#features',
+  },
+]
+const rightNavs = [
+  {
+    label: 'about us',
+    href: '/#about-us',
+  },
+  {
+    label: 'contact',
+    href: '/#contact',
+  },
+]
+---
+
+<nav
+  class="shadow-lg z-10 flex items-center justify-between bg-background fixed left-0 right-0 top-0 rounded-xl px-6 py-3 m-4"
+>
+  <MenuItems items={leftNavs} />
+  <a href="/">
+    <Image src={logo} alt="Logo" class="rounded-md w-14 h-14" />
+  </a>
+  <MenuItems items={rightNavs} />
+  <MobileMenu client:media="(max-width: 640px)" />
+</nav>

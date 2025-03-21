@@ -31,6 +31,7 @@ import Feature1Content from '@/components/Feature1Content.astro';
 import Feature3Content from '@/components/Feature3Content.astro';
 import { Progress } from '@/components/ui/progress';
 import Teams from '@/components/Teams.astro';
+import Navigation from '@/components/Navigation.astro';
 
 const leftNavs = [
   {
@@ -148,17 +149,8 @@ const assistantFeatures = [
     />
   </head>
   <body class='bg-white text-gray-900 font-light'>
-    <nav
-      class='shadow-lg z-10 flex items-center justify-between bg-background fixed top-3 left-1/2 -translate-x-1/2 rounded-xl px-6 py-3 w-[98%]'
-    >
-      <MenuItems items={leftNavs} />
-      <a href='/'>
-        <Image src={logo} alt='Logo' class='rounded-md w-14 h-14' />
-      </a>
-      <MenuItems items={rightNavs} />
-      <MobileMenu client:media='(max-width: 640px)' />
-    </nav>
-    <header class='h-screen bg-primary relative text-white'>
+    <Navigation />
+    <header class='h-screen w-screen bg-primary relative text-white'>
       <div
         class='container relative h-2/3 top-1/2 -translate-y-1/2 text-white grid grid-cols-2'
       >
