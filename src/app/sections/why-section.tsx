@@ -1,5 +1,6 @@
 import { why } from "@/content/home.json";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function WhySection() {
   return (
@@ -8,14 +9,15 @@ export default function WhySection() {
       <div className="flex flex-col xl:flex-row justify-around mt-8">
         {why.items.map((item, index) => (
           <div key={index} className="flex flex-col items-center p-8">
-            <Image
-              className="max-w-[250px] h-auto md:max-w-none size-76"
-              src={item.image}
-              alt={`${item.headline} image`}
-              // Same as size-76
-              width={304}
-              height={304}
-            />
+            <div className="relative size-76 max-w-[250px] md:max-w-none">
+              <Image
+                className="size-full"
+                src={item.image}
+                alt={`${item.headline} image`}
+                fill
+              />
+            </div>
+
             <div className="flex gap-x-6 xl:max-w-none md:max-w-2/3">
               <div className="h-10 w-4 rounded-full bg-navyblue" />
               <div>
@@ -28,9 +30,11 @@ export default function WhySection() {
           </div>
         ))}
       </div>
-      <button className="bg-navyblue text-white md:px-16 md:py-5 px-12 py-4 md:text-xl rounded-2xl font-bold mt-8">
-        Meet our team
-      </button>
+      <Link href={why.actionButton.link}>
+        <button className="bg-navyblue text-white md:px-16 md:py-5 px-12 py-4 md:text-xl rounded-2xl font-bold mt-8">
+          {why.actionButton.label}
+        </button>
+      </Link>
     </section>
   );
 }
