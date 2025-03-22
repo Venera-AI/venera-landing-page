@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function WhySection() {
   return (
     <section className="bg-white">
-      <div className="flex flex-col items-center justify-center py-16 px-8 md:p-16 bg-white max-w-7xl m-auto">
+      <div className="flex flex-col items-center justify-center py-16 px-8 md:p-16 max-w-7xl m-auto">
         <h2 className="text-4xl font-medium text-center">{why.headline}</h2>
         <div className="flex flex-col xl:flex-row justify-around mt-8">
           {why.items.map((item, index) => (
