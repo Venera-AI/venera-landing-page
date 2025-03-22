@@ -1,7 +1,8 @@
-import { feedback } from "@/content/home.json";
+import home from "@/content/home.json";
 import Image from "next/image";
 
 export default function FeedbackSection() {
+  const { feedback } = home;
   return (
     <section className="py-16 px-8 md:p-16 bg-white">
       <h2 className="font-medium text-4xl text-center">{feedback.headline}</h2>
