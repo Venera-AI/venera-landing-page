@@ -34,6 +34,7 @@ jobs:
           # Defined at https://github.com/Venera-AI/venera-landing-page/settings/secrets/actions
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_DEV }}
           projectId: venera-business-dev
-          firebaseToolsVersion: 13.34.0
+          # Somehow newer version breaks the deploy
+          firebaseToolsVersion: 11.13.0
         env:
           FIREBASE_CLI_EXPERIMENTS: webframeworks
