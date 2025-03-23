@@ -1,6 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
+  distDir: "out",
+  images: {
+    // To make image component work with static export
+    unoptimized: true,
+  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.md$/,
