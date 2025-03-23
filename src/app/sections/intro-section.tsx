@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function IntroSection() {
   return (
     <section className="bg-white">
-      <div className="flex flex-col lg:flex-row gap-8 items-center justify-center max-w-7xl py-16 px-8 m-auto">
-        <div className="flex flex-col lg:w-1/3">
+      <div className="flex flex-col lg:flex-row gap-8 items-center max-w-7xl py-16 px-8 m-auto">
+        <div className="flex flex-col">
           <h2 className="text-4xl font-medium text-center lg:text-start leading-12">
             {intro.headline}
           </h2>
