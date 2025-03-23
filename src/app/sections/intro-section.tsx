@@ -1,7 +1,8 @@
-import { intro } from "@/content/home.json";
+import home from "@/content/home.json";
 import Image from "next/image";
 
 export default function IntroSection() {
+  const { intro } = home;
   return (
     <section className="bg-white">
       <div className="flex flex-col lg:flex-row gap-8 items-center max-w-7xl py-16 px-8 m-auto">
