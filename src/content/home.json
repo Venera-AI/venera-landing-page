@@ -45,22 +45,26 @@
     "image": "/images/intro.webp"
   },
   "why": {
-    "headline": "Why Venera AI?",
+    "headline": "Why people prefer us",
+    "actionButton": {
+      "label": "Meet our team",
+      "link": ""
+    },
     "items": [
       {
-        "headline": "",
-        "body": "",
-        "image": ""
+        "headline": "Advanced AI experts",
+        "body": "Our team of experts brings over a decade of research and innovation in advanced AI technology, driving cutting-edge solutions in the field.",
+        "image": "/images/ai-experts.svg"
       },
       {
-        "headline": "",
-        "body": "",
-        "image": ""
+        "headline": "Dedicated team",
+        "body": "Our expert engineers, data scientists, and mentors continuously refine our platform to lead in healthcare innovation.",
+        "image": "/images/dedicated-team.svg"
       },
       {
-        "headline": "",
-        "body": "",
-        "image": ""
+        "headline": "Trusted medical experts",
+        "body": "We collaborate with top healthcare and medical experts to ensure trusted, comprehensive support for our users.",
+        "image": "/images/trusted-experts.svg"
       }
     ]
   },
@@ -78,17 +82,17 @@
     "items": [
       {
         "name": "Elvira Montanez",
-        "image": "",
+        "image": "/images/feedback-profile-1.jpg",
         "body": "Venera AI has completely changed how I manage my health. I no longer have to dig through multiple portals to find my records—everything is in one place, and the AI explanations make it so easy to understand!"
       },
       {
         "name": "Casper Berkley",
-        "image": "",
+        "image": "/images/feedback-profile-2.jpg",
         "body": "As a caregiver, keeping track of my dad’s medical history used to be overwhelming. With Venera AI, I can access his records, monitor his vitals, and even get quick explanations of test results—all in seconds."
       },
       {
         "name": "Daniel Gallego",
-        "image": "",
+        "image": "/images/feedback-profile-3.jpg",
         "body": "The AI chatbot is a game-changer! I can ask questions about my lab results anytime and get clear, simple explanations without waiting for a doctor's appointment. It gives me peace of mind."
       }
     ]
