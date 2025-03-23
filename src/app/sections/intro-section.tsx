@@ -15,7 +15,7 @@ export default function IntroSection() {
         </div>
         <Image
           src={intro.image}
-          alt="usage-image"
+          alt="usage image"
           width={565}
           height={511}
           className="max-w-[300px] md:max-w-[450px]"
