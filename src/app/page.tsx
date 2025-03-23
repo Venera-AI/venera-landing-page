@@ -4,6 +4,7 @@ import IntroSection from "@/app/sections/intro-section";
 import WhySection from "@/app/sections/why-section";
 import ContactSection from "@/app/sections/contact-section";
 import HeroSection from "@/app/sections/hero-section";
+
 export default function Home() {
   return (
     <main>
