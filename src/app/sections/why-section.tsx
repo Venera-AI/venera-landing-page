@@ -1,8 +1,9 @@
-import { why } from "@/content/home.json";
+import home from "@/content/home.json";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function WhySection() {
+  const { why } = home;
   return (
     <section className="bg-[#ecf5ff]">
       <div className="flex flex-col items-center justify-center py-16 px-8 md:p-16 max-w-7xl m-auto">
