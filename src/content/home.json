@@ -97,5 +97,16 @@
       }
     ]
   },
-  "contact": {}
+  "contact": {
+    "headline":"Contact us", 
+    "items":{
+      "nameInput" : "Name",
+      "emailInput":"Email",
+      "messageInput":"Message",
+      "actionButton": {
+        "label": "Send",
+        "link": ""
+      }
+    }
+  }
 }
