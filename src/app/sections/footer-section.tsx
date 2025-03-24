@@ -13,11 +13,15 @@ export default function FooterSection() {
 
           <p className="mt-6">
             {footer.call_label}:{" "}
-            <span className="underline">{contact.phone}</span>
+            <a href={`tel:${contact.phone}`} className="underline">
+              {contact.phone}
+            </a>
           </p>
           <p>
             {footer.email_label}:{" "}
-            <span className="underline">{contact.email}</span>
+            <a href={`mailto:${contact.email}`} className="underline">
+              {contact.email}
+            </a>
           </p>
         </section>
 
