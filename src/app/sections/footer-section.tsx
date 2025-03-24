@@ -1,63 +1,91 @@
 import home from "@/content/home.json";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { IconType } from "react-icons";
+
+type Social = "facebook" | "instagram";
+
+type IconConfig = {
+  Icon: IconType;
+  size: number;
+  className: string;
+};
+
+const iconsConfig: Record<Social, IconConfig> = {
+  facebook: {
+    Icon: FaFacebookF,
+    size: 24,
+    className: "-ml-1 stroke-white fill-white",
+  },
+  instagram: {
+    Icon: FaInstagram,
+    size: 26,
+    className: "stroke-white",
+  },
+};
 
 export default function FooterSection() {
   const { contact, footer } = home;
+
   return (
     <footer className="[background:linear-gradient(135deg,#9ec5f7,#2d44ad)]">
-      <div className="text-white flex flex-col sm:flex-row justify-between gap-10 sm:gap-0 min-h-[400px] lg:max-w-4xl max-w-2xl m-auto py-16 px-8">
+      <div className="text-white flex flex-col sm:flex-row justify-between gap-10 sm:gap-0 lg:max-w-4xl max-w-2xl m-auto py-16 px-8">
         {/* Contact */}
         <section className="mt-4 font-medium">
-          <h2 className="text-4xl">{footer.our_contact_label}</h2>
+          <h2 className="text-4xl font-light">{footer.ourContactLabel}</h2>
           <p className="mt-6">{contact.address}</p>
 
           <p className="mt-6">
-            {footer.call_label}:{" "}
+            {footer.callLabel}:{" "}
             <a href={`tel:${contact.phone}`} className="underline">
               {contact.phone}
             </a>
           </p>
           <p>
-            {footer.email_label}:{" "}
+            {footer.emailLabel}:{" "}
             <a href={`mailto:${contact.email}`} className="underline">
               {contact.email}
             </a>
           </p>
         </section>
 
-        <section className="flex flex-col justify-between sm:gap-0 gap-10">
+        <div className="flex flex-col justify-between sm:gap-0 gap-10">
           {/* Business */}
-          <div>
-            <h2 className="text-[22px]">{footer.business_hours_label}</h2>
+          <section>
+            <h2 className="text-[22px]">{footer.businessHoursLabel}</h2>
             <p className="text-[12px]">
-              {footer.monday_saturday}
+              {footer.businessHours[0].day}
               <br />
-              {footer["8am_8pm"]}
+              {footer.businessHours[0].time}
             </p>
 
             <p className="mt-4 text-[12px]">
-              {footer.sundays}
+              {footer.businessHours[1].day}
               <br />
-              {footer["12noon_8pm"]}
+              {footer.businessHours[1].time}
             </p>
-          </div>
+          </section>
 
           {/* Socials */}
-          <div>
-            <h2 className="text-[22px]">{footer.follow_label}</h2>
+          <section className="mt-26">
+            <h2 className="text-[22px]">{footer.followLabel}</h2>
             <div className="flex gap-1 mt-2">
-              <a href="">
-                <FaFacebookF
-                  size={24}
-                  className="-ml-1 stroke-white fill-white"
-                />
-              </a>
-              <a href="">
-                <FaInstagram size={26} className=" stroke-white" />
-              </a>
+              {contact.socials.map((social) => {
+                const { Icon, size, className } =
+                  iconsConfig[social.type as Social];
+                return (
+                  <a
+                    key={social.type}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon size={size} className={className} />
+                  </a>
+                );
+              })}
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </footer>
   );
