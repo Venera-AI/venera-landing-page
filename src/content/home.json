@@ -6,8 +6,20 @@
   "hero": {
     "headline": "Meet Venera AI",
     "subheadline": "Your fast & easy personal health companion",
-    "actionButton": {
-      "label": "Try for free"
+    "buttons":{
+      "buttonLogIn":{
+        "label":"Log In",
+        "link":""
+      },
+      "buttonTryForFree":{
+        "label":"Try for free",
+        "link":""
+      },
+      "buttonAppStore":{
+        "label":"Get it on",
+        "app":"Appstore",
+        "link":""
+      }
     }
   },
   "introduction": {
