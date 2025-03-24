@@ -98,15 +98,13 @@
     ]
   },
   "contact": {
-    "headline":"Contact us", 
-    "items":{
-      "nameInput" : "Name",
-      "emailInput":"Email",
-      "messageInput":"Message",
-      "actionButton": {
-        "label": "Send",
-        "link": ""
-      }
+    "headline": "Contact us",
+    "nameInput": "Name",
+    "emailInput": "Email",
+    "messageInput": "Message",
+    "actionButton": {
+      "label": "Send",
+      "link": ""
     }
   }
 }

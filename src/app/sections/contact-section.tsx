@@ -98,14 +98,14 @@ export default function ContactSection() {
             className="bg-white md:text-[17px] w-full h-17 pl-6 p-3 text-sm focus:outline-none focus:border-blue-500 placeholder-black"
             type="text"
             value={name}
-            placeholder={data.contact.items.nameInput}
+            placeholder={data.contact.nameInput}
             onChange={(e) => setName(e.target.value)}
           />
           <input
             className="bg-white md:text-[17px] w-full h-17 pl-6 p-3 text-sm focus:outline-none focus:border-blue-500 placeholder-black"
             type="email"
             value={email}
-            placeholder={data.contact.items.emailInput}
+            placeholder={data.contact.emailInput}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
@@ -114,7 +114,7 @@ export default function ContactSection() {
           className="bg-white md:text-[17px] w-full h-30 pl-6 pt-10 text-sm focus:outline-none focus:border-blue-500 placeholder-black"
           onChange={(e) => setMessage(e.target.value)}
           value={message}
-          placeholder={data.contact.items.messageInput}
+          placeholder={data.contact.messageInput}
           rows={4}
         />
         <div className="text-center px-4">
@@ -122,7 +122,7 @@ export default function ContactSection() {
             className="w-1/2 sm:w-1/5 h-10 sm:h-12 bg-gradient-to-r from-[#2d44ad] to-[#9ec5f7] px-6 py-2 text-white rounded-lg mt-6 font-bold"
             type="submit"
           >
-            {data.contact.items.actionButton.label}
+            {data.contact.actionButton.label}
           </button>
         </div>
         {status.error && <div className="text-red-500"> {status.error} </div>}
