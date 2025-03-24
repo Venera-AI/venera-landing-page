@@ -89,8 +89,8 @@ export default function ContactSection() {
   };
   return (
     <div className="bg-blue-100 p-8 w-auto h-auto">
-      <div className="text-4xl font-medium text-center mt-8">
-        {data.contact.headline}
+      <div className="max-w-5xl mx-auto text-4xl text-center lg:text-left font-medium">
+        <h2>{data.contact.headline}</h2>
       </div>
       <form onSubmit={handleSubmit} className="space-y-4 max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-13 w-full">
