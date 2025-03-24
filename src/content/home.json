@@ -100,10 +100,10 @@
   "contact": {
     "headline": "Contact us",
     "nameInput": "Name",
-    "emailInput": "Email",
+    "emailInput": "Email Adress",
     "messageInput": "Message",
     "actionButton": {
-      "label": "Send",
+      "label": "Send"
     }
   }
 }
