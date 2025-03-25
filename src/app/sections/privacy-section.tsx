@@ -9,7 +9,7 @@ export default function PrivacySection() {
       <div className="flex flex-col items-center justify-center py-12 px-6 md:p-16 max-w-4xl m-auto">
         <Image
           src={privacy.image}
-          alt="Privacy Icon"
+          alt="Privacy"
           width={150}
           height={150}
           className="mb-6"
