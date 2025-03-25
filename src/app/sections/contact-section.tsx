@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { db } from "@/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import data from "@/content/home.json";
@@ -29,23 +29,21 @@ export default function ContactSection() {
   const fetchLocation = async () => {
     const API_KEY = process.env.NEXT_PUBLIC_IP_INFO_TOKEN;
     const url = `https://ipinfo.io?token=${API_KEY}`;
-
     try {
       const response = await fetch(url);
       const locationData = await response.json();
-      setLocation({
+      const newLocation = {
         ip: locationData.ip,
         city: locationData.city,
         region: locationData.region,
         country: locationData.country,
-      });
+      };
+      setLocation(newLocation);
+      return newLocation;
     } catch (error) {
       console.error("Error fetching location:", error);
     }
   };
-  useEffect(() => {
-    fetchLocation();
-  }, []);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -63,13 +61,18 @@ export default function ContactSection() {
     }
 
     try {
+      let currentLocation = location;
+      if (!currentLocation) {
+        currentLocation = await fetchLocation();
+        setLocation(currentLocation);
+      }
       const messagesRef = collection(db, "messages");
       await addDoc(messagesRef, {
         name: trimmedName,
         email: trimmedEmail,
         message: trimmedMessage,
         timestamp: serverTimestamp(),
-        location: location,
+        location: currentLocation,
       });
       setStatus({
         error: null,
