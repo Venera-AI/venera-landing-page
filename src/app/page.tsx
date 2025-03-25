@@ -1,7 +1,7 @@
 import FeedbackSection from "@/app/sections/feedback-section";
 import IntroSection from "@/app/sections/intro-section";
 import WhySection from "@/app/sections/why-section";
-
+import ContactSection from "@/app/sections/contact-section";
 export default function Home() {
   return (
     <main>
@@ -9,6 +9,7 @@ export default function Home() {
       <IntroSection />
       <WhySection />
       <FeedbackSection />
+      <ContactSection />
     </main>
   );
 }
