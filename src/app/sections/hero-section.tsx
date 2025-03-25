@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <div className="w-full h-screen flex flex-col items-center bg-gray-100">
       <NavBar />
-      <div className="w-full h-screen flex flex-col items-center justify-between p-4 md:flex-row md:p-0 bg-gradient-to-r from-[#9ec5f7] to-[#2d44ad]">
+      <div className="max-w-6xl h-screen flex flex-col items-center justify-between p-4 md:flex-row bg-gradient-to-r from-[#9ec5f7] to-darkblue">
         <div className="w-full text-center p-4 sm:w-1/2 sm:text-left">
           <div className="relative mt-4 sm:mt-[1rem] text-[1rem]">
             <div className="relative ml-4 mb-6">
@@ -19,16 +19,10 @@ export default function HeroSection() {
                 height={1080}
               />
               <div className="absolute top-[45%] left-8 transform translate-y-[-50%] p-2 sm:p-0">
-                <div
-                  className="text-white font-bold 
-                                md:text-5xl text-3xl mb-3"
-                >
+                <div className="text-white font-bold md:text-5xl text-3xl mb-3">
                   {hero.headline}
                 </div>
-                <div
-                  className="text-white 
-                                sm:text-4xl text-xl"
-                >
+                <div className="text-white sm:text-4xl text-xl">
                   {hero.subheadline}
                 </div>
               </div>
