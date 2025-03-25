@@ -91,7 +91,7 @@ export default function ContactSection() {
     }
   };
   return (
-    <div className="bg-blue-100 lg:pt-10 lg:pb-25 px-8 py-8 w-auto h-auto">
+    <div className="bg-blue-100 lg:pt-10 lg:pb-25 px-8 py-8">
       <div className="max-w-5xl mx-auto text-4xl text-center lg:text-left font-medium">
         <h2>{data.contact.headline}</h2>
       </div>
@@ -99,16 +99,16 @@ export default function ContactSection() {
         onSubmit={handleSubmit}
         className="lg:space-y-6 space-y-3 max-w-5xl mx-auto mt-13"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <input
-            className="lg:text-lg bg-white w-full pl-6 p-5 text-sm focus:outline-none focus:border-blue-500 placeholder-black"
+            className="lg:text-lg bg-white lg:pl-10 p-5 text-sm focus:outline-none focus:border-blue-500 placeholder-black"
             type="text"
             value={name}
             placeholder={data.contact.nameInput}
             onChange={(e) => setName(e.target.value)}
           />
           <input
-            className="lg:text-lg bg-white w-full pl-6 p-5 text-sm focus:outline-none focus:border-blue-500 placeholder-black"
+            className="lg:text-lg bg-white lg:pl-10 p-5 text-sm focus:outline-none focus:border-blue-500 placeholder-black"
             type="email"
             value={email}
             placeholder={data.contact.emailInput}
@@ -117,13 +117,13 @@ export default function ContactSection() {
         </div>
 
         <textarea
-          className="lg:text-lg lg:pl-8 bg-white w-full pt-8 pl-5 text-sm focus:outline-none focus:border-blue-500 placeholder-black"
+          className="lg:text-lg bg-white w-full lg:pt-12 lg:pl-10 p-5 text-sm focus:outline-none focus:border-blue-500 placeholder-black"
           onChange={(e) => setMessage(e.target.value)}
           value={message}
           placeholder={data.contact.messageInput}
-          rows={4}
+          rows={3}
         />
-        <div className="lg:justify-end w-full flex justify-center mt-3">
+        <div className="lg:justify-end flex justify-center mt-3">
           <button className="lg:p-3 lg:w-1/4 lg:text-xl w-1/2 px-6 py-2 bg-gradient-to-r from-[#2d44ad] to-[#9ec5f7] text-white rounded-xl font-bold">
             {data.contact.actionButton.label}
           </button>
