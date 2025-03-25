@@ -60,11 +60,11 @@
     ]
   },
   "privacy": {
-    "headline": "",
-    "body": "",
+    "headline": "Your privacy matters",
+    "body": "We never sell your data or share it with any third parties. We don’t store your personal health data in our system. You have full control over your privacy.",
     "image": "",
     "actionButton": {
-      "label": "",
+      "label": "Read more",
       "link": ""
     }
   },
@@ -88,5 +88,7 @@
       }
     ]
   },
+
   "contact": {}
+  
 }
