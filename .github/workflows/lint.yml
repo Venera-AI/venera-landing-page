@@ -32,9 +32,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
 
-      # Install all dev dependencies to get the matching ESLint version
       - name: Install dependencies
-        run: pnpm install -D
+        run: pnpm install
 
       - name: Run ESLint
         run: pnpm lint
