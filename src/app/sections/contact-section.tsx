@@ -42,6 +42,7 @@ export default function ContactSection() {
       return newLocation;
     } catch (error) {
       console.error("Error fetching location:", error);
+      return null;
     }
   };
   const handleSubmit = async (e: React.FormEvent) => {
@@ -64,7 +65,10 @@ export default function ContactSection() {
       let currentLocation = location;
       if (!currentLocation) {
         currentLocation = await fetchLocation();
-        setLocation(currentLocation);
+        if (!currentLocation) {
+          console.log("Failed to fetch location");
+          return;
+        }
       }
       const messagesRef = collection(db, "messages");
       await addDoc(messagesRef, {
