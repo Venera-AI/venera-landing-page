@@ -8,10 +8,10 @@ export default function Home() {
     <main>
       <h1 className="sr-only">Home</h1>
       <IntroSection />
+      <PrivacySection />
       <WhySection />
       <FeedbackSection />
       <ContactSection />
-      <PrivacySection />
     </main>
   );
 }

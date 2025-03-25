@@ -1,25 +1,34 @@
-import { privacy } from "@/content/home.json";
+import home from "@/content/home.json";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function PrivacySection() {
+  const { privacy } = home;
   return (
-    <section className="py-16 px-8 md:p-16 bg-white">
-      <div className="flex items-center justify-center">
-        <img
-          src="./images/privacy.PNG"
-          alt="Privacy Illustration"
-          className="w-1/10 mb-6"
+    <section className="bg-[#ecf5ff] p-16 max-w-full mx-auto border-white border-[80px] rounded-lg">
+      <div className="flex flex-col items-center justify-center py-12 px-6 md:p-16 max-w-4xl m-auto">
+        <Image
+          src={privacy.image}
+          alt="Privacy Icon"
+          width={150}
+          height={150}
+          className="mb-6"
         />
-      </div>
-      <h2 className="font-medium text-4xl text-center">{privacy.headline}</h2>
-      <div className="mt-8 mx-auto max-w-3xl p-8 rounded-lg shadow-lg">
-        <p className="mt-4 text-center text-2xl leading-relaxed">
-          {privacy.body}
-        </p>
-      </div>
-      <div className="mt-6 flex justify-center">
-        <button className="px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full text-lg">
-          Read More
-        </button>
+
+        <h2 className="font-medium text-2xl md:text-3xl text-center text-[#1a1a1a]">
+          {privacy.headline}
+        </h2>
+        <div className="mt-4 mx-auto max-w-2xl">
+          <p className="mt-2 text-center text-xl md:text-2xl leading-relaxed text-black">
+            {privacy.body}
+          </p>
+        </div>
+
+        <Link href={privacy.actionButton.link}>
+          <button className="bg-[#158d6a] text-white md:px-16 md:py-5 px-12 py-4 md:text-xl rounded-2xl font-bold mt-8">
+            {privacy.actionButton.label}
+          </button>
+        </Link>
       </div>
     </section>
   );
