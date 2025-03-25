@@ -109,5 +109,13 @@
       }
     ]
   },
-  "contact": {}
+  "contact": {
+    "headline": "Contact us",
+    "nameInput": "Name",
+    "emailInput": "Email Adress",
+    "messageInput": "Message",
+    "actionButton": {
+      "label": "Send"
+    }
+  }
 }
