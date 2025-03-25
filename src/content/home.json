@@ -144,7 +144,7 @@
   "contact": {
     "headline": "Contact us",
     "nameInput": "Name",
-    "emailInput": "Email Adress",
+    "emailInput": "Email Address",
     "messageInput": "Message",
     "actionButton": {
       "label": "Send"
