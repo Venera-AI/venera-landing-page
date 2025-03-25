@@ -23,7 +23,7 @@ export default function Team() {
               <li key={index} className="flex flex-col items-center">
                 <div className="w-28 h-28 relative bg-[#C8DBF3] rounded-lg overflow-hidden">
                   <Image
-                    className="object-cover mx-auto "
+                    className="object-cover mx-auto"
                     fill
                     src={member.image}
                     alt={`Photo of ${member.name}`}
