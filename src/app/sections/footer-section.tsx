@@ -24,7 +24,8 @@ const iconsConfig: Record<Social, IconConfig> = {
 };
 
 export default function FooterSection() {
-  const { contact, footer } = home;
+  const { footer } = home;
+  const contact = footer.contact;
 
   return (
     <footer className="[background:linear-gradient(135deg,#9ec5f7,#2d44ad)]">
@@ -52,17 +53,16 @@ export default function FooterSection() {
           {/* Business */}
           <section>
             <h2 className="text-[22px]">{footer.businessHoursLabel}</h2>
-            <p className="text-[12px]">
-              {footer.businessHours[0].day}
-              <br />
-              {footer.businessHours[0].time}
-            </p>
 
-            <p className="mt-4 text-[12px]">
-              {footer.businessHours[1].day}
-              <br />
-              {footer.businessHours[1].time}
-            </p>
+            <div className="flex flex-col gap-4">
+              {footer.businessHours.map((hour) => (
+                <p key={hour.day} className="text-[12px]">
+                  {hour.day}
+                  <br />
+                  {hour.time}
+                </p>
+              ))}
+            </div>
           </section>
 
           {/* Socials */}

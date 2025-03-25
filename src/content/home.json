@@ -110,23 +110,23 @@
       },
       {
         "day": "Sundays",
-        "time": "12:00noon to 8:00pm"
+        "time": "12:00 noon to 8:00pm"
       }
-    ]
-  },
-  "contact": {
-    "address": "465 84th St, Brooklyn, NY 11209",
-    "phone": "1 (541) 908 9436",
-    "email": "admin@viai.io",
-    "socials": [
-      {
-        "type": "facebook",
-        "link": ""
-      },
-      {
-        "type": "instagram",
-        "link": ""
-      }
-    ]
+    ],
+    "contact": {
+      "address": "465 84th St, Brooklyn, NY 11209",
+      "phone": "1 (541) 908 9436",
+      "email": "admin@viai.io",
+      "socials": [
+        {
+          "type": "facebook",
+          "link": ""
+        },
+        {
+          "type": "instagram",
+          "link": ""
+        }
+      ]
+    }
   }
 }
