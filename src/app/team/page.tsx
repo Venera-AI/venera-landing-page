@@ -13,8 +13,6 @@ export default function Team() {
         <h1 className="text-center text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
           {team.headline}
         </h1>
-
-        <h2 className="sr-only">Members</h2>
         <ul className="grid grid-cols-2 mt-8 text-center sm:mt-16 lg:mt-20 sm:grid-cols-4 gap-y-8 lg:grid-cols-9 gap-x-0">
           {memberGridData.map((member, index) =>
             member === null ? (
