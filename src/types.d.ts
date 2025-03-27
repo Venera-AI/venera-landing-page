@@ -16,7 +16,7 @@ export interface ContactMessageBase<TTimestamp> {
   email: string;
   message: string;
   timestamp: TTimestamp;
-  location: UserLocation;
+  location: UserLocation | null;
 }
 
 export type ContactMessage = ContactMessageBase<Timestamp>;

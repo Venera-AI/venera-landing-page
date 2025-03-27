@@ -32,6 +32,8 @@ export const sendContactMessageNotification = onDocumentCreated(
             name: message.name,
             email: message.email,
             message: message.message,
+            city: message.location?.city,
+            country: message.location?.country,
           },
         },
       ],
