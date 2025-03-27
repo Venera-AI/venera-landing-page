@@ -5,59 +5,61 @@ import NavBar from "../components/NavBar";
 export default function HeroSection() {
   const { hero } = homeData;
   return (
-    <div className="min-h-screen flex flex-col items-center">
+    <div className="flex flex-col bg-gradient-to-r from-[#9ec5f7] to-darkblue">
       <NavBar />
-      <div className="lg:max-w-7xl py-12 md:py-5 h-auto md:flex md:flex-col lg:flex-row md:justify-between items-center bg-gradient-to-r from-[#9ec5f7] to-darkblue">
-        <div className="lg:w-1/2 lg:p-10 sm:text-center md:p-5 md:w-2/3">
+      <div className="lg:max-w-7xl lg:flex-row md:justify-between gap-4 py-10 flex flex-col">
+        <div className="lg:w-full lg:pl-20 lg:p-0 md:p-10 p-3 text-center">
           <div className="relative">
-            <div className="relative justify-center">
+            <div className="z-10 py-30">
+              <div className="text-white font-bold md:text-5xl lg:text-7xl lg:text-left text-3xl mb-7 text-center">
+                <h1>{hero.headline} </h1>
+              </div>
+              <div className="text-center text-white lg:text-5xl lg:text-left md:text-2xl text-xl">
+                <span className="in-line">
+                  <h3> {hero.subheadline} </h3>
+                </span>
+                <br />
+                <span>
+                  <h3>{hero.subheadline2} </h3>
+                </span>
+              </div>
+            </div>
+            <div className="w-full absolute top-0 left-0 aspect-square">
               <Image
                 src="/images/Slide1.png"
                 alt="Slide 1"
-                className="md:w-full"
-                width={1920}
-                height={1080}
+                fill
+                className="object-cover"
               />
-              <div className="absolute top-[35%] left-5 transform translate-y-[-50%]">
-                <div className="text-white font-bold md:text-5xl lg:text-6xl lg:text-left text-3xl mb-7 text-center">
-                  {hero.headline}
-                </div>
-                <div className="text-center text-white lg:text-3xl lg:text-left text-xl ">
-                  {hero.subheadline}
-                </div>
-              </div>
             </div>
           </div>
         </div>
-        <div className="relative lg:flex justify-center items-center lg:w-1/2 md:w-full md:p-10">
-          <div className="absolute flex justify-center items-center lg:left-[5%] md:left-[28%] sm:left-[20%] left-[13%]">
+        <div className="relative lg:w-full lg:justify-center lg:flex lg:py-0 md:w-full md:py-20">
+          <div className="absolute md:ml-25 md:mt-30 left-[60]">
             <Image
               src="/images/phone-effect.png"
               alt="Phone Effect"
-              className="w-[350px] lg:w-[550px] sm:w-[400px] h-auto"
-              width={600}
+              className="w-[250] md:w-[380] lg:w-[420] object-cover"
+              width={400}
               height={0}
             />
           </div>
 
-          <div className="top-[50%] relative z-10 flex flex-col items-center max-w-full">
+          <div className="relative z-10 justify-center flex lg:left-[60] items-center md:mb-[5] md:mt-30 lg:top-[-100]">
             <Image
               alt="Phone MockUp"
-              src="/images/phone-screen.png"
-              className="max-w-full md:w-[550px] lg:w-[680px] lg:scale-200 md:scale-150 sm:w-[450px] sm:scale-150 w-[400px] scale-120"
-              width={400}
-              height={400}
+              src="/images/Mockup1.png"
+              className="w-[180px] lg:w-[300px] md:w-[280px]"
+              width={250}
+              height={250}
             />
           </div>
-          <div className="absolute z-20 transform md:min-w-[200px] sm:min-w-[100px]">
-            <button
-              className="absolute flex flex-row md:items-center bg-white text-black rounded-lg hover:bg-gray-200 lg:pl-3 lg:pr-8 lg:py-1 md:pl-2 md:pr-6 md:py-1 pl-2 pr-8 py-2
- translate-x-[-150%] lg:translate-x-[-50%] lg:translate-y-[180%] translate-y-[-350%]"
-            >
+          <div className="absolute z-20 -top-15 left-3/10 md:left-70 md:top-30 lg:left-[100] lg:top-110">
+            <button className="absolute flex flex-row gap-2 md:items-center bg-white text-black rounded-lg hover:bg-gray-200 lg:pl-6 lg:pr-18 lg:py-2 md:pl-2 md:pr-10 md:py-1 pl-1 pr-7 py-1">
               <Image
                 src="/images/apple-logo.svg"
                 alt="button App store"
-                className="lg:w-8 lg:h-8 md:w-6 md:h-6 w-1/3 mr-1"
+                className="lg:w-8 lg:h-8 md:w-6 md:h-6 w-1/4 mr-1"
                 width={4}
                 height={4}
               />
