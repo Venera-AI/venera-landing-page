@@ -17,7 +17,7 @@ const eslintConfig = [
     ignores: ["/lib/**/*", "/generated/**/*"],
     plugins: {
       import: eslintPluginImport,
-      '@typescript-eslint': eslintPluginTS,
+      "@typescript-eslint": eslintPluginTS,
     },
     rules: {
       ...eslintPluginImport.configs.errors.rules,
