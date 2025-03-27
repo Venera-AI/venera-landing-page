@@ -28,3 +28,12 @@ firebase emulators:start
 ```
 
 This will start the Firebase emulators for Firestore and Functions.
+
+## Deploy
+
+Make sure you have the correct environment variables set in `.env.<project alias>`.
+
+```bash
+firebase use <alias>
+pnpm run deploy
+```
