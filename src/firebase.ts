@@ -14,7 +14,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-if (process.env.NEXT_PUBLIC_FIREBASE_EMULATOR) {
+if (process.env.NEXT_PUBLIC_USE_FIREBASE_EMULATOR) {
   const firestorePort = firebaseJSON.emulators.firestore.port;
   console.log(`Using the Firestore emulator at port ${firestorePort}`);
   connectFirestoreEmulator(db, "localhost", firestorePort);
