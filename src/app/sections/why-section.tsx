@@ -1,3 +1,4 @@
+import SlideIn from "@/components/SlideIn";
 import home from "@/content/home.json";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,9 +8,12 @@ export default function WhySection() {
   return (
     <section className="bg-[#ecf5ff]">
       <div className="flex flex-col items-center justify-center py-16 px-8 md:p-16 max-w-7xl m-auto">
-        <h2 className="text-4xl font-medium text-center text-navyblue">
+        <SlideIn
+          as="h2"
+          className="text-4xl font-medium text-center text-navyblue"
+        >
           {why.headline}
-        </h2>
+        </SlideIn>
         <div className="flex flex-col xl:flex-row justify-between mt-8">
           {why.items.map((item, index) => (
             <div key={index} className="flex flex-col items-center p-8">
