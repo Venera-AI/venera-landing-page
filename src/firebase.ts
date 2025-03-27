@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { connectFirestoreEmulator, getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -13,5 +13,9 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+// 8080 should match the port in the firebase.json file
+if (process.env.NEXT_PUBLIC_FIREBASE_EMULATOR) {
+  connectFirestoreEmulator(db, "localhost", 8080);
+}
 
 export { db };
