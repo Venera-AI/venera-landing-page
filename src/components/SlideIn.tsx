@@ -37,7 +37,7 @@ export default function SlideIn<T extends keyof HTMLElementTagNameMap = "div">({
       initial={slideVariants[direction]}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, delay }}
+      transition={{ duration: 0.3, delay }}
       className={className}
       {...props}
     >

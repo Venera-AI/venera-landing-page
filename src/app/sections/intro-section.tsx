@@ -18,13 +18,13 @@ export default function IntroSection() {
           </SlideIn>
           <SlideIn
             as="p"
-            delay={0.2}
+            delay={0.1}
             className="text-xl mt-8 lg:w-[80%] text-center lg:text-start leading-8"
           >
             {intro.body}
           </SlideIn>
         </div>
-        <SlideIn delay={0.4}>
+        <SlideIn delay={0.2}>
           <Image
             src={intro.image}
             alt="usage image"
