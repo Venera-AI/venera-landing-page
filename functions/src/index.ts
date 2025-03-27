@@ -19,7 +19,7 @@ export const sendContactMessageNotification = onDocumentCreated(
 
     const templateId = process.env.MAILERSEND_TEMPLATE_ID;
     const fromEmail = process.env.CONTACT_NOTIFICATION_SENDER_EMAIL;
-    const toEmail = process.env.CONTACT_NOTIFICATION_RECEIPIENT_EMAIL;
+    const toEmail = process.env.CONTACT_NOTIFICATION_RECIPIENT_EMAIL;
 
     const emailPayload = {
       from: { email: fromEmail },
