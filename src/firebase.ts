@@ -15,6 +15,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 // 8080 should match the port in the firebase.json file
 if (process.env.NEXT_PUBLIC_FIREBASE_EMULATOR) {
+  console.log("Using the Firestore emulator");
   connectFirestoreEmulator(db, "localhost", 8080);
 }
 
