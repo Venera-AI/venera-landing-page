@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import home from "@/content/home.json";
+import { getLocale } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 import "./styles/index.css";
+import home from "@/content/home.json";
 
 const poppins = Poppins({
   weight: ["400", "500", "700"],
@@ -13,14 +15,18 @@ export const metadata: Metadata = {
   description: home.metadata.description,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+
   return (
-    <html lang="en">
-      <body className={`${poppins.className} antialiased`}>{children}</body>
+    <html lang={locale}>
+      <body className={`${poppins.className} antialiased`}>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+      </body>
     </html>
   );
 }
