@@ -34,10 +34,11 @@ export default function WhySection() {
             </div>
           ))}
         </div>
-        <Link href={why.actionButton.link}>
-          <button className="bg-[#2d44ad] text-white md:px-16 md:py-5 px-12 py-4 md:text-xl rounded-2xl font-bold mt-8">
-            {why.actionButton.label}
-          </button>
+        <Link
+          href={why.actionButton.link}
+          className="bg-[#2d44ad] text-white md:px-16 md:py-5 px-12 py-4 md:text-xl rounded-2xl font-bold mt-8"
+        >
+          {why.actionButton.label}
         </Link>
       </div>
     </section>

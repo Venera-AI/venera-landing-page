@@ -1,0 +1,113 @@
+{
+  "headline": "Meet our team",
+  "members": [
+    {
+      "name": "Thang Nguyen",
+      "position": "CEO",
+      "title": "Business Lead",
+      "image": "/images/team/thang-nguyen.jpg"
+    },
+    {
+      "name": "Minh Tran",
+      "position": "CTO",
+      "title": "AI Lead",
+      "image": "/images/team/minh-tran.jpg"
+    },
+    {
+      "name": "Lam Le",
+      "position": "Product",
+      "title": "Product Lead",
+      "image": "/images/team/lam-le.jpg"
+    },
+    {
+      "name": "Binh Trinh",
+      "position": "SWE",
+      "title": "SWE Lead",
+      "image": "/images/team/binh-trinh.jpg"
+    },
+    {
+      "name": "Thai Dao",
+      "position": "AI",
+      "title": "Data Platform",
+      "image": "/images/team/thai-dao.jpg"
+    },
+    {
+      "name": "Thong Nguyen",
+      "position": "AI",
+      "title": "Data Synthesize/Modeling",
+      "image": "/images/team/thong-nguyen.jpg"
+    },
+    {
+      "name": "Minh Dang",
+      "position": "AI",
+      "title": "Benchmarking",
+      "image": "/images/team/minh-dang.jpg"
+    },
+    {
+      "name": "Long Nguyen",
+      "position": "AI",
+      "title": "Research",
+      "image": "/images/team/long-nguyen.jpg"
+    },
+    {
+      "name": "Quan Le",
+      "position": "AI",
+      "title": "Modeling",
+      "image": "/images/team/quan-le.jpg"
+    },
+    {
+      "name": "Duc Nguyen",
+      "position": "SWE",
+      "title": "Backend/Data Pipeline",
+      "image": "/images/team/duc-nguyen.jpg"
+    },
+    {
+      "name": "Hoang Phan",
+      "position": "SWE",
+      "title": "Backend",
+      "image": "/images/team/hoang-phan.jpg"
+    },
+    {
+      "name": "Vu Nguyen",
+      "position": "SWE",
+      "title": "Frontend",
+      "image": "/images/team/vu-nguyen.jpg"
+    },
+    {
+      "name": "Thang Le",
+      "position": "SWE",
+      "title": "Frontend",
+      "image": "/images/team/thang-le.jpg"
+    },
+    {
+      "name": "Hung Nguyen",
+      "position": "SWE",
+      "title": "Web Platform",
+      "image": "/images/team/hung-nguyen.jpg"
+    },
+    {
+      "name": "Hieu Pham",
+      "position": "SWE",
+      "title": "Data Platform",
+      "image": "/images/team/hieu-pham.jpg"
+    },
+    {
+      "name": "Dat Nguyen",
+      "position": "Product",
+      "title": "Product Design/Biz Dev",
+      "image": "/images/team/dat-nguyen.jpg"
+    },
+    {
+      "name": "Minh-Anh Bui",
+      "position": "Product",
+      "title": "UX/UI Designer",
+      "image": "/images/team/minh-anh-bui.jpg"
+    },
+    {
+      "name": "Phuong-Anh Nguyen",
+      "position": "Product",
+      "title": "UX/UI Designer",
+      "image": "/images/team/phuong-anh-nguyen.jpg"
+    }
+  ]
+}
