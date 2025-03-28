@@ -5,7 +5,7 @@ import NavBar from "../components/NavBar";
 export default function HeroSection() {
   const { hero } = homeData;
   return (
-    <div className="flex flex-col bg-gradient-to-r from-[#9ec5f7] to-darkblue">
+    <div className="bg-gradient-to-r from-[#9ec5f7] to-darkblue">
       <NavBar />
       <div className="lg:max-w-7xl lg:flex-row md:justify-between gap-4 py-10 flex flex-col">
         <div className="lg:w-full lg:pl-20 lg:p-0 md:p-10 p-3 text-center">
