@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { db } from "@/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import data from "@/content/home.json";
+import { UserLocation } from "@/types";
+
 export default function ContactSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -14,12 +16,7 @@ export default function ContactSection() {
     error: null,
     success: null,
   });
-  const [location, setLocation] = useState<{
-    ip: string;
-    city: string;
-    region: string;
-    country: string;
-  } | null>(null);
+  const [location, setLocation] = useState<UserLocation | null>(null);
 
   const MESSAGES = {
     REQUIRED_FIELDS: "All fields are required!",
@@ -62,14 +59,8 @@ export default function ContactSection() {
     }
 
     try {
-      let currentLocation = location;
-      if (!currentLocation) {
-        currentLocation = await fetchLocation();
-        if (!currentLocation) {
-          console.log("Failed to fetch location");
-          return;
-        }
-      }
+      // If location is null, it's ok to continue without it
+      const currentLocation = location || (await fetchLocation());
       const messagesRef = collection(db, "messages");
       await addDoc(messagesRef, {
         name: trimmedName,
@@ -86,12 +77,12 @@ export default function ContactSection() {
       setName("");
       setEmail("");
       setMessage("");
-    } catch {
+    } catch (error) {
+      console.log({ error });
       setStatus({
         error: MESSAGES.ERROR,
         success: null,
       });
-      setTimeout(() => setStatus({ error: null, success: null }), 5000);
     }
   };
   return (
@@ -132,9 +123,15 @@ export default function ContactSection() {
             {data.contact.actionButton.label}
           </button>
         </div>
-        {status.error && <div className="text-red-500"> {status.error} </div>}
+        {status.error && (
+          <div className="text-red-500 font-medium text-center">
+            {status.error}
+          </div>
+        )}
         {status.success && (
-          <div className="text-black-500"> {status.success} </div>
+          <div className="text-green-600 font-medium text-center">
+            {status.success}
+          </div>
         )}
       </form>
     </div>
