@@ -5,9 +5,22 @@
   },
   "hero": {
     "headline": "Meet Venera AI",
-    "subheadline": "Your fast & easy personal health companion",
-    "actionButton": {
-      "label": "Try for free"
+    "subheadline": "Your fast & easy personal",
+    "subheadline2": " health companion",
+    "buttons": {
+      "buttonLogIn": {
+        "label": "Log In",
+        "link": ""
+      },
+      "buttonTryForFree": {
+        "label": "Try for free",
+        "link": ""
+      },
+      "buttonAppStore": {
+        "label": "Get it on the",
+        "app": "App Store",
+        "link": ""
+      }
     }
   },
   "introduction": {
@@ -132,7 +145,7 @@
   "contact": {
     "headline": "Contact us",
     "nameInput": "Name",
-    "emailInput": "Email Adress",
+    "emailInput": "Email Address",
     "messageInput": "Message",
     "actionButton": {
       "label": "Send"
