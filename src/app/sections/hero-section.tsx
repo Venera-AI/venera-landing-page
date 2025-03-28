@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <div className="bg-gradient-to-r from-[#9ec5f7] to-darkblue">
       <NavBar />
-      <div className="lg:max-w-7xl lg:flex-row md:justify-between gap-4 py-10 flex flex-col">
+      <div className="lg:max-w-7xl lg:flex-row md:justify-between gap-4 py-10 flex flex-col mx-auto">
         <div className="lg:w-full lg:pl-20 lg:p-0 md:p-10 p-3 text-center">
           <div className="relative">
             <div className="z-10 py-30">
