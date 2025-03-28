@@ -15,11 +15,10 @@ export default function DashboardFeature2() {
           </p>
         </div>
         <div className="relative">
-          {/* Blue pastel circle moved to the far right */}
           <div
             className="absolute z-0 rounded-full w-[450px] h-[450px]"
             style={{
-              backgroundColor: "#d9e6f3", // Custom pastel pink
+              backgroundColor: "#d9e6f3",
               top: "-60px",
               right: "-110px",
             }}
