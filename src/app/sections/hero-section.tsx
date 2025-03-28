@@ -55,7 +55,7 @@ export default function HeroSection() {
             />
           </div>
           <div className="absolute z-20 -top-15 left-3/10 md:left-70 md:top-30 lg:left-[100] lg:top-110">
-            <button className="absolute flex flex-row gap-2 md:items-center bg-white text-black rounded-lg hover:bg-gray-200 lg:pl-6 lg:pr-18 lg:py-2 md:pl-2 md:pr-10 md:py-1 pl-1 pr-7 py-1">
+            <button className="absolute flex flex-row gap-2 md:items-center bg-white text-black rounded-lg hover:bg-gray-200 lg:pl-6 lg:pr-18 lg:py-2 md:pl-2 md:pr-10 md:py-1 pl-1 pr-7 py-1 cursor-pointer">
               <Image
                 src="/images/apple-logo.svg"
                 alt="button App store"
