@@ -4,7 +4,7 @@ import { motion, HTMLMotionProps } from "framer-motion";
 import { PropsWithChildren } from "react";
 import React from "react";
 
-type SlideDirection = "up" | "down" | "left" | "right";
+export type SlideDirection = "up" | "down" | "left" | "right";
 
 interface SlideInProps<T extends keyof HTMLElementTagNameMap = "div"> {
   as?: T;
@@ -20,8 +20,8 @@ const slideVariants = {
   right: { opacity: 0, x: -50 },
 };
 
-export default function SlideIn<T extends keyof HTMLElementTagNameMap = "div">({
-  as,
+export default function SlideIn<T extends keyof HTMLElementTagNameMap>({
+  as = "div" as T,
   children,
   delay = 0,
   direction = "up",

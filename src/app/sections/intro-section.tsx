@@ -1,6 +1,6 @@
 "use client";
 
-import SlideIn from "@/components/SlideIn";
+import SlideIn from "@/components/slide-in";
 import home from "@/content/home.json";
 import Image from "next/image";
 
