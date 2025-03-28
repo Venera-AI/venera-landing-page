@@ -4,7 +4,7 @@ export default function NavBar() {
   const { hero } = homeData;
   return (
     <div className="w-full">
-      <nav className="flex w-full lg:p-3 lg:px-8 justify-between items-center md:px-6 py-3 px-3 shadow-md bg-gradient-to-r from-[#83a3cb] to-[#5162b2]">
+      <nav className="flex justify-between items-center w-full py-3 px-3 md:px-6 lg:p-3 lg:px-8 shadow-md bg-gradient-to-r from-[#83a3cb] to-[#5162b2]">
         <div className="flex justify-center md:justify-start md:w-auto">
           <Image
             src="/images/venera-logo.svg"
