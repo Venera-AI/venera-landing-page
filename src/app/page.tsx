@@ -3,11 +3,11 @@ import FeedbackSection from "@/app/sections/feedback-section";
 import FooterSection from "@/app/sections/footer-section";
 import IntroSection from "@/app/sections/intro-section";
 import WhySection from "@/app/sections/why-section";
-import metadata from "@/content/metadata.json";
+import metadata from "@/content/metadata-en.json";
 import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
-  // TODO: handle returning metadata based on language
+  // TODO: handle returning metadata based on locale
   return metadata;
 }
 
