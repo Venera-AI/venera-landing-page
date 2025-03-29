@@ -5,11 +5,11 @@ import IntroSection from "@/app/sections/intro-section";
 import WhySection from "@/app/sections/why-section";
 import PrivacySection from "@/app/sections/privacy-section";
 
-import metadata from "@/content/metadata-en.json";
 import { Metadata } from "next";
+import { getMetadata } from "@/utils/getMetadata";
 
 export async function generateMetadata(): Promise<Metadata> {
-  // TODO: handle returning metadata based on locale
+  const metadata = getMetadata();
   return metadata;
 }
 
