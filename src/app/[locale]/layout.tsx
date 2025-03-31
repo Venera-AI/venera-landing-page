@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import "@/app/styles/index.css";
-import home from "@/content/home.json";
 import { defaultLocale, Locale } from "@/i18n/config";
 import { routing } from "@/i18n/routing";
 import { redirect } from "@/i18n/navigation";
@@ -13,10 +12,13 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: home.metadata.title,
-  description: home.metadata.description,
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("homePage.metadata");
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 export function generateStaticParams() {
   return [...routing.locales].map((locale) => ({ locale }));
