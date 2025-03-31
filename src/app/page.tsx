@@ -1,17 +1,16 @@
-import FeedbackSection from "@/app/sections/feedback-section";
-import FooterSection from "@/app/sections/footer-section";
-import IntroSection from "@/app/sections/intro-section";
-import WhySection from "@/app/sections/why-section";
-import ContactSection from "@/app/sections/contact-section";
-export default function Home() {
-  return (
-    <main>
-      <h1 className="sr-only">Home</h1>
-      <IntroSection />
-      <WhySection />
-      <FeedbackSection />
-      <ContactSection />
-      <FooterSection />
-    </main>
-  );
+import { redirect } from "@/i18n/navigation";
+import { defaultLocale } from "@/i18n/config";
+import "@/app/styles/index.css";
+
+// TODO use metadata of default locale
+// export const metadata: Metadata = {
+//   title: home.metadata.title,
+//   description: home.metadata.description,
+// };
+
+export default function RootLayout() {
+  return redirect({
+    href: `/`,
+    locale: defaultLocale,
+  });
 }
