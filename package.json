@@ -14,6 +14,7 @@
     "deploy:staging": "firebase deploy -P staging"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "firebase": "^11.4.0",
     "ipinfo": "^1.5.2",
     "next": "15.2.2",
