@@ -12,7 +12,7 @@ export default function PrivacySection() {
           alt="Privacy Icon"
           width={150}
           height={150}
-          className="mb-6"
+          className="mb-6 w-[150px] h-[150px]"
         />
 
         <h2 className="font-medium text-2xl md:text-3xl text-center text-[#1a1a1a]">
@@ -24,10 +24,11 @@ export default function PrivacySection() {
           </p>
         </div>
 
-        <Link href={privacy.actionButton.link}>
-          <button className="bg-[#158d6a] text-white md:px-16 md:py-5 px-12 py-4 md:text-xl rounded-2xl font-bold mt-8">
-            {privacy.actionButton.label}
-          </button>
+        <Link
+          href={privacy.actionButton.link}
+          className="bg-[#158d6a] text-white md:px-16 md:py-5 px-12 py-4 md:text-xl rounded-2xl font-bold mt-8"
+        >
+          {privacy.actionButton.label}
         </Link>
       </div>
     </section>
