@@ -22,7 +22,7 @@ export default function LocaleSwitcher() {
     .map((separator, i) => (i % 2 === 0 ? locales[i / 2] : separator));
 
   return (
-    <div className="flex flex-row items-center bg-red-200 px-2 py-1">
+    <div className="flex flex-row items-center px-2 py-1">
       {localesWithSeparator.map((item, index) =>
         item === " | " ? (
           <div key={index} className="mx-2 w-1 h-6 bg-white"></div>
