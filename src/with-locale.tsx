@@ -9,7 +9,7 @@ type Params = Promise<{ locale: Locale }>;
  * Needed on all server page components that use `next-intl`
  * or have child components the use `next-intl`.
  */
-export function withLocaleHandling<T extends object>(
+export function withLocale<T extends object>(
   Component: React.ComponentType<T>,
 ) {
   return function LocaleHandledComponent({
