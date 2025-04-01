@@ -119,7 +119,7 @@ export default function ContactSection() {
           rows={3}
         />
         <div className="lg:justify-end flex justify-center mt-3">
-          <button className="lg:p-3 lg:w-1/4 lg:text-xl w-1/2 px-6 py-2 bg-gradient-to-r from-[#2d44ad] to-[#9ec5f7] text-white rounded-xl font-bold">
+          <button className="cursor-pointer lg:p-3 lg:w-1/4 lg:text-xl w-1/2 px-6 py-2 bg-gradient-to-r from-[#2d44ad] to-[#9ec5f7] text-white rounded-xl font-bold">
             {data.contact.actionButton.label}
           </button>
         </div>
