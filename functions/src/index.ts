@@ -21,6 +21,11 @@ export const sendContactMessageNotification = onDocumentCreated(
     const fromEmail = process.env.CONTACT_NOTIFICATION_SENDER_EMAIL;
     const toEmail = process.env.CONTACT_NOTIFICATION_RECIPIENT_EMAIL;
 
+    if (!templateId || !fromEmail || !toEmail || !MAILERSEND_API_URL) {
+      console.error("Missing required environment variables");
+      return;
+    }
+
     const emailPayload = {
       from: { email: fromEmail },
       to: [{ email: toEmail }],
