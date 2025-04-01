@@ -1,73 +1,71 @@
 import React from "react";
 import homeData from "@/content/home.json";
 import Image from "next/image";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/nav-bar";
+
 export default function HeroSection() {
   const { hero } = homeData;
   return (
     <div className="bg-gradient-to-r from-[#9ec5f7] to-darkblue">
       <NavBar />
-      <div className="lg:max-w-7xl lg:flex-row md:justify-between gap-4 py-10 flex flex-col mx-auto">
-        <div className="lg:w-full lg:pl-20 lg:p-0 md:p-10 p-3 text-center">
+      <div className="flex flex-col gap-4 py-10 md:justify-between lg:flex-row lg:max-w-7xl lg:pb-5">
+        {/* Left Section */}
+        <div className="w-full p-3 text-center md:p-10 lg:w-[60%] lg:p-0 lg:pl-20">
           <div className="relative">
-            <div className="z-10 py-30">
-              <div className="text-white font-bold md:text-5xl lg:text-7xl lg:text-left text-3xl mb-7 text-center">
-                <h1>{hero.headline} </h1>
+            <div className="z-10 pt-40 lg:pt-20">
+              <div className="mb-7 text-3xl font-bold text-white text-center md:mt-30 md:text-5xl lg:text-left lg:text-7xl">
+                <h1>{hero.headline}</h1>
               </div>
-              <div className="text-center text-white lg:text-5xl lg:text-left md:text-2xl text-xl">
-                <span className="in-line">
-                  <h3> {hero.subheadline} </h3>
-                </span>
-                <br />
-                <span>
-                  <h3>{hero.subheadline2} </h3>
+              <div className="text-xl text-white text-center md:text-2xl lg:text-left lg:text-5xl">
+                <span className="inline-block">
+                  <h3>{hero.subheadline}</h3>
                 </span>
               </div>
             </div>
-            <div className="w-full absolute top-0 left-0 aspect-square">
+            <div className="absolute top-0 left-0 w-full aspect-square lg:w-[80%]">
               <Image
-                src="/images/Slide1.png"
-                alt="Slide 1"
+                src={hero.images.leftEffect}
+                alt="Left Section Effect"
                 fill
                 className="object-cover"
               />
             </div>
           </div>
         </div>
-        <div className="relative lg:w-full lg:justify-center lg:flex lg:py-0 md:w-full md:py-20">
-          <div className="absolute md:ml-25 md:mt-30 left-[60]">
+
+        {/* Right Section */}
+        <div className="relative flex justify-center w-full pt-40 sm:pt-80 md:pt-70 md:py-20 lg:w-[40%] lg:py-0">
+          <div className="absolute w-[300px] h-[350px] md:top-[40%] md:left-[18%] md:w-[550px] md:h-[400px] lg:left-[5%] lg:top-[20px] lg:w-[90%] lg:h-[550px]">
             <Image
-              src="/images/phone-effect.png"
+              src={hero.images.rightPhoneEffect}
               alt="Phone Effect"
-              className="w-[250] md:w-[380] lg:w-[420] object-cover"
-              width={400}
-              height={0}
+              className="object-contain"
+              fill
             />
           </div>
-
-          <div className="relative z-10 justify-center flex lg:left-[60] items-center md:mb-[5] md:mt-30 lg:top-[-100]">
+          <div className="relative z-10 flex items-center justify-center md:mb-5 md:mt-30 lg:top-[-100px]">
             <Image
               alt="Phone MockUp"
-              src="/images/Mockup1.png"
-              className="w-[180px] lg:w-[300px] md:w-[280px]"
+              src={hero.images.mockUpPhone}
+              className="w-[180px] md:w-[280px] lg:w-[300px]"
               width={250}
               height={250}
             />
           </div>
-          <div className="absolute z-20 -top-15 left-3/10 md:left-70 md:top-30 lg:left-[100] lg:top-110">
-            <button className="absolute flex flex-row gap-2 md:items-center bg-white text-black rounded-lg hover:bg-gray-200 lg:pl-6 lg:pr-18 lg:py-2 md:pl-2 md:pr-10 md:py-1 pl-1 pr-7 py-1 cursor-pointer">
+          <div className="absolute z-20 transform -translate-x-1/2 left-1/3 top-[100] md:left-[40%] md:top-[300] lg:top-[58%] lg:left-[-5%]">
+            <button className="absolute flex flex-row gap-2 items-center bg-white text-black rounded-lg hover:bg-gray-200 pl-1 pr-7 py-1 cursor-pointer md:pl-2 md:pr-13 md:py-1 lg:pl-6 lg:pr-18 lg:py-2">
               <Image
-                src="/images/apple-logo.svg"
+                src={hero.logos.appleLogo}
                 alt="button App store"
-                className="lg:w-8 lg:h-8 md:w-6 md:h-6 w-1/4 mr-1"
+                className="mr-1 w-1/4 md:w-6 md:h-6 lg:w-8 lg:h-8"
                 width={4}
                 height={4}
               />
-              <div className="flex flex-col whitespace-nowrap w-2/3 mr-2">
-                <span className="md:text-base text-xs">
+              <div className="flex flex-col w-2/3 whitespace-nowrap mr-2">
+                <span className="text-xs md:text-base">
                   {hero.buttons.buttonAppStore.label}
                 </span>
-                <div className="md:text-xl text-xs font-bold whitespace-nowrap">
+                <div className="text-xs font-bold whitespace-nowrap md:text-xl">
                   {hero.buttons.buttonAppStore.app}
                 </div>
               </div>
