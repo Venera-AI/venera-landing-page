@@ -24,10 +24,22 @@ By default, `.env` and `.env.dev` are loaded.
 ## Run functions locally
 
 ```bash
-firebase emulators:start
+pnpm serve
 ```
 
 This will start the Firebase emulators for Firestore and Functions.
+
+You can set `NEXT_PUBLIC_USE_FIREBASE_EMULATOR` to `1` in your `.env` file to use the Firebase emulator for Firestore in the web app. This way you can test the contact message submission with local data.
+
+## Development
+
+```bash
+pnpm build:watch # build the functions upon changes
+
+# open a new terminal
+
+pnpm serve
+```
 
 ## Deploy
 
