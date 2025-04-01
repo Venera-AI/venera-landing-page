@@ -50,7 +50,6 @@ export const sendContactMessageNotification = onDocumentCreated(
       });
       if (!response.ok) {
         const error: unknown = await response.json();
-        console.error({ error });
         throw new Error(`${response.statusText}. Failed to send email.`, {
           cause: error,
         });
