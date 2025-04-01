@@ -2,111 +2,98 @@
   "headline": "Meet our team",
   "members": [
     {
-      "name": "Thang Nguyen",
-      "position": "CEO",
-      "title": "Business Lead",
-      "image": "/images/team/thang-nguyen.jpg"
-    },
-    {
       "name": "Minh Tran",
-      "position": "CTO",
-      "title": "AI Lead",
+      "position": "CEO",
       "image": "/images/team/minh-tran.jpg"
     },
     {
+      "name": "Thang Nguyen",
+      "position": "CTO",
+      "image": "/images/team/thang-nguyen.png"
+    },
+    {
       "name": "Lam Le",
-      "position": "Product",
-      "title": "Product Lead",
+      "position": "CPO",
       "image": "/images/team/lam-le.jpg"
     },
     {
       "name": "Binh Trinh",
-      "position": "SWE",
-      "title": "SWE Lead",
+      "position": "Software Engineer",
       "image": "/images/team/binh-trinh.jpg"
     },
     {
       "name": "Thai Dao",
-      "position": "AI",
-      "title": "Data Platform",
+      "position": "AI Engineer",
       "image": "/images/team/thai-dao.jpg"
     },
     {
       "name": "Thong Nguyen",
-      "position": "AI",
-      "title": "Data Synthesize/Modeling",
+      "position": "AI Engineer",
       "image": "/images/team/thong-nguyen.jpg"
     },
     {
       "name": "Minh Dang",
-      "position": "AI",
-      "title": "Benchmarking",
+      "position": "AI Engineer",
       "image": "/images/team/minh-dang.jpg"
     },
     {
       "name": "Long Nguyen",
-      "position": "AI",
-      "title": "Research",
-      "image": "/images/team/long-nguyen.jpg"
+      "position": "AI Engineer",
+      "image": "/images/team/long-nguyen.png"
     },
     {
       "name": "Quan Le",
-      "position": "AI",
-      "title": "Modeling",
+      "position": "AI Engineer",
       "image": "/images/team/quan-le.jpg"
     },
     {
       "name": "Duc Nguyen",
-      "position": "SWE",
-      "title": "Backend/Data Pipeline",
+      "position": "Software Engineer",
       "image": "/images/team/duc-nguyen.jpg"
     },
     {
       "name": "Hoang Phan",
-      "position": "SWE",
-      "title": "Backend",
+      "position": "Software Engineer",
       "image": "/images/team/hoang-phan.jpg"
     },
     {
       "name": "Vu Nguyen",
-      "position": "SWE",
-      "title": "Frontend",
+      "position": "Software Engineer",
       "image": "/images/team/vu-nguyen.jpg"
     },
     {
       "name": "Thang Le",
-      "position": "SWE",
-      "title": "Frontend",
+      "position": "Software Engineer",
       "image": "/images/team/thang-le.jpg"
     },
     {
+      "name": "Huong Pham",
+      "position": "Software Engineer",
+      "image": "/images/team/huong-pham.jpg"
+    },
+    {
       "name": "Hung Nguyen",
-      "position": "SWE",
-      "title": "Web Platform",
+      "position": "Software Engineer",
       "image": "/images/team/hung-nguyen.jpg"
     },
     {
-      "name": "Hieu Pham",
-      "position": "SWE",
-      "title": "Data Platform",
-      "image": "/images/team/hieu-pham.jpg"
+      "name": "Anh Vu",
+      "position": "Developer",
+      "image": "/images/team/anh-vu.png"
     },
     {
       "name": "Dat Nguyen",
-      "position": "Product",
-      "title": "Product Design/Biz Dev",
+      "position": "Business Development",
       "image": "/images/team/dat-nguyen.jpg"
     },
     {
       "name": "Minh-Anh Bui",
-      "position": "Product",
-      "title": "UX/UI Designer",
+      "position": "UX/UI Designer",
       "image": "/images/team/minh-anh-bui.jpg"
     },
     {
       "name": "Phuong-Anh Nguyen",
-      "position": "Product",
-      "title": "UX/UI Designer",
+      "position": "UX/UI Designer",
       "image": "/images/team/phuong-anh-nguyen.jpg"
     }
   ]
