@@ -43,14 +43,14 @@
     },
     "intro": {
       "headline": "Accessible, actionable, and assured health journey",
-      "body": "At Venera AI, we’re transforming healthcare by making it accessible, intuitive, and data-driven. With Venera AI, proactive healthcare is now within reach for everyone.",
+      "body": "At Venera AI, we're transforming healthcare by making it accessible, intuitive, and data-driven. With Venera AI, proactive healthcare is now within reach for everyone.",
       "image": "/images/intro.webp"
     },
     "why": {
       "headline": "Why people prefer us",
       "actionButton": {
         "label": "Meet our team",
-        "link": ""
+        "link": "/team"
       },
       "items": {
         "1": {
