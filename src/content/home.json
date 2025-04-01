@@ -7,13 +7,13 @@
     "headline": "Meet Venera AI",
     "subheadline": "Your fast & easy personal health companion",
     "images": {
-      "leftEffect":"/images/effect-slide1.png",
-      "mockUpPhone":"/images/mock-up1.png",
-      "rightPhoneEffect":"/images/phone-effect.png"
+      "leftEffect": "/images/effect-slide1.png",
+      "mockUpPhone": "/images/mock-up1.png",
+      "rightPhoneEffect": "/images/phone-effect.png"
     },
-    "logos":{
-      "logoNavBar":"/images/venera-logo.svg",
-      "appleLogo":"/images/apple-logo.svg"
+    "logos": {
+      "logoNavBar": "/images/venera-logo.svg",
+      "appleLogo": "/images/apple-logo.svg"
     },
     "buttons": {
       "buttonLogIn": {
