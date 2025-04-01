@@ -1,5 +1,5 @@
 import { formats } from "@/i18n/request";
-import { Locale } from "@/i18n/config";
+import { Locale } from "@/i18n/routing";
 import messages from "./messages/en.json";
 
 declare module "next-intl" {

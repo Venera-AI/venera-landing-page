@@ -1,4 +1,4 @@
-import { Locale } from "@/i18n/config";
+import { Locale } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 
