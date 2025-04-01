@@ -69,7 +69,7 @@
     "headline": "Why people prefer us",
     "actionButton": {
       "label": "Meet our team",
-      "link": ""
+      "link": "/team"
     },
     "items": [
       {
@@ -90,11 +90,11 @@
     ]
   },
   "privacy": {
-    "headline": "",
-    "body": "",
-    "image": "",
+    "headline": "Your privacy matters",
+    "body": "We never sell your data or share it with any third parties. We don't store your personal health data in our system. You have full control over your privacy.",
+    "image": "/images/shield.png",
     "actionButton": {
-      "label": "",
+      "label": "Read more",
       "link": ""
     }
   },
