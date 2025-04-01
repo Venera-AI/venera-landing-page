@@ -5,7 +5,7 @@
 1. Contact project owner for
    1. Access to Firebase project.
    2. Mailersend API Key and Template ID.
-2. Set environment variables in `.env` file using `.env.example` as a template.
+2. Set environment variables in `.env` file using [.env.example](./.env.example) as a template.
 
 ## Load environment variables
 
