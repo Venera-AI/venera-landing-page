@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import { db } from "@/firebase";
+import { db } from "@/services/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import data from "@/content/home.json";
+import { useTranslations } from "next-intl";
+
 export default function ContactSection() {
+  const t = useTranslations("homePage.contact");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -94,10 +96,11 @@ export default function ContactSection() {
       setTimeout(() => setStatus({ error: null, success: null }), 5000);
     }
   };
+
   return (
     <div className="bg-blue-100 lg:pt-10 lg:pb-25 px-8 py-8">
       <div className="max-w-5xl mx-auto text-4xl text-center lg:text-left font-medium">
-        <h2>{data.contact.headline}</h2>
+        <h2>{t("headline")}</h2>
       </div>
       <form
         onSubmit={handleSubmit}
@@ -108,14 +111,14 @@ export default function ContactSection() {
             className="lg:text-lg bg-white lg:pl-10 p-5 text-sm focus:outline-none focus:border-blue-500 placeholder-black"
             type="text"
             value={name}
-            placeholder={data.contact.nameInput}
+            placeholder={t("nameInput")}
             onChange={(e) => setName(e.target.value)}
           />
           <input
             className="lg:text-lg bg-white lg:pl-10 p-5 text-sm focus:outline-none focus:border-blue-500 placeholder-black"
             type="email"
             value={email}
-            placeholder={data.contact.emailInput}
+            placeholder={t("emailInput")}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
@@ -124,12 +127,12 @@ export default function ContactSection() {
           className="lg:text-lg bg-white w-full lg:pt-12 lg:pl-10 p-5 text-sm focus:outline-none focus:border-blue-500 placeholder-black"
           onChange={(e) => setMessage(e.target.value)}
           value={message}
-          placeholder={data.contact.messageInput}
+          placeholder={t("messageInput")}
           rows={3}
         />
         <div className="lg:justify-end flex justify-center mt-3">
           <button className="lg:p-3 lg:w-1/4 lg:text-xl w-1/2 px-6 py-2 bg-gradient-to-r from-[#2d44ad] to-[#9ec5f7] text-white rounded-xl font-bold">
-            {data.contact.actionButton.label}
+            {t("actionButton.label")}
           </button>
         </div>
         {status.error && <div className="text-red-500"> {status.error} </div>}
