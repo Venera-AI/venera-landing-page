@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useTranslations } from "next-intl";
+import { useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 
 const gradientColors = {
@@ -10,7 +10,10 @@ const gradientColors = {
 
 export default function HealthcareDataSection() {
   const t = useTranslations("homePage.healthcareData");
-  const itemKeys = ["1", "2", "3"] as const;
+  const healthcareMessages = useMessages().homePage.healthcareData;
+  const itemKeys = Object.keys(
+    healthcareMessages.items,
+  ) as readonly (keyof typeof healthcareMessages.items)[];
 
   return (
     <section className="bg-white py-16 lg:py-24 px-4 xl:px-8">

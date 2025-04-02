@@ -1,10 +1,13 @@
 import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
+import { useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function WhySection() {
   const t = useTranslations("homePage.why");
-  const itemKeys = ["1", "2", "3"] as const;
+  const whyMessages = useMessages().homePage.why;
+  const itemKeys = Object.keys(
+    whyMessages.items,
+  ) as readonly (keyof typeof whyMessages.items)[];
 
   return (
     <section className="bg-[#ecf5ff]">
