@@ -21,16 +21,19 @@ export default function HeroSection() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full lg:pt-20 z-10 transform">
-                <div className="text-white text-center lg:text-left text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-7">
-                  <h1>{hero.headline}</h1>
-                </div>
-                <div className="text-white text-center lg:text-left text-xl md:text-2xl lg:text-5xl">
-                  <span className="inline-block">
-                    <h3>{hero.subheadline}</h3>
-                  </span>
-                </div>
+              <div className="text-xl text-white text-center md:text-2xl lg:text-left lg:text-5xl">
+                <span className="inline-block">
+                  <h3>{hero.subheadline}</h3>
+                </span>
               </div>
+            </div>
+            <div className="absolute top-0 left-0 w-full aspect-square lg:w-[80%]">
+              <Image
+                src={hero.images.leftEffect}
+                alt="Text's decorative effect"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
