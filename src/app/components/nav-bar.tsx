@@ -14,10 +14,10 @@ export default function NavBar() {
         />
       </div>
       <div className="flex justify-end gap-2 md:gap-4">
-        <button className="text-center border border-white text-white font-semibold bg-transparent rounded-2xl hover:bg-white hover:text-black text-[10px] whitespace-nowrap px-6 py-2 sm:text-sm md:w-full md:text-base md:px-10 md:py-2 lg:w-full lg:text-xl lg:px-14 lg:py-4">
+        <button className="text-center border border-white text-white font-semibold bg-transparent rounded-2xl hover:bg-white hover:text-black text-[10px] whitespace-nowrap px-6 py-2 sm:text-sm md:w-full md:text-base md:px-10 md:py-2 lg:w-full lg:text-xl lg:px-14 lg:py-4 cursor-pointer">
           {hero.buttons.buttonLogIn.label}
         </button>
-        <button className=" text-center text-darkblue bg-white font-semibold rounded-2xl hover:bg-darkblue hover:text-white px-4 py-2 whitespace-nowrap text-[10px] sm:text-sm md:w-full md:text-base md:px-8 md:py-2 lg:w-full lg:text-xl lg:px-10 lg:py-4 ">
+        <button className="text-center text-darkblue bg-white font-semibold rounded-2xl hover:bg-darkblue hover:text-white px-4 py-2 whitespace-nowrap text-[10px] sm:text-sm md:w-full md:text-base md:px-8 md:py-2 lg:w-full lg:text-xl lg:px-10 lg:py-4 cursor-pointer">
           {hero.buttons.buttonTryForFree.label}
         </button>
       </div>
