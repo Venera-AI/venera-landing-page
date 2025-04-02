@@ -25,7 +25,7 @@ export default function HeroSection() {
             <div className="absolute top-0 left-0 w-full aspect-square lg:w-[80%]">
               <Image
                 src={hero.images.leftEffect}
-                alt="Left Section Effect"
+                alt="Text's decorative effect"
                 fill
                 className="object-cover"
               />
