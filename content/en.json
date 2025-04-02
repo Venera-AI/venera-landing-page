@@ -12,6 +12,26 @@
         "label": "Try for free"
       }
     },
+    "healthcareData": {
+      "headline": "Healthcare data is fragmented",
+      "items": {
+        "1": {
+          "headline": "70%",
+          "body": "Patients struggle to access and manage their medical records",
+          "image": "/images/healthcare-data-1.jpg"
+        },
+        "2": {
+          "headline": "$50B",
+          "body": "Is lost annually due to inefficiencies in healthcare data management",
+          "image": "/images/healthcare-data-2.jpeg"
+        },
+        "3": {
+          "headline": "90%",
+          "body": "Providers face challenges integrating patient data across systems",
+          "image": "/images/healthcare-data-3.webp"
+        }
+      }
+    },
     "introduction": {
       "headline": "Smarter Health, Simplified",
       "body": "Venera AI goes beyond storing your health records, we help you understand them. With AI-powered insights, seamless data integration, and personalized guidance, we turn complex medical information into clear, actionable steps. Take control of your health with confidence, all in one place."
