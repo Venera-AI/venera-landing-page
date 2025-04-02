@@ -12,7 +12,7 @@ export default withLocale(function Team() {
     .map((_, index) => (index % 2 === 0 ? membersData[index / 2] : null));
 
   return (
-    <main className="py-10 min-h-lvh bg-gray-50 sm:py-16 lg:py-24 font-nunito">
+    <main className="py-10 min-h-lvh bg-gray-50 sm:py-16 lg:py-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <h1 className="text-center text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
           {messages.teamPage.headline}
