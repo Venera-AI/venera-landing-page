@@ -1,7 +1,7 @@
 import React from "react";
 import homeData from "@/content/home.json";
 import Image from "next/image";
-import NavBar from "../components/nav-bar";
+import NavBar from "@/app/components/nav-bar";
 
 export default function HeroSection() {
   const { hero } = homeData;
