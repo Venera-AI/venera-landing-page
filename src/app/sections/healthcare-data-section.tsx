@@ -13,7 +13,7 @@ export default function HealthcareDataSection() {
   const itemKeys = ["1", "2", "3"] as const;
 
   return (
-    <section className="bg-white py-16 px-4 xl:p-8">
+    <section className="bg-white py-16 lg:py-24 px-4 xl:px-8">
       <div className="max-w-7xl mx-auto space-y-10 lg:space-y-16">
         <h2 className="text-center font-medium text-3xl lg:text-4xl">
           {healthcareData.headline}
@@ -32,7 +32,7 @@ export default function HealthcareDataSection() {
                   fill
                   className="object-cover"
                   src={healthcareData.items[itemKey].image}
-                  alt={"decorative image"}
+                  alt=""
                 />
               </div>
               <h3 className="font-semibold text-5xl">
