@@ -32,9 +32,10 @@
         }
       }
     },
-    "introduction": {
-      "headline": "Smarter Health, Simplified",
-      "body": "Venera AI goes beyond storing your health records, we help you understand them. With AI-powered insights, seamless data integration, and personalized guidance, we turn complex medical information into clear, actionable steps. Take control of your health with confidence, all in one place."
+    "intro": {
+      "headline": "Accessible, actionable, and assured health journey",
+      "body": "At Venera AI, we're transforming healthcare by making it accessible, intuitive, and data-driven. With Venera AI, proactive healthcare is now within reach for everyone.",
+      "image": "/images/intro.webp"
     },
     "functionalities": {
       "headline": "Take control of your health, all in one place",
@@ -60,11 +61,6 @@
           "image": ""
         }
       ]
-    },
-    "intro": {
-      "headline": "Accessible, actionable, and assured health journey",
-      "body": "At Venera AI, we're transforming healthcare by making it accessible, intuitive, and data-driven. With Venera AI, proactive healthcare is now within reach for everyone.",
-      "image": "/images/intro.webp"
     },
     "why": {
       "headline": "Why people prefer us",
