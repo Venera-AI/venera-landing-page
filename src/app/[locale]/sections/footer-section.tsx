@@ -1,6 +1,6 @@
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { IconType } from "react-icons";
-import { useTranslations } from "next-intl";
+import { useMessages, useTranslations } from "next-intl";
 
 type Social = "facebook" | "instagram";
 
@@ -25,14 +25,19 @@ const iconsConfig: Record<Social, IconConfig> = {
 
 export default function FooterSection() {
   const t = useTranslations("homePage.footer");
-  const businessHoursKeys = ["1", "2"] as const;
-  const socialKeys = ["facebook", "instagram"] as const;
+  const footerMessages = useMessages().homePage.footer;
+  const businessHoursKeys = Object.keys(
+    footerMessages.businessHours,
+  ) as readonly (keyof typeof footerMessages.businessHours)[];
+  const socialKeys = Object.keys(
+    footerMessages.contact.socials,
+  ) as readonly (keyof typeof footerMessages.contact.socials)[];
 
   return (
     <footer className="[background:linear-gradient(135deg,#9ec5f7,#2d44ad)]">
       <div className="text-white flex flex-col sm:flex-row justify-between gap-10 sm:gap-0 lg:max-w-4xl max-w-2xl m-auto py-16 px-8">
         {/* Contact */}
-        <section className="mt-4 font-medium">
+        <section className="font-medium">
           <h2 className="text-4xl font-light">{t("ourContactLabel")}</h2>
           <p className="mt-6">{t("contact.address")}</p>
 

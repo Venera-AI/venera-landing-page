@@ -1,9 +1,12 @@
-import { useTranslations } from "next-intl";
+import { useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function FeedbackSection() {
   const t = useTranslations("homePage.feedback");
-  const itemKeys = ["1", "2", "3"] as const;
+  const feedbackMessages = useMessages().homePage.feedback;
+  const itemKeys = Object.keys(
+    feedbackMessages.items,
+  ) as readonly (keyof typeof feedbackMessages.items)[];
 
   return (
     <section className="py-16 px-8 md:p-16 bg-white">

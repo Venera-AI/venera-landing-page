@@ -12,9 +12,30 @@
         "label": "Try for free"
       }
     },
-    "introduction": {
-      "headline": "Smarter Health, Simplified",
-      "body": "Venera AI goes beyond storing your health records, we help you understand them. With AI-powered insights, seamless data integration, and personalized guidance, we turn complex medical information into clear, actionable steps. Take control of your health with confidence, all in one place."
+    "healthcareData": {
+      "headline": "Healthcare data is fragmented",
+      "items": {
+        "1": {
+          "headline": "70%",
+          "body": "Patients struggle to access and manage their medical records",
+          "image": "/images/healthcare-data-1.jpg"
+        },
+        "2": {
+          "headline": "$50B",
+          "body": "Is lost annually due to inefficiencies in healthcare data management",
+          "image": "/images/healthcare-data-2.jpeg"
+        },
+        "3": {
+          "headline": "90%",
+          "body": "Providers face challenges integrating patient data across systems",
+          "image": "/images/healthcare-data-3.webp"
+        }
+      }
+    },
+    "intro": {
+      "headline": "Accessible, actionable, and assured health journey",
+      "body": "At Venera AI, we're transforming healthcare by making it accessible, intuitive, and data-driven. With Venera AI, proactive healthcare is now within reach for everyone.",
+      "image": "/images/intro.webp"
     },
     "functionalities": {
       "headline": "Take control of your health, all in one place",
@@ -40,11 +61,6 @@
           "image": ""
         }
       ]
-    },
-    "intro": {
-      "headline": "Accessible, actionable, and assured health journey",
-      "body": "At Venera AI, we're transforming healthcare by making it accessible, intuitive, and data-driven. With Venera AI, proactive healthcare is now within reach for everyone.",
-      "image": "/images/intro.webp"
     },
     "why": {
       "headline": "Why people prefer us",
@@ -138,6 +154,106 @@
       "messageInput": "Message",
       "actionButton": {
         "label": "Send"
+      }
+    }
+  },
+  "teamPage": {
+    "headline": "Meet our team",
+    "members": {
+      "minhTran": {
+        "name": "Minh Tran",
+        "position": "CEO",
+        "image": "/images/team/minh-tran.jpg"
+      },
+      "thangNguyen": {
+        "name": "Thang Nguyen",
+        "position": "CTO",
+        "image": "/images/team/thang-nguyen.png"
+      },
+      "lamLe": {
+        "name": "Lam Le",
+        "position": "CPO",
+        "image": "/images/team/lam-le.jpg"
+      },
+      "binhTrinh": {
+        "name": "Binh Trinh",
+        "position": "Software Engineer",
+        "image": "/images/team/binh-trinh.jpg"
+      },
+      "thaiDao": {
+        "name": "Thai Dao",
+        "position": "AI Engineer",
+        "image": "/images/team/thai-dao.jpg"
+      },
+      "thongNguyen": {
+        "name": "Thong Nguyen",
+        "position": "AI Engineer",
+        "image": "/images/team/thong-nguyen.jpg"
+      },
+      "minhDang": {
+        "name": "Minh Dang",
+        "position": "AI Engineer",
+        "image": "/images/team/minh-dang.jpg"
+      },
+      "longNguyen": {
+        "name": "Long Nguyen",
+        "position": "AI Engineer",
+        "image": "/images/team/long-nguyen.png"
+      },
+      "quanLe": {
+        "name": "Quan Le",
+        "position": "AI Engineer",
+        "image": "/images/team/quan-le.jpg"
+      },
+      "ducNguyen": {
+        "name": "Duc Nguyen",
+        "position": "Software Engineer",
+        "image": "/images/team/duc-nguyen.jpg"
+      },
+      "hoangPhan": {
+        "name": "Hoang Phan",
+        "position": "Software Engineer",
+        "image": "/images/team/hoang-phan.jpg"
+      },
+      "vuNguyen": {
+        "name": "Vu Nguyen",
+        "position": "Software Engineer",
+        "image": "/images/team/vu-nguyen.jpg"
+      },
+      "thangLe": {
+        "name": "Thang Le",
+        "position": "Software Engineer",
+        "image": "/images/team/thang-le.jpg"
+      },
+      "huongPham": {
+        "name": "Huong Pham",
+        "position": "Software Engineer",
+        "image": "/images/team/huong-pham.jpg"
+      },
+      "hungNguyen": {
+        "name": "Hung Nguyen",
+        "position": "Software Engineer",
+        "image": "/images/team/hung-nguyen.jpg"
+      },
+      "anhVu": {
+        "name": "Anh Vu",
+        "position": "Developer",
+        "image": "/images/team/anh-vu.png"
+      },
+      "datNguyen": {
+        "name": "Dat Nguyen",
+        "position": "Business Development",
+        "image": "/images/team/dat-nguyen.jpg"
+      },
+      "minhAnhBui": {
+        "name": "Minh Anh Bui",
+        "position": "UX/UI Designer",
+        "image": "/images/team/minh-anh-bui.jpg"
+      },
+      "phuongAnhNguyen": {
+        "name": "Phuong Anh Nguyen",
+        "position": "UX/UI Designer",
+        "image": "/images/team/phuong-anh-nguyen.jpg"
       }
     }
   }
