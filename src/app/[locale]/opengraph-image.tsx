@@ -19,7 +19,7 @@ export default function OpengraphImage() {
         }}
       >
         <img
-          src="https://viai.ai/icons/embed.png"
+          src="https://viai.io/icons/embed.png"
           alt="Venera AI"
           width={1200}
           height={600}
