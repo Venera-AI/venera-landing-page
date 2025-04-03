@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://viai.io"),
   title: "Venera AI - Trợ lý sức khỏe thông minh",
   description:
     "Venera AI là nền tảng chăm sóc sức khỏe sử dụng AI giúp người dùng theo dõi, phân tích dữ liệu sức khỏe và đề xuất điều chỉnh kịp thời.",
