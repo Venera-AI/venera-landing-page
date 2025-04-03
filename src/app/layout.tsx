@@ -1,26 +1,11 @@
-import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import home from "@/content/home.json";
-import "./styles/index.css";
+// root layout.tsx is required for static export
 
-const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-});
+import "@/app/styles/index.css";
 
-export const metadata: Metadata = {
-  title: home.metadata.title,
-  description: home.metadata.description,
-};
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={`${poppins.className} antialiased`}>{children}</body>
-    </html>
-  );
+  return children;
 }

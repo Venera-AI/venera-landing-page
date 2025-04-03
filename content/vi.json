@@ -1,0 +1,260 @@
+{
+  "homePage": {
+    "metadata": {
+      "title": "Venera AI | Healthcare with AI",
+      "description": "Web application to automate medical data processing and medical insights extracting. Insights visualizes. diagnosis recommender."
+    },
+    "title": "Trang chủ",
+    "hero": {
+      "headline": "Gặp gỡ Venera AI",
+      "subheadline": "Trợ lý sức khỏe cá nhân nhanh chóng & dễ dàng",
+      "actionButton": {
+        "label": "Dùng thử miễn phí"
+      }
+    },
+    "healthcareData": {
+      "headline": "Những con số đáng chú ý",
+      "items": {
+        "1": {
+          "headline": "70%",
+          "body": "Bệnh nhân gặp khó khăn khi truy cập và quản lý hồ sơ y tế",
+          "image": "/images/healthcare-data-1.jpg"
+        },
+        "2": {
+          "headline": "50 tỷ",
+          "body": "Là số tiền thất thoát hàng năm do quản lý dữ liệu y tế kém hiệu quả",
+          "image": "/images/healthcare-data-2.jpeg"
+        },
+        "3": {
+          "headline": "90%",
+          "body": "Nhà cung cấp dịch vụ y tế gặp khó khăn trong tích hợp dữ liệu bệnh nhân giữa các hệ thống",
+          "image": "/images/healthcare-data-3.webp"
+        }
+      }
+    },
+    "intro": {
+      "headline": "Hành trình sức khỏe dễ tiếp cận, chủ động và đáng tin cậy",
+      "body": "Venera AI cách mạng hóa ngành y tế bằng cách làm cho việc chăm sóc sức khỏe trở nên dễ dàng, trực quan và hoàn toàn dựa trên dữ liệu cá nhân. Với Venera AI, tất cả mọi người đều có thể chủ động chăm sóc sức khỏe hiệu quả.",
+      "image": "/images/intro.webp"
+    },
+    "functionalities": {
+      "headline": "Quản lý sức khỏe toàn diện tại một nơi duy nhất",
+      "items": [
+        {
+          "headline": "",
+          "body": "",
+          "image": ""
+        },
+        {
+          "headline": "",
+          "body": "",
+          "image": ""
+        },
+        {
+          "headline": "",
+          "body": "",
+          "image": ""
+        },
+        {
+          "headline": "",
+          "body": "",
+          "image": ""
+        }
+      ]
+    },
+    "privacy": {
+      "headline": "Chính sách bảo vệ dữ liệu cá nhân",
+      "body": "Chúng tôi không bán hoặc chia sẻ dữ liệu của bạn với bên thứ ba và không lưu trữ dữ liệu sức khỏe cá nhân trên hệ thống. Bạn hoàn toàn kiểm soát quyền riêng tư của mình.",
+      "image": "/images/shield.png",
+      "actionButton": {
+        "label": "Read more",
+        "link": "/privacy"
+      }
+    },
+    "why": {
+      "headline": "Tại sao khách hàng tin tưởng Venera AI?",
+      "actionButton": {
+        "label": "Tìm hiểu thêm",
+        "link": "/team"
+      },
+      "items": {
+        "1": {
+          "headline": "Chuyên gia hàng đầu về AI",
+          "body": "Đội ngũ các kỹ sư của chúng tôi có hơn 10 năm nghiên cứu & phát triển công nghệ AI tiên tiến.",
+          "image": "/images/ai-experts.svg"
+        },
+        "2": {
+          "headline": "Đội ngũ tận tâm",
+          "body": "Các kỹ sư, nhà khoa học dữ liệu và cố vấn của chúng tôi liên tục cải tiến nền tảng để dẫn đầu trong đổi mới y tế.",
+          "image": "/images/dedicated-team.svg"
+        },
+        "3": {
+          "headline": "Chuyên gia y tế đầu ngành",
+          "body": "Chúng tôi hợp tác với các chuyên gia y tế hàng đầu để đảm bảo sự hỗ trợ toàn diện và đáng tin cậy cho người dùng.",
+          "image": "/images/trusted-experts.svg"
+        }
+      }
+    },
+    "feedback": {
+      "headline": "Cảm nhận từ người dùng",
+      "items": {
+        "1": {
+          "name": "Elvira Montanez",
+          "image": "/images/feedback-profile-1.jpg",
+          "body": "Venera AI đã thay đổi hoàn toàn cách tôi quản lý sức khỏe. Tôi không còn phải lục tìm qua nhiều cổng thông tin của các bệnh viện khác nhau—mọi thứ đều có trong một nơi và AI giúp giải thích thông tin y tế của tôi một cách dễ hiểu!"
+        },
+        "2": {
+          "name": "Casper Berkley",
+          "image": "/images/feedback-profile-2.jpg",
+          "body": "Là một người chăm sóc gia đình, tôi từng cảm thấy quá tải khi theo dõi hồ sơ y tế của bố tôi. Nhưng với Venera AI, tôi có thể truy cập hồ sơ, giám sát sức khỏe của ông và nhận các giải thích nhanh chóng về kết quả xét nghiệm—chỉ trong vài giây."
+        },
+        "3": {
+          "name": "Daniel Gallego",
+          "image": "/images/feedback-profile-3.jpg",
+          "body": "Chatbot AI thật sự là một bước ngoặt đối với tôi! Tôi có thể hỏi về kết quả xét nghiệm của mình bất cứ lúc nào và nhận được giải thích rõ ràng mà không cần chờ đến cuộc hẹn với bác sĩ. Nó mang lại cho tôi sự yên tâm."
+        }
+      }
+    },
+    "contact": {
+      "headline": "Kết nối với chúng tôi",
+      "nameInput": "Tên",
+      "emailInput": "Địa chỉ Email",
+      "messageInput": "Lời nhắn",
+      "actionButton": {
+        "label": "Gửi"
+      }
+    },
+    "footer": {
+      "ourContactLabel": "Thông tin liên hệ",
+      "callLabel": "Điện thoại",
+      "emailLabel": "Email",
+      "businessHoursLabel": "Giờ làm việc",
+      "followLabel": "Theo dõi chúng tôi",
+      "businessHours": {
+        "1": {
+          "day": "Thứ Hai - Thứ Bảy",
+          "time": "8:00 sáng đến 8:00 tối"
+        },
+        "2": {
+          "day": "Chủ Nhật",
+          "time": "12:00 trưa to 8:00 tối"
+        }
+      },
+      "contact": {
+        "address": "465 84th St, Brooklyn, NY 11209",
+        "phone": "1 (541) 908 9436",
+        "email": "admin@viai.io",
+        "socials": {
+          "facebook": {
+            "type": "facebook",
+            "link": ""
+          },
+          "instagram": {
+            "type": "instagram",
+            "link": ""
+          }
+        }
+      }
+    }
+  },
+  "teamPage": {
+    "headline": "Meet our team",
+    "members": {
+      "minhTran": {
+        "name": "Minh Tran",
+        "position": "CEO",
+        "image": "/images/team/minh-tran.jpg"
+      },
+      "thangNguyen": {
+        "name": "Thang Nguyen",
+        "position": "CTO",
+        "image": "/images/team/thang-nguyen.png"
+      },
+      "lamLe": {
+        "name": "Lam Le",
+        "position": "CPO",
+        "image": "/images/team/lam-le.jpg"
+      },
+      "binhTrinh": {
+        "name": "Binh Trinh",
+        "position": "Software Engineer",
+        "image": "/images/team/binh-trinh.jpg"
+      },
+      "thaiDao": {
+        "name": "Thai Dao",
+        "position": "AI Engineer",
+        "image": "/images/team/thai-dao.jpg"
+      },
+      "thongNguyen": {
+        "name": "Thong Nguyen",
+        "position": "AI Engineer",
+        "image": "/images/team/thong-nguyen.jpg"
+      },
+      "minhDang": {
+        "name": "Minh Dang",
+        "position": "AI Engineer",
+        "image": "/images/team/minh-dang.jpg"
+      },
+      "longNguyen": {
+        "name": "Long Nguyen",
+        "position": "AI Engineer",
+        "image": "/images/team/long-nguyen.png"
+      },
+      "quanLe": {
+        "name": "Quan Le",
+        "position": "AI Engineer",
+        "image": "/images/team/quan-le.jpg"
+      },
+      "ducNguyen": {
+        "name": "Duc Nguyen",
+        "position": "Software Engineer",
+        "image": "/images/team/duc-nguyen.jpg"
+      },
+      "hoangPhan": {
+        "name": "Hoang Phan",
+        "position": "Software Engineer",
+        "image": "/images/team/hoang-phan.jpg"
+      },
+      "vuNguyen": {
+        "name": "Vu Nguyen",
+        "position": "Software Engineer",
+        "image": "/images/team/vu-nguyen.jpg"
+      },
+      "thangLe": {
+        "name": "Thang Le",
+        "position": "Software Engineer",
+        "image": "/images/team/thang-le.jpg"
+      },
+      "huongPham": {
+        "name": "Huong Pham",
+        "position": "Software Engineer",
+        "image": "/images/team/huong-pham.jpg"
+      },
+      "hungNguyen": {
+        "name": "Hung Nguyen",
+        "position": "Software Engineer",
+        "image": "/images/team/hung-nguyen.jpg"
+      },
+      "anhVu": {
+        "name": "Anh Vu",
+        "position": "Developer",
+        "image": "/images/team/anh-vu.png"
+      },
+      "datNguyen": {
+        "name": "Dat Nguyen",
+        "position": "Business Development",
+        "image": "/images/team/dat-nguyen.jpg"
+      },
+      "minhAnhBui": {
+        "name": "Minh Anh Bui",
+        "position": "UX/UI Designer",
+        "image": "/images/team/minh-anh-bui.jpg"
+      },
+      "phuongAnhNguyen": {
+        "name": "Phuong Anh Nguyen",
+        "position": "UX/UI Designer",
+        "image": "/images/team/phuong-anh-nguyen.jpg"
+      }
+    }
+  }
+}
