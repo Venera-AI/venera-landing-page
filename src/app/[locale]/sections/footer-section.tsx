@@ -1,6 +1,6 @@
-import home from "@/content/home.json";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { IconType } from "react-icons";
+import { useMessages, useTranslations } from "next-intl";
 
 type Social = "facebook" | "instagram";
 
@@ -24,27 +24,33 @@ const iconsConfig: Record<Social, IconConfig> = {
 };
 
 export default function FooterSection() {
-  const { footer } = home;
-  const contact = footer.contact;
+  const t = useTranslations("homePage.footer");
+  const footerMessages = useMessages().homePage.footer;
+  const businessHoursKeys = Object.keys(
+    footerMessages.businessHours,
+  ) as readonly (keyof typeof footerMessages.businessHours)[];
+  const socialKeys = Object.keys(
+    footerMessages.contact.socials,
+  ) as readonly (keyof typeof footerMessages.contact.socials)[];
 
   return (
     <footer className="[background:linear-gradient(135deg,#9ec5f7,#2d44ad)]">
       <div className="text-white flex flex-col sm:flex-row justify-between gap-10 sm:gap-0 lg:max-w-4xl max-w-2xl m-auto py-16 px-8">
         {/* Contact */}
-        <section className="mt-4 font-medium">
-          <h2 className="text-4xl font-light">{footer.ourContactLabel}</h2>
-          <p className="mt-6">{contact.address}</p>
+        <section className="font-medium">
+          <h2 className="text-4xl font-light">{t("ourContactLabel")}</h2>
+          <p className="mt-6">{t("contact.address")}</p>
 
           <p className="mt-6">
-            {footer.callLabel}:{" "}
-            <a href={`tel:${contact.phone}`} className="underline">
-              {contact.phone}
+            {t("callLabel")}:{" "}
+            <a href={`tel:${t("contact.phone")}`} className="underline">
+              {t("contact.phone")}
             </a>
           </p>
           <p>
-            {footer.emailLabel}:{" "}
-            <a href={`mailto:${contact.email}`} className="underline">
-              {contact.email}
+            {t("emailLabel")}:{" "}
+            <a href={`mailto:${t("contact.email")}`} className="underline">
+              {t("contact.email")}
             </a>
           </p>
         </section>
@@ -52,14 +58,14 @@ export default function FooterSection() {
         <div className="flex flex-col justify-between sm:gap-0 gap-10">
           {/* Business */}
           <section>
-            <h2 className="text-[22px]">{footer.businessHoursLabel}</h2>
+            <h2 className="text-[22px]">{t("businessHoursLabel")}</h2>
 
             <div className="flex flex-col gap-4">
-              {footer.businessHours.map((hour) => (
-                <p key={hour.day} className="text-[12px]">
-                  {hour.day}
+              {businessHoursKeys.map((businessHoursKey) => (
+                <p key={businessHoursKey} className="text-[12px]">
+                  {t(`businessHours.${businessHoursKey}.day`)}
                   <br />
-                  {hour.time}
+                  {t(`businessHours.${businessHoursKey}.time`)}
                 </p>
               ))}
             </div>
@@ -67,15 +73,17 @@ export default function FooterSection() {
 
           {/* Socials */}
           <section className="mt-26">
-            <h2 className="text-[22px]">{footer.followLabel}</h2>
+            <h2 className="text-[22px]">{t("followLabel")}</h2>
             <div className="flex gap-1 mt-2">
-              {contact.socials.map((social) => {
+              {socialKeys.map((socialKey) => {
+                const socialType = t(`contact.socials.${socialKey}.type`);
+                const socialLink = t(`contact.socials.${socialKey}.link`);
                 const { Icon, size, className } =
-                  iconsConfig[social.type as Social];
+                  iconsConfig[socialType as Social];
                 return (
                   <a
-                    key={social.type}
-                    href={social.link}
+                    key={socialType}
+                    href={socialLink}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
