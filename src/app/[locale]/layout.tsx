@@ -1,11 +1,12 @@
 import { Locale, routing } from "@/i18n/routing";
 import { getMetadata } from "@/utils/getMetadata";
-import clsx from "clsx";
+
 import type { Metadata } from "next";
+import { Poppins, Nunito } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getLocale, setRequestLocale } from "next-intl/server";
-import { Nunito, Poppins } from "next/font/google";
 import { notFound } from "next/navigation";
+import clsx from "clsx";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
