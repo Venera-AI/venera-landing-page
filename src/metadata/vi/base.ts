@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const baseMetadata: Metadata = {
   metadataBase: new URL("https://viai.io"),
   title: "Venera AI - Trợ lý sức khỏe thông minh",
   description:
