@@ -1,9 +1,5 @@
 {
   "homePage": {
-    "metadata": {
-      "title": "Venera AI | Healthcare with AI",
-      "description": "Web application to automate medical data processing and medical insights extracting. Insights visualizes. diagnosis recommender."
-    },
     "title": "Trang chủ",
     "hero": {
       "headline": "Gặp gỡ Venera AI",
