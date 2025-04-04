@@ -33,12 +33,38 @@
       "body": "At Venera AI, we're transforming healthcare by making it accessible, intuitive, and data-driven. With Venera AI, proactive healthcare is now within reach for everyone.",
       "image": "/images/intro.webp"
     },
-
     "dashboard1": {
       "headline": "AI interactive dashboard for healthcare providers",
       "alt": "Dashboard Feature 1",
       "body": "Venera AI's interactive dashboard enables doctors and medical staff to efficiently manage patient data, visualize health insights, and leverage AI diagnosis recommendations.",
-      "image": "/images/Patient-list.png"
+      "image": "/images/Patient-list.png",
+      "circleColor": "linear-gradient(135deg,#f8ddc6,#efefef)"
+    },
+
+    "functionalities": {
+      "headline": "Take control of your health, all in one place",
+      "items": [
+        {
+          "headline": "Upload your medical records effortlessly",
+          "body": "Easily upload your medical records by scanning documents, images, or syncing with patient portals.",
+          "image": ""
+        },
+        {
+          "headline": "",
+          "body": "",
+          "image": ""
+        },
+        {
+          "headline": "",
+          "body": "",
+          "image": ""
+        },
+        {
+          "headline": "",
+          "body": "",
+          "image": ""
+        }
+      ]
     },
 
     "dashboard2": {
