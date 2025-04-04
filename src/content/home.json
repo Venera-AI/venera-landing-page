@@ -7,9 +7,9 @@
     "headline": "Meet Venera AI",
     "subheadline": "Your fast & easy personal health companion",
     "images": {
-      "leftEffect": "/images/effect-slide1.png",
+      "textEffect": "/images/effect-slide1.png",
       "mockUpPhone": "/images/mock-up1.png",
-      "rightPhoneEffect": "/images/phone-effect.png"
+      "phoneEffect": "/images/phone-effect.png"
     },
     "logos": {
       "logoNavBar": "/images/venera-logo.svg",
@@ -25,8 +25,7 @@
         "link": ""
       },
       "buttonAppStore": {
-        "label": "Get it on the",
-        "app": "App Store",
+        "img": "/images/appstore-button.svg",
         "link": ""
       }
     }
