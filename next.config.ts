@@ -18,7 +18,6 @@ const nextConfig: NextConfig = {
         mode: ["react-component", "html", "body", "meta"],
       },
     });
-
     return config;
   },
   compiler: {
