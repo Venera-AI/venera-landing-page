@@ -14,7 +14,7 @@ export default function DashboardFeatureTemplate({
   content: { headline, body, image, alt, circleColor },
 }: DashboardFeatureTemplateProps) {
   return (
-    <section className="bg-white">
+    <section className="bg-white py-8">
       <div className="flex flex-col lg:flex-row gap-8 items-center max-w-7xl py-16 px-8 m-auto relative">
         <div className="flex flex-col">
           <h2 className="text-4xl font-medium text-center lg:text-start leading-12">
@@ -24,23 +24,24 @@ export default function DashboardFeatureTemplate({
             {body}
           </p>
         </div>
-        <div className="relative flex justify-center items-center">
+        <div className="relative flex justify-center items-center py-8">
           <div
-            className="absolute z-0 rounded-full w-[250px] h-[250px] md:w-[450px] md:h-[450px]"
+            className="absolute z-0 rounded-full 
+             top-1/2 left-[55%] transform -translate-y-1/2 -translate-x-1/2
+             w-[308px] h-[308px] sm:w-[330px] sm:h-[330px] 
+             md:w-[363px] md:h-[363px] 
+             lg:w-[385px] lg:h-[385px] 
+             xl:w-[418px] xl:h-[418px]"
             style={{
               background: circleColor,
-              top: "-35px",
-              left: "-33px",
-              right: "auto",
             }}
           ></div>
           <Image
             src={image}
             alt={alt}
-            width={565}
+            width={500}
             height={511}
-            sizes="(max-width: 768px) 80vw, (max-width: 1200px) 50vw, 33vw"
-            className="relative z-10 max-w-[200px] md:max-w-[300px] lg:max-w-[450px]"
+            className="relative z-10 md:max-w-[300px] lg:max-w-[450px]"
           />
         </div>
       </div>
