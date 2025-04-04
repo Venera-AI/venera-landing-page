@@ -1,6 +1,15 @@
+import { Locale } from "@/i18n/routing";
+import { getMetadata } from "@/utils/getMetadata";
 import { withLocale } from "@/with-locale";
+import { Metadata } from "next";
 import { useMessages } from "next-intl";
+import { getLocale } from "next-intl/server";
 import Image from "next/image";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = (await getLocale()) as Locale;
+  return getMetadata(locale, "team");
+}
 
 export default withLocale(function Team() {
   const messages = useMessages();

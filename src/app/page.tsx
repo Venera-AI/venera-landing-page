@@ -7,12 +7,14 @@ import ContactSection from "./[locale]/sections/contact-section";
 import PrivacySection from "./[locale]/sections/privacy-section";
 import DashboardFeature1 from "./[locale]/sections/dashboard-section1";
 import DashboardFeature2 from "./[locale]/sections/dashboard-section2";
+import FeaturesSection from "./[locale]/sections/features-section";
 export default function Home() {
   return (
     <main>
       <h1 className="sr-only">Home</h1>
       <HealthcareDataSection />
       <IntroSection />
+      <FeaturesSection />
       <DashboardFeature1 />
       <DashboardFeature2 />
       <PrivacySection />

@@ -1,8 +1,10 @@
+import { Locale, routing } from "@/i18n/routing";
+import { getMetadata } from "@/utils/getMetadata";
+
 import type { Metadata } from "next";
 import { Poppins, Nunito } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Locale, routing } from "@/i18n/routing";
+import { getLocale, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import clsx from "clsx";
 
@@ -23,11 +25,9 @@ const localeFont: Record<Locale, string> = {
 };
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("homePage.metadata");
-  return {
-    title: t("title"),
-    description: t("description"),
-  };
+  const locale = (await getLocale()) as Locale;
+  const metadata = getMetadata(locale);
+  return metadata;
 }
 
 export function generateStaticParams() {
