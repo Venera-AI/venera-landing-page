@@ -32,13 +32,11 @@ export default function PrivacySection() {
           </p>
         </SlideIn>
 
-        <SlideIn delay={0.6}>
-          <Link
-            href={t("actionButton.link")}
-            className="bg-[#158d6a] text-white md:px-16 md:py-5 px-12 py-4 md:text-xl rounded-2xl font-bold mt-8"
-          >
-            {t("actionButton.label")}
-          </Link>
+        <SlideIn
+          delay={0.6}
+          className="mt-8 bg-[#158d6a] text-white md:px-16 md:py-5 px-12 py-4 md:text-xl rounded-2xl font-bold"
+        >
+          <Link href={t("actionButton.link")}>{t("actionButton.label")}</Link>
         </SlideIn>
       </div>
     </section>
