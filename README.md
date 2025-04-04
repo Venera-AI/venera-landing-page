@@ -31,6 +31,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - `pnpm lint`: Lint the code using ESLint and Prettier.
 - `pnpm lint:fix`: Try to fix lint errors using ESLint and format the code using Prettier.
 
+## Firebase Functions
+
+This project uses Firebase Functions. The functions are located in the [functions](./functions) directory. View the [functions README](./functions/README.md) for more information.
+
 ## Contributing
 
 The repository enforces ESLint and Prettier to ensure code format and quality. Your code is also automatically linted and formatted using ESLint and Prettier when you commit your changes. In the case linting errors are not fixed automatically, please run `pnpm lint` to find the errors and fix them manually.

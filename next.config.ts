@@ -21,6 +21,10 @@ const nextConfig: NextConfig = {
 
     return config;
   },
+  compiler: {
+    removeConsole:
+      process.env.NODE_ENV === "production" ? { exclude: ["error"] } : false,
+  },
   experimental: {
     turbo: {
       rules: {
