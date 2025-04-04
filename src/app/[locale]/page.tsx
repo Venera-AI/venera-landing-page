@@ -9,7 +9,7 @@ import PrivacySection from "@/app/[locale]/sections/privacy-section";
 import LocaleSwitcher from "@/app/components/locale-switcher";
 import DashboardFeature1 from "@/app/[locale]/sections/dashboard-section1";
 import DashboardFeature2 from "@/app/[locale]/sections/dashboard-section2";
-
+import FeaturesSection from "./sections/features-section";
 export default withLocale(function Home() {
   return (
     <main>
@@ -20,6 +20,7 @@ export default withLocale(function Home() {
       </div>
       <HealthcareDataSection />
       <IntroSection />
+      <FeaturesSection />
       <DashboardFeature1 />
       <DashboardFeature2 />
       <PrivacySection />
