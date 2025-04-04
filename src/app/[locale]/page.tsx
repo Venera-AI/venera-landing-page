@@ -7,6 +7,8 @@ import WhySection from "@/app/[locale]/sections/why-section";
 import ContactSection from "@/app/[locale]/sections/contact-section";
 import PrivacySection from "@/app/[locale]/sections/privacy-section";
 import LocaleSwitcher from "@/app/components/locale-switcher";
+import DashboardFeature1 from "@/app/[locale]/sections/dashboard-section1";
+import DashboardFeature2 from "@/app/[locale]/sections/dashboard-section2";
 
 export default withLocale(function Home() {
   return (
@@ -18,6 +20,8 @@ export default withLocale(function Home() {
       </div>
       <HealthcareDataSection />
       <IntroSection />
+      <DashboardFeature1 />
+      <DashboardFeature2 />
       <PrivacySection />
       <WhySection />
       <FeedbackSection />
