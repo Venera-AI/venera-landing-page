@@ -95,16 +95,14 @@
       "headline": "Bảng điều khiển tương tác AI dành cho bác sĩ",
       "alt": "Dashboard Feature 1",
       "body": "Giúp các bác sĩ và nhân viên y tế quản lý dữ liệu bệnh nhân một cách hiệu quả. Hiển thị thông tin sức khỏe trực quan và đề xuất chẩn đoán dựa trên AI.",
-      "image": "/images/Patient-list.png",
-      "circleColor": "linear-gradient(135deg,#f8ddc6,#efefef)"
+      "image": "/images/Patient-list.png"
     },
 
     "dashboard2": {
       "headline": "Giám sát sức khỏe cộng đồng an toàn",
       "alt": "Dashboard Feature 1",
       "body": "Theo dõi các xu hướng y tế, phát hiện bất thường và phân tích các chỉ số sức khỏe chính bằng AI & phân tích dữ liệu nâng cao.",
-      "image": "/images/Patient-list.png",
-      "circleColor": "linear-gradient(135deg,#c6dff8,#efefef)"
+      "image": "/images/Public-Health.webp"
     },
 
     "features": {

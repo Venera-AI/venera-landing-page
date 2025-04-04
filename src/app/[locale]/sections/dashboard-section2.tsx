@@ -3,5 +3,8 @@ import DashboardFeatureTemplate from "@/app/components/dashboard-feature-templat
 
 export default function DashboardFeature2() {
   const dashboard = useMessages().homePage.dashboard2;
-  return <DashboardFeatureTemplate content={dashboard} />;
+  const circleColor = "linear-gradient(135deg,#c6dff8,#efefef)";
+  return (
+    <DashboardFeatureTemplate content={dashboard} circleColor={circleColor} />
+  );
 }
