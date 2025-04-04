@@ -1,5 +1,6 @@
 import { withLocale } from "@/with-locale";
 import HealthcareDataSection from "@/app/[locale]/sections/healthcare-data-section";
+import HeroSection from "@/app/[locale]/sections/hero-section";
 import FeedbackSection from "@/app/[locale]/sections/feedback-section";
 import FooterSection from "@/app/[locale]/sections/footer-section";
 import IntroSection from "@/app/[locale]/sections/intro-section";
@@ -16,6 +17,7 @@ export default withLocale(function Home() {
       <div className="bg-violet-300">
         <LocaleSwitcher />
       </div>
+      <HeroSection />
       <HealthcareDataSection />
       <IntroSection />
       <PrivacySection />
