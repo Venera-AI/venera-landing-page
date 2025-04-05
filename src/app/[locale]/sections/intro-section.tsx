@@ -8,8 +8,8 @@ export default function IntroSection() {
   const t = useTranslations("homePage.intro");
 
   return (
-    <section className="bg-white">
-      <div className="flex flex-col lg:flex-row gap-8 items-center max-w-7xl py-16 px-8 m-auto">
+    <section className="bg-white px-8 py-16">
+      <div className="flex flex-col lg:flex-row gap-8 items-center max-w-7xl m-auto">
         <div className="flex flex-col">
           <SlideIn
             as="h2"
