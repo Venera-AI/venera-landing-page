@@ -37,9 +37,9 @@ jobs:
         run: |
           hasError=false
 
-          pnpm lint || { hasError=true }
+          pnpm lint || { hasError=true; }
 
-          pnpm prettier || { hasError=true }
+          pnpm prettier || { hasError=true; }
 
           if [ $hasError ]; then
             echo "Lint failed. Please fix the errors.";
