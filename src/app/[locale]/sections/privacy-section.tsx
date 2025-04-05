@@ -1,3 +1,4 @@
+import SlideIn from "@/components/slide-in";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,25 +9,37 @@ export default function PrivacySection() {
   return (
     <section className="p-6 md:p-12 xl:p-20">
       <div className="mx-auto max-w-7xl bg-[#ecf5ff] flex flex-col items-center py-14 px-4 lg:px-8">
-        <Image
-          src={t("image")}
-          alt="Privacy Icon"
-          width={0}
-          height={0}
-          className="mb-6 w-[150px]"
-        />
-        <h2 className="mb-6 font-medium text-4xl text-center">
+        <SlideIn className="mb-6">
+          <Image
+            src={t("image")}
+            alt="Privacy Icon"
+            className="w-[150px]"
+            width={0}
+            height={0}
+          />
+        </SlideIn>
+
+        <SlideIn
+          as="h2"
+          delay={0.2}
+          className="mb-6 font-medium text-4xl text-center"
+        >
           {t("headline")}
-        </h2>
-        <p className="mb-16 lg:px-8 text-center text-xl md:text-2xl leading-relaxed">
+        </SlideIn>
+        <SlideIn
+          delay={0.4}
+          as="h2"
+          className="mb-16 lg:px-8 text-center text-xl md:text-2xl leading-relaxed"
+        >
           {t("body")}
-        </p>
-        <Link
-          href={t("actionButton.link")}
+        </SlideIn>
+
+        <SlideIn
+          delay={0.6}
           className="bg-[#158d6a] text-white px-12 md:px-16 py-4 md:py-5 md:text-xl rounded-2xl font-bold"
         >
-          {t("actionButton.label")}
-        </Link>
+          <Link href={t("actionButton.link")}>{t("actionButton.label")}</Link>
+        </SlideIn>
       </div>
     </section>
   );
