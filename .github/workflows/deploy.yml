@@ -15,6 +15,11 @@ on:
         type: environment
         required: true
 
+permissions:
+  checks: write
+  contents: read
+  pull-requests: write
+
 env:
   FIREBASE_PROJECT_ID:
   # Cannot set firebase service account value into env variable,
