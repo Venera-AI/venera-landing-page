@@ -81,9 +81,9 @@ jobs:
           INPUT_ENVIRONMENT: ${{ inputs.environment }}
         run: |
           if [ "$INPUT_ENVIRONMENT" == "STAGING" ]; then
-            FIREBASE_SERVICE_ACCOUNT_ENV=STAGING
+            FIREBASE_SERVICE_ACCOUNT_ENV="STAGING"
           else
-            FIREBASE_SERVICE_ACCOUNT_ENV=DEV
+            FIREBASE_SERVICE_ACCOUNT_ENV="DEV"
           fi
           echo "FIREBASE_SERVICE_ACCOUNT_ENV=$FIREBASE_SERVICE_ACCOUNT_ENV" >> $GITHUB_ENV
 
@@ -93,9 +93,9 @@ jobs:
           GITHUB_REF: ${{ github.ref }}
         run: |
           if [ "$GITHUB_REF" == "refs/heads/staging" ]; then
-            FIREBASE_SERVICE_ACCOUNT_ENV=STAGING
+            FIREBASE_SERVICE_ACCOUNT_ENV="STAGING"
           else
-            FIREBASE_SERVICE_ACCOUNT_ENV=DEV
+            FIREBASE_SERVICE_ACCOUNT_ENV="DEV"
           fi
           echo "FIREBASE_SERVICE_ACCOUNT_ENV=$FIREBASE_SERVICE_ACCOUNT_ENV" >> $GITHUB_ENV
 
