@@ -35,14 +35,13 @@ export default function HeroSection() {
                   <h1>{t("headline")}</h1>
                 </SlideIn>
                 <SlideIn
+                  as="div"
                   direction="right"
                   delay={1.2}
                   duration={0.5}
-                  className="text-white text-center lg:text-left text-xl md:text-2xl lg:text-5xl"
+                  className="text-white text-center lg:text-left text-xl md:text-2xl lg:text-[54px]"
                 >
-                  <span className="inline-block">
-                    <h3>{t("subheadline")}</h3>
-                  </span>
+                  {t("subheadline")}
                 </SlideIn>
               </div>
             </div>
