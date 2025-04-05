@@ -15,11 +15,25 @@ export default function FeaturesSection() {
     "bg-[linear-gradient(180deg,#c6ccf8,#efefef)]",
   ];
 
+  const headlineChunks = t("headline").split(",");
+  const separatedHeadlineChunks = Array(headlineChunks.length * 2 - 1)
+    .fill(null)
+    .map((_, index) => (index % 2 === 0 ? headlineChunks[index / 2] : ","));
+
   return (
-    <section className="px-4 md:px-8 py-16 ">
+    <section className="px-4 md:px-8 py-16 lg:py-24">
       <div className="max-w-7xl mx-auto">
-        <h2 className="mb-12 xl:mb-20 text-[42px] text-left leading-tight">
-          {t("headline")}
+        <h2 className="mb-12 xl:mb-20 text-[42px] text-center lg:text-left leading-tight">
+          {separatedHeadlineChunks.map((chunk, index) =>
+            chunk === "," ? (
+              <span key={index}>
+                <span>,</span>
+                <br className="hidden md:inline"></br>
+              </span>
+            ) : (
+              <span key={index}>{chunk}</span>
+            ),
+          )}
         </h2>
 
         <div className="grid gap-8 xl:gap-16 max-w-7xl">
