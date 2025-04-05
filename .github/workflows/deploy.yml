@@ -17,7 +17,9 @@ on:
 
 env:
   FIREBASE_PROJECT_ID:
-  FIREBASE_SERVICE_ACCOUNT:
+  # Cannot set firebase service account value into env variable,
+  # hence, only compute what environment to use, then use the corresponding secret
+  FIREBASE_SERVICE_ACCOUNT_ENV:
 
 jobs:
   deploy_firebase_hosting:
@@ -79,11 +81,11 @@ jobs:
           INPUT_ENVIRONMENT: ${{ inputs.environment }}
         run: |
           if [ "$INPUT_ENVIRONMENT" == "STAGING" ]; then
-            FIREBASE_SERVICE_ACCOUNT="${{ secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_STAGING }}"
+            FIREBASE_SERVICE_ACCOUNT_ENV=STAGING
           else
-            FIREBASE_SERVICE_ACCOUNT="${{ secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_DEV }}"
+            FIREBASE_SERVICE_ACCOUNT_ENV=DEV
           fi
-          echo "FIREBASE_SERVICE_ACCOUNT=$FIREBASE_SERVICE_ACCOUNT" >> $GITHUB_ENV
+          echo "FIREBASE_SERVICE_ACCOUNT_ENV=$FIREBASE_SERVICE_ACCOUNT_ENV" >> $GITHUB_ENV
 
       - name: Set Firebase Service Account
         if: github.event_name == 'push'
@@ -91,22 +93,20 @@ jobs:
           GITHUB_REF: ${{ github.ref }}
         run: |
           if [ "$GITHUB_REF" == "refs/heads/staging" ]; then
-            FIREBASE_SERVICE_ACCOUNT="${{ secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_STAGING }}"
+            FIREBASE_SERVICE_ACCOUNT_ENV=STAGING
           else
-            FIREBASE_SERVICE_ACCOUNT="${{ secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_DEV }}"
+            FIREBASE_SERVICE_ACCOUNT_ENV=DEV
           fi
-          echo "FIREBASE_SERVICE_ACCOUNT=$FIREBASE_SERVICE_ACCOUNT" >> $GITHUB_ENV
+          echo "FIREBASE_SERVICE_ACCOUNT_ENV=$FIREBASE_SERVICE_ACCOUNT_ENV" >> $GITHUB_ENV
 
       - name: Set Firebase Service Account
-        if: github.event_name == 'pull_request'
-        env:
-          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_DEV }}
-        run: echo "FIREBASE_SERVICE_ACCOUNT=$FIREBASE_SERVICE_ACCOUNT" >> $GITHUB_ENV
+        if: ${{ github.event_name == 'pull_request' }}
+        run: echo "FIREBASE_SERVICE_ACCOUNT_ENV=DEV" >> $GITHUB_ENV
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ env.FIREBASE_SERVICE_ACCOUNT }}
+          firebaseServiceAccount: ${{ env.FIREBASE_SERVICE_ACCOUNT_ENV == 'STAGING' && secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_STAGING || secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_DEV }}
           projectId: ${{ env.FIREBASE_PROJECT_ID }}
           channelId: ${{ github.event_name == 'pull_request' && '' || 'live' }}
