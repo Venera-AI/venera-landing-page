@@ -17,6 +17,7 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "firebase": "^11.4.0",
+    "framer-motion": "^12.6.2",
     "ipinfo": "^1.5.2",
     "next": "15.2.2",
     "next-intl": "^4.0.2",
