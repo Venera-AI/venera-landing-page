@@ -11,6 +11,7 @@ interface SlideInProps<T extends keyof HTMLElementTagNameMap = "div"> {
   delay?: number;
   className?: string;
   direction?: SlideDirection;
+  duration?: number;
 }
 
 const slideVariants = {
@@ -26,6 +27,7 @@ export default function SlideIn<T extends keyof HTMLElementTagNameMap>({
   delay = 0,
   direction = "up",
   className = "",
+  duration = 0.3,
   ...props
 }: PropsWithChildren<SlideInProps<T> & HTMLMotionProps<T>>) {
   // This alllows us to use the HTML element as is instead of having to wrap it in a motion.div
@@ -37,7 +39,7 @@ export default function SlideIn<T extends keyof HTMLElementTagNameMap>({
       initial={slideVariants[direction]}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.3, delay }}
+      transition={{ duration: duration, delay, ease: "easeOut" }}
       className={className}
       {...props}
     >
