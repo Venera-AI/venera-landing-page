@@ -41,7 +41,7 @@ jobs:
 
           pnpm prettier || { hasError=true; }
 
-          if [ $hasError ]; then
+          if [ "$hasError" = true ]; then
             echo "Lint failed. Please fix the errors.";
             echo "Try running 'pnpm lint:fix'";
             exit 1;
