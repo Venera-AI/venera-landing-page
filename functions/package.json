@@ -7,6 +7,7 @@
     "serve": "pnpm build && firebase emulators:start",
     "shell": "pnpm build && firebase functions:shell",
     "start": "pnpm shell",
+    "predeploy": "pnpm build",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log"
   },
@@ -15,6 +16,7 @@
   },
   "main": "lib/index.js",
   "dependencies": {
+    "@google-cloud/functions-framework": "^3.5.1",
     "firebase-admin": "^12.6.0",
     "firebase-functions": "^6.0.1"
   },

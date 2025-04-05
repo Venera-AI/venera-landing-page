@@ -23,7 +23,7 @@ import { useMessages, useTranslations } from "next-intl";
 //   },
 // };
 
-export default function FooterSection() {
+export default function Footer() {
   const t = useTranslations("homePage.footer");
   const footerMessages = useMessages().homePage.footer;
   const businessHoursKeys = Object.keys(
@@ -35,7 +35,7 @@ export default function FooterSection() {
 
   return (
     <footer className="[background:linear-gradient(135deg,#9ec5f7,#2d44ad)]">
-      <div className="text-white flex flex-col sm:flex-row justify-between gap-10 sm:gap-0 lg:max-w-4xl max-w-2xl m-auto py-16 px-8">
+      <div className="text-white flex flex-col sm:flex-row justify-between gap-10 sm:gap-0 lg:max-w-5xl m-auto py-16 px-8">
         {/* Contact */}
         <section className="font-medium">
           <h2 className="text-4xl font-light">{t("ourContactLabel")}</h2>

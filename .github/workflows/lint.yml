@@ -33,12 +33,20 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run ESLint
-        run: pnpm lint
-        continue-on-error: false
+      - name: Run ESLint and Prettier
+        run: |
+          hasError=false
 
-      - name: Run Prettier
-        run: pnpm prettier
+          pnpm lint || { hasError=true; }
+
+          pnpm prettier || { hasError=true; }
+
+          if [ "$hasError" = true ]; then
+            echo "Lint failed. Please fix the errors.";
+            echo "Try running 'pnpm lint:fix'";
+            exit 1;
+          fi
+
         continue-on-error: false
 
       ## Requires GitHub Advanced Security to be enabled
