@@ -47,8 +47,10 @@ jobs:
 
       - name: Set Firebase Project ID
         if: github.event_name == 'workflow_dispatch'
+        env:
+          INPUT_ENVIRONMENT: ${{ inputs.environment }}
         run: |
-          if [ "${{ inputs.environment }}" == "STAGING" ]; then
+          if [ "$INPUT_ENVIRONMENT" == "STAGING" ]; then
             FIREBASE_PROJECT_ID="venera-business-staging"
           else
             FIREBASE_PROJECT_ID="venera-business-dev"
@@ -57,8 +59,10 @@ jobs:
 
       - name: Set Firebase Project ID
         if: github.event_name == 'push'
+        env:
+          GITHUB_REF: ${{ github.ref }}
         run: |
-          if [ "${{ github.ref }}" == "refs/heads/staging" ]; then
+          if [ "$GITHUB_REF" == "refs/heads/staging" ]; then
             FIREBASE_PROJECT_ID="venera-business-staging"
           else
             FIREBASE_PROJECT_ID="venera-business-dev"
@@ -71,8 +75,10 @@ jobs:
 
       - name: Set Firebase Service Account
         if: github.event_name == 'workflow_dispatch'
+        env:
+          INPUT_ENVIRONMENT: ${{ inputs.environment }}
         run: |
-          if [ "${{ inputs.environment }}" == "STAGING" ]; then
+          if [ "$INPUT_ENVIRONMENT" == "STAGING" ]; then
             FIREBASE_SERVICE_ACCOUNT="${{ secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_STAGING }}"
           else
             FIREBASE_SERVICE_ACCOUNT="${{ secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_DEV }}"
@@ -81,8 +87,10 @@ jobs:
 
       - name: Set Firebase Service Account
         if: github.event_name == 'push'
+        env:
+          GITHUB_REF: ${{ github.ref }}
         run: |
-          if [ "${{ github.ref }}" == "refs/heads/staging" ]; then
+          if [ "$GITHUB_REF" == "refs/heads/staging" ]; then
             FIREBASE_SERVICE_ACCOUNT="${{ secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_STAGING }}"
           else
             FIREBASE_SERVICE_ACCOUNT="${{ secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_DEV }}"
