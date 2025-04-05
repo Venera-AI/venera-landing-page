@@ -1,3 +1,4 @@
+import SlideIn from "@/components/slide-in";
 import clsx from "clsx";
 import { useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
@@ -18,12 +19,19 @@ export default function HealthcareDataSection() {
   return (
     <section className="bg-white py-16 lg:py-24 px-4 xl:px-8">
       <div className="max-w-7xl mx-auto space-y-10 lg:space-y-16">
-        <h2 className="text-center font-medium text-3xl lg:text-4xl">
+        <SlideIn
+          as="h2"
+          delay={0.5}
+          className="text-center font-medium text-3xl lg:text-4xl"
+        >
           {t("headline")}
-        </h2>
+        </SlideIn>
         <ul className="space-y-4 md:grid grid-flow-col gap-x-4 xl:gap-x-14">
           {itemKeys.map((itemKey, index) => (
-            <div
+            <SlideIn
+              as="li"
+              direction="left"
+              delay={0.8 + 0.2 * index}
               key={index}
               className={clsx(
                 "h-full p-5 md:p-4 lg:p-6 space-y-4 lg:space-y-6 rounded-3xl overflow-hidden",
@@ -42,7 +50,7 @@ export default function HealthcareDataSection() {
                 {t(`items.${itemKey}.headline`)}
               </h3>
               <p className="text-lg leading-8">{t(`items.${itemKey}.body`)}</p>
-            </div>
+            </SlideIn>
           ))}
         </ul>
       </div>
