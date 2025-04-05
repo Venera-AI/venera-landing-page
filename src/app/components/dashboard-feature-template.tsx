@@ -30,7 +30,7 @@ export default function DashboardFeatureTemplate({
         {/* Image + circle on the right */}
         <div className="relative flex justify-end items-center flex-1 mt-12 lg:mt-0">
           <div
-            className="absolute z-0 rounded-full w-[250px] h-[250px] md:w-[450px] md:h-[450px]"
+            className="absolute z-0 rounded-full w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px]"
             style={{
               background: circleColor,
               top: "50%",

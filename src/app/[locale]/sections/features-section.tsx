@@ -25,9 +25,9 @@ export default function FeaturesSection() {
         <div key={key} className={`py-16 ${gradientBackgrounds[index]}`}>
           <div className="flex flex-col lg:flex-row gap-8 items-center max-w-7xl px-8 m-auto">
             <div className="flex flex-col">
-              <h2 className="text-4xl font-medium text-center lg:text-start leading-12 text-black">
+              <h3 className="text-4xl font-medium text-center lg:text-start leading-12 text-black">
                 {t(`items.${key}.headline`)}
-              </h2>
+              </h3>
               <p className="text-xl mt-8 lg:w-[80%] text-center lg:text-start leading-8 text-black">
                 {t(`items.${key}.body`)}
               </p>
