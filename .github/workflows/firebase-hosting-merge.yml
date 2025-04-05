@@ -9,8 +9,9 @@ on:
       - main
 
 jobs:
-  build_and_deploy:
+  deploy_firebase_hosting:
     runs-on: ubuntu-latest
+    environment: ${{ github.ref == 'refs/heads/staging' && 'STAGING' || 'DEV' }}
     strategy:
       matrix:
         node-version: [20]
