@@ -12,7 +12,8 @@ permissions:
 
 jobs:
   deploy_firebase_hosting_preview:
-    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
+    # if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
+    if: false
     runs-on: ubuntu-latest
     environment: DEV
     strategy:
