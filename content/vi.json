@@ -33,20 +33,6 @@
       "body": "Venera AI cách mạng hóa ngành y tế bằng cách làm cho việc chăm sóc sức khỏe trở nên dễ dàng, trực quan và hoàn toàn dựa trên dữ liệu cá nhân. Với Venera AI, tất cả mọi người đều có thể chủ động chăm sóc sức khỏe hiệu quả.",
       "image": "/images/intro.webp"
     },
-    "dashboard1": {
-      "headline": "AI interactive dashboard for healthcare providers",
-      "alt": "Dashboard Feature 1",
-      "body": "Venera AI’s interactive dashboard enables doctors and medical staff to efficiently manage patient data, visualize health insights, and leverage AI diagnosis recommendations.",
-      "image": "/images/Patient-list.png",
-      "circleColor": "linear-gradient(135deg,#f8ddc6,#efefef)"
-    },
-    "dashboard2": {
-      "headline": "Secure public health monitoring",
-      "alt": "Dashboard Feature 2",
-      "body": "Monitor healthcare trends, detect anomalies, and track key health metrics through advanced analytics and AI-powered simulations.",
-      "image": "/images/PublicHealth.webp",
-      "circleColor": "linear-gradient(135deg,#c6dff8,#efefef)"
-    },
     "privacy": {
       "headline": "Chính sách bảo vệ dữ liệu cá nhân",
       "body": "Chúng tôi không bán hoặc chia sẻ dữ liệu của bạn với bên thứ ba và không lưu trữ dữ liệu sức khỏe cá nhân trên hệ thống. Bạn hoàn toàn kiểm soát quyền riêng tư của mình.",
@@ -82,18 +68,16 @@
     },
     "dashboard1": {
       "headline": "Bảng điều khiển tương tác AI dành cho bác sĩ",
-      "alt": "Dashboard Feature 1",
+      "alt": "",
       "body": "Giúp các bác sĩ và nhân viên y tế quản lý dữ liệu bệnh nhân một cách hiệu quả. Hiển thị thông tin sức khỏe trực quan và đề xuất chẩn đoán dựa trên AI.",
-      "image": "/images/Patient-list.png"
+      "image": "/images/patient-list.png"
     },
-
     "dashboard2": {
       "headline": "Giám sát sức khỏe cộng đồng an toàn",
-      "alt": "Dashboard Feature 1",
+      "alt": "",
       "body": "Theo dõi các xu hướng y tế, phát hiện bất thường và phân tích các chỉ số sức khỏe chính bằng AI & phân tích dữ liệu nâng cao.",
       "image": "/images/Public-Health.webp"
     },
-
     "features": {
       "headline": "Quản lý sức khỏe toàn diện tại một nơi duy nhất",
       "items": {
@@ -119,7 +103,6 @@
         }
       }
     },
-
     "feedback": {
       "headline": "Cảm nhận từ người dùng",
       "items": {

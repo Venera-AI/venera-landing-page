@@ -37,10 +37,15 @@
       "headline": "AI interactive dashboard for healthcare providers",
       "alt": "Dashboard Feature 1",
       "body": "Venera AI's interactive dashboard enables doctors and medical staff to efficiently manage patient data, visualize health insights, and leverage AI diagnosis recommendations.",
-      "image": "/images/Patient-list.png",
+      "image": "/images/patient-list.png",
       "circleColor": "linear-gradient(135deg,#f8ddc6,#efefef)"
     },
-
+    "dashboard2": {
+      "headline": "Secure public health monitoring",
+      "alt": "Dashboard Feature 1",
+      "body": "Monitor healthcare trends, detect anomalies, and track key health metrics through advanced analytics and AI-powered simulations.",
+      "image": "/images/Public-Health.webp"
+    },
     "functionalities": {
       "headline": "Take control of your health, all in one place",
       "items": [
@@ -66,14 +71,6 @@
         }
       ]
     },
-
-    "dashboard2": {
-      "headline": "Secure public health monitoring",
-      "alt": "Dashboard Feature 1",
-      "body": "Monitor healthcare trends, detect anomalies, and track key health metrics through advanced analytics and AI-powered simulations.",
-      "image": "/images/Public-Health.webp"
-    },
-
     "features": {
       "headline": "Take control of your health, all in one place",
       "items": {
