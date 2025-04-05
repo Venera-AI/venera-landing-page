@@ -1,27 +1,27 @@
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import { IconType } from "react-icons";
 import { useMessages, useTranslations } from "next-intl";
+// import { IconType } from "react-icons";
+// import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
-type Social = "facebook" | "instagram";
+// type Social = "facebook" | "instagram";
 
-type IconConfig = {
-  Icon: IconType;
-  size: number;
-  className: string;
-};
+// type IconConfig = {
+//   Icon: IconType;
+//   size: number;
+//   className: string;
+// };
 
-const iconsConfig: Record<Social, IconConfig> = {
-  facebook: {
-    Icon: FaFacebookF,
-    size: 24,
-    className: "-ml-1 stroke-white fill-white",
-  },
-  instagram: {
-    Icon: FaInstagram,
-    size: 26,
-    className: "stroke-white",
-  },
-};
+// const iconsConfig: Record<Social, IconConfig> = {
+//   facebook: {
+//     Icon: FaFacebookF,
+//     size: 24,
+//     className: "-ml-1 stroke-white fill-white",
+//   },
+//   instagram: {
+//     Icon: FaInstagram,
+//     size: 26,
+//     className: "stroke-white",
+//   },
+// };
 
 export default function FooterSection() {
   const t = useTranslations("homePage.footer");
@@ -29,9 +29,9 @@ export default function FooterSection() {
   const businessHoursKeys = Object.keys(
     footerMessages.businessHours,
   ) as readonly (keyof typeof footerMessages.businessHours)[];
-  const socialKeys = Object.keys(
-    footerMessages.contact.socials,
-  ) as readonly (keyof typeof footerMessages.contact.socials)[];
+  // const socialKeys = Object.keys(
+  //   footerMessages.contact.socials,
+  // ) as readonly (keyof typeof footerMessages.contact.socials)[];
 
   return (
     <footer className="[background:linear-gradient(135deg,#9ec5f7,#2d44ad)]">
@@ -72,7 +72,7 @@ export default function FooterSection() {
           </section>
 
           {/* Socials */}
-          <section className="mt-26">
+          {/* <section className="mt-26">
             <h2 className="text-[22px]">{t("followLabel")}</h2>
             <div className="flex gap-1 mt-2">
               {socialKeys.map((socialKey) => {
@@ -92,7 +92,7 @@ export default function FooterSection() {
                 );
               })}
             </div>
-          </section>
+          </section> */}
         </div>
       </div>
     </footer>
