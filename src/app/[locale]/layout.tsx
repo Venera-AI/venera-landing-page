@@ -1,12 +1,13 @@
 import { Locale, routing } from "@/i18n/routing";
 import { getMetadata } from "@/utils/getMetadata";
-
 import type { Metadata } from "next";
 import { Poppins, Nunito } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getLocale, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import clsx from "clsx";
+import NavBar from "@/app/components/nav-bar";
+import FooterSection from "@/app/[locale]/sections/footer-section";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -58,7 +59,11 @@ export default async function RootLayout({
           localeFont[locale],
         )}
       >
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <NavBar />
+          {children}
+          <FooterSection />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
