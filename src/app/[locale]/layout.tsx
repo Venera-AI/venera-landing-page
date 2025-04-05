@@ -7,7 +7,7 @@ import { getLocale, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import clsx from "clsx";
 import NavBar from "@/app/components/nav-bar";
-import FooterSection from "@/app/[locale]/sections/footer-section";
+import Footer from "@/app/components/footer";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -62,7 +62,7 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <NavBar />
           {children}
-          <FooterSection />
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

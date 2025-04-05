@@ -3,7 +3,6 @@ import DashboardFeature1 from "@/app/[locale]/sections/dashboard-section-1";
 import DashboardFeature2 from "@/app/[locale]/sections/dashboard-section-2";
 import FeaturesSection from "@/app/[locale]/sections/features-section";
 import FeedbackSection from "@/app/[locale]/sections/feedback-section";
-import FooterSection from "@/app/[locale]/sections/footer-section";
 import HealthcareDataSection from "@/app/[locale]/sections/healthcare-data-section";
 import HeroSection from "@/app/[locale]/sections/hero-section";
 import IntroSection from "@/app/[locale]/sections/intro-section";
@@ -25,7 +24,6 @@ export default withLocale(function Home() {
       <WhySection />
       <FeedbackSection />
       <ContactSection />
-      <FooterSection />
     </main>
   );
 });
