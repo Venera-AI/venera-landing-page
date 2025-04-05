@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-interface DashboardFeatureTemplateProps {
+interface DashboardSectionTemplateProps {
   content: {
     headline: string;
     body: string;
@@ -10,10 +10,10 @@ interface DashboardFeatureTemplateProps {
   circleColor: string;
 }
 
-export default function DashboardFeatureTemplate({
+export default function DashboardSectionTemplate({
   content: { headline, body, image, alt },
   circleColor,
-}: DashboardFeatureTemplateProps) {
+}: DashboardSectionTemplateProps) {
   return (
     <section className="bg-white overflow-x-hidden overflow-y-visible py-16 md:py-24 px-8">
       <div className="flex flex-col lg:flex-row gap-8 md:gap-10 lg:justify-between items-center max-w-7xl m-auto relative">

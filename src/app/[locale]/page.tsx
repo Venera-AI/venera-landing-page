@@ -7,8 +7,8 @@ import WhySection from "@/app/[locale]/sections/why-section";
 import ContactSection from "@/app/[locale]/sections/contact-section";
 import PrivacySection from "@/app/[locale]/sections/privacy-section";
 import LocaleSwitcher from "@/app/components/locale-switcher";
-import DashboardFeature1 from "./sections/dashboard-section1";
-import DashboardFeature2 from "./sections/dashboard-section2";
+import DashboardFeature1 from "./sections/dashboard-section-1";
+import DashboardFeature2 from "./sections/dashboard-section-2";
 import FeaturesSection from "./sections/features-section";
 export default withLocale(function Home() {
   return (
