@@ -4,8 +4,27 @@
     "hero": {
       "headline": "Gặp gỡ Venera AI",
       "subheadline": "Trợ lý sức khỏe cá nhân nhanh chóng & dễ dàng",
-      "actionButton": {
-        "label": "Dùng thử miễn phí"
+      "images": {
+        "textEffect": "/images/effect-slide1.png",
+        "mockUpPhone": "/images/mock-up1.png",
+        "phoneEffect": "/images/phone-effect.png"
+      },
+      "logos": {
+        "logoNavBar": "/images/venera-logo.svg"
+      },
+      "buttons": {
+        "buttonLogIn": {
+          "label": "Đăng nhập",
+          "link": ""
+        },
+        "buttonTryForFree": {
+          "label": "Dùng thử",
+          "link": ""
+        },
+        "buttonAppStore": {
+          "img": "/images/appstore-button-VN.svg",
+          "link": ""
+        }
       }
     },
     "healthcareData": {
@@ -32,31 +51,6 @@
       "headline": "Hành trình sức khỏe dễ tiếp cận, chủ động và đáng tin cậy",
       "body": "Venera AI cách mạng hóa ngành y tế bằng cách làm cho việc chăm sóc sức khỏe trở nên dễ dàng, trực quan và hoàn toàn dựa trên dữ liệu cá nhân. Với Venera AI, tất cả mọi người đều có thể chủ động chăm sóc sức khỏe hiệu quả.",
       "image": "/images/intro.webp"
-    },
-    "functionalities": {
-      "headline": "Quản lý sức khỏe toàn diện tại một nơi duy nhất",
-      "items": [
-        {
-          "headline": "",
-          "body": "",
-          "image": ""
-        },
-        {
-          "headline": "",
-          "body": "",
-          "image": ""
-        },
-        {
-          "headline": "",
-          "body": "",
-          "image": ""
-        },
-        {
-          "headline": "",
-          "body": "",
-          "image": ""
-        }
-      ]
     },
     "privacy": {
       "headline": "Chính sách bảo vệ dữ liệu cá nhân",
@@ -93,18 +87,16 @@
     },
     "dashboard1": {
       "headline": "Bảng điều khiển tương tác AI dành cho bác sĩ",
-      "alt": "Dashboard Feature 1",
+      "alt": "",
       "body": "Giúp các bác sĩ và nhân viên y tế quản lý dữ liệu bệnh nhân một cách hiệu quả. Hiển thị thông tin sức khỏe trực quan và đề xuất chẩn đoán dựa trên AI.",
-      "image": "/images/Patient-list.png"
+      "image": "/images/patient-list.png"
     },
-
     "dashboard2": {
       "headline": "Giám sát sức khỏe cộng đồng an toàn",
-      "alt": "Dashboard Feature 1",
+      "alt": "",
       "body": "Theo dõi các xu hướng y tế, phát hiện bất thường và phân tích các chỉ số sức khỏe chính bằng AI & phân tích dữ liệu nâng cao.",
       "image": "/images/Public-Health.webp"
     },
-
     "features": {
       "headline": "Quản lý sức khỏe toàn diện tại một nơi duy nhất",
       "items": {
@@ -130,7 +122,6 @@
         }
       }
     },
-
     "feedback": {
       "headline": "Cảm nhận từ người dùng",
       "items": {

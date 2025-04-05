@@ -4,8 +4,27 @@
     "hero": {
       "headline": "Meet Venera AI",
       "subheadline": "Your fast & easy personal health companion",
-      "actionButton": {
-        "label": "Try for free"
+      "images": {
+        "textEffect": "/images/effect-slide1.png",
+        "mockUpPhone": "/images/mock-up1.png",
+        "phoneEffect": "/images/phone-effect.png"
+      },
+      "logos": {
+        "logoNavBar": "/images/venera-logo.svg"
+      },
+      "buttons": {
+        "buttonLogIn": {
+          "label": "Log In",
+          "link": ""
+        },
+        "buttonTryForFree": {
+          "label": "Try for free",
+          "link": ""
+        },
+        "buttonAppStore": {
+          "img": "/images/appstore-button-EN.svg",
+          "link": ""
+        }
       }
     },
     "healthcareData": {
@@ -33,21 +52,44 @@
       "body": "At Venera AI, we're transforming healthcare by making it accessible, intuitive, and data-driven. With Venera AI, proactive healthcare is now within reach for everyone.",
       "image": "/images/intro.webp"
     },
-
     "dashboard1": {
       "headline": "AI interactive dashboard for healthcare providers",
       "alt": "Dashboard Feature 1",
       "body": "Venera AI's interactive dashboard enables doctors and medical staff to efficiently manage patient data, visualize health insights, and leverage AI diagnosis recommendations.",
-      "image": "/images/Patient-list.png"
+      "image": "/images/patient-list.png",
+      "circleColor": "linear-gradient(135deg,#f8ddc6,#efefef)"
     },
-
     "dashboard2": {
       "headline": "Secure public health monitoring",
       "alt": "Dashboard Feature 1",
       "body": "Monitor healthcare trends, detect anomalies, and track key health metrics through advanced analytics and AI-powered simulations.",
       "image": "/images/Public-Health.webp"
     },
-
+    "functionalities": {
+      "headline": "Take control of your health, all in one place",
+      "items": [
+        {
+          "headline": "Upload your medical records effortlessly",
+          "body": "Easily upload your medical records by scanning documents, images, or syncing with patient portals.",
+          "image": ""
+        },
+        {
+          "headline": "",
+          "body": "",
+          "image": ""
+        },
+        {
+          "headline": "",
+          "body": "",
+          "image": ""
+        },
+        {
+          "headline": "",
+          "body": "",
+          "image": ""
+        }
+      ]
+    },
     "features": {
       "headline": "Take control of your health, all in one place",
       "items": {
