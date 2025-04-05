@@ -17,7 +17,6 @@ export default function DashboardFeatureTemplate({
   return (
     <section className="bg-white mb-24">
       <div className="flex flex-col lg:flex-row gap-8 items-center max-w-7xl py-16 px-8 m-auto relative">
-        {/* Text content on the left */}
         <div className="flex flex-col flex-1">
           <h2 className="text-4xl font-medium text-center lg:text-start leading-12">
             {headline}
@@ -27,14 +26,13 @@ export default function DashboardFeatureTemplate({
           </p>
         </div>
 
-        {/* Image + circle on the right */}
         <div className="relative flex justify-end items-center flex-1 mt-12 lg:mt-0">
           <div
             className="absolute z-0 rounded-full w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px]"
             style={{
               background: circleColor,
               top: "50%",
-              left: "calc(100% - 66%)", // 2/3 behind image
+              left: "calc(100% - 66%)",
               transform: "translateY(-50%)",
             }}
           ></div>
