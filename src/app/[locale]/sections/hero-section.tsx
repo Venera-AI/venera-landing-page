@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import NavBar from "@/app/components/nav-bar";
 import { useTranslations } from "next-intl";
 import SlideIn from "@/components/slide-in";
 
@@ -9,7 +8,6 @@ export default function HeroSection() {
 
   return (
     <div className="bg-gradient-to-r from-[#9ec5f7] to-darkblue">
-      <NavBar />
       <div className="flex flex-col lg:flex-row gap-5 py-10 lg:py-15 md:justify-between mx-auto lg:max-w-7xl">
         {/* Left Section */}
         <div className="w-full lg:w-[60%] p-3 md:p-10 lg:p-0 lg:pl-20 text-center">
@@ -37,14 +35,13 @@ export default function HeroSection() {
                   <h1>{t("headline")}</h1>
                 </SlideIn>
                 <SlideIn
+                  as="div"
                   direction="right"
                   delay={1.2}
                   duration={0.5}
-                  className="text-white text-center lg:text-left text-xl md:text-2xl lg:text-5xl"
+                  className="text-white text-center lg:text-left text-xl md:text-2xl lg:text-[54px]"
                 >
-                  <span className="inline-block">
-                    <h3>{t("subheadline")}</h3>
-                  </span>
+                  {t("subheadline")}
                 </SlideIn>
               </div>
             </div>
@@ -60,7 +57,8 @@ export default function HeroSection() {
                 as="button"
                 delay={1.2}
                 duration={0.8}
-                className="relative block mx-auto max-w-[150px] sm:max-w-[180px] lg:max-w-[200px] w-full mb-5 rounded-lg cursor-pointer"
+                // TODO remove "hidden" when url is ready
+                className="relative hidden mx-auto max-w-[150px] sm:max-w-[180px] lg:max-w-[200px] w-full mb-5 rounded-lg cursor-pointer"
               >
                 <Image
                   src={t("buttons.buttonAppStore.img")}
