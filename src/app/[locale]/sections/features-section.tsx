@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -8,7 +9,6 @@ export default function FeaturesSection() {
     features.items,
   ) as readonly (keyof typeof features.items)[];
 
-  // Define four gradient backgrounds as per request
   const gradientBackgrounds = [
     "bg-[linear-gradient(180deg,#c6dff8,#efefef)]",
     "bg-[linear-gradient(180deg,#f8eac6,#efefef)]",
@@ -16,33 +16,56 @@ export default function FeaturesSection() {
     "bg-[linear-gradient(180deg,#c6ccf8,#efefef)]",
   ];
 
-  return (
-    <section className="w-full py-16">
-      <div className="max-w-7xl px-8 mx-auto mb-12">
-        <h2 className="text-5xl text-left leading-tight">{t("headline")}</h2>
-      </div>
-      {itemKeys.map((key, index) => (
-        <div key={key} className={`py-16 ${gradientBackgrounds[index]}`}>
-          <div className="flex flex-col lg:flex-row gap-8 items-center max-w-7xl px-8 m-auto">
-            <div className="flex flex-col">
-              <h3 className="text-4xl font-medium text-center lg:text-start leading-12 text-black">
-                {t(`items.${key}.headline`)}
-              </h3>
-              <p className="text-xl mt-8 lg:w-[80%] text-center lg:text-start leading-8 text-black">
-                {t(`items.${key}.body`)}
-              </p>
-            </div>
+  const headlineChunks = t("headline").split(",");
+  const separatedHeadlineChunks = Array(headlineChunks.length * 2 - 1)
+    .fill(null)
+    .map((_, index) => (index % 2 === 0 ? headlineChunks[index / 2] : ","));
 
-            <Image
-              src={t(`items.${key}.image`)}
-              alt=""
-              width={300}
-              height={250}
-              className="max-w-[250px] md:max-w-[350px] rounded-lg"
-            />
-          </div>
+  return (
+    <section className="px-4 md:px-8 py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="mb-12 xl:mb-20 text-[42px] text-center lg:text-left leading-tight">
+          {separatedHeadlineChunks.map((chunk, index) =>
+            chunk === "," ? (
+              <span key={index}>
+                <span>,</span>
+                <br className="hidden md:inline"></br>
+              </span>
+            ) : (
+              <span key={index}>{chunk}</span>
+            ),
+          )}
+        </h2>
+
+        <div className="grid gap-8 xl:gap-16">
+          {itemKeys.map((key, index) => (
+            <div
+              key={key}
+              className={clsx(
+                "px-8 lg:px-11 py-10 xl:pr-40 rounded-4xl flex flex-col lg:flex-row items-center gap-12 xl:gap-14",
+                gradientBackgrounds[index],
+              )}
+            >
+              <div>
+                <h3 className="text-[32px] text-center lg:text-start leading-12">
+                  {t(`items.${key}.headline`)}
+                </h3>
+                <p className="font-light text-2xl mt-4 lg:w-[80%] text-center lg:text-start leading-normal">
+                  {t(`items.${key}.body`)}
+                </p>
+              </div>
+
+              <Image
+                src={t(`items.${key}.image`)}
+                alt=""
+                width={300}
+                height={250}
+                className="w-full max-w-[400px] rounded-lg"
+              />
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </section>
   );
 }
