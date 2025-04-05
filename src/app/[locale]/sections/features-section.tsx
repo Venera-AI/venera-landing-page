@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -36,11 +37,14 @@ export default function FeaturesSection() {
           )}
         </h2>
 
-        <div className="grid gap-8 xl:gap-16 max-w-7xl">
+        <div className="grid gap-8 xl:gap-16">
           {itemKeys.map((key, index) => (
             <div
               key={key}
-              className={`px-8 lg:px-11 py-10 xl:pr-40 rounded-4xl flex flex-col lg:flex-row items-center gap-12 xl:gap-14 ${gradientBackgrounds[index]}`}
+              className={clsx(
+                "px-8 lg:px-11 py-10 xl:pr-40 rounded-4xl flex flex-col lg:flex-row items-center gap-12 xl:gap-14",
+                gradientBackgrounds[index],
+              )}
             >
               <div>
                 <h3 className="text-[32px] text-center lg:text-start leading-12">
