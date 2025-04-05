@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Environment to run against'
+        description: "Environment to run against"
         type: environment
         required: true
 
