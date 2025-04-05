@@ -19,9 +19,15 @@ export default function WhySection() {
         >
           {t("headline")}
         </SlideIn>
-        <div className="flex flex-col xl:flex-row justify-between mt-8">
+        <ul className="flex flex-col xl:flex-row justify-between mt-8">
           {itemKeys.map((itemKey, index) => (
-            <div key={index} className="flex flex-col items-center p-8">
+            <SlideIn
+              key={index}
+              as="li"
+              delay={0.5 + 0.2 * index}
+              direction="right"
+              className="flex flex-col items-center p-8"
+            >
               <div className="relative size-76 max-w-[250px] md:max-w-none">
                 <Image
                   className="size-full"
@@ -40,9 +46,9 @@ export default function WhySection() {
                   <p className="mt-4">{t(`items.${itemKey}.body`)}</p>
                 </div>
               </div>
-            </div>
+            </SlideIn>
           ))}
-        </div>
+        </ul>
         <Link
           href={t("actionButton.link")}
           className="bg-[#2d44ad] text-white md:px-16 md:py-5 px-12 py-4 md:text-xl rounded-2xl font-bold mt-8"

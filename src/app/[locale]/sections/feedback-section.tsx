@@ -15,8 +15,10 @@ export default function FeedbackSection() {
         {t("headline")}
       </SlideIn>
       <ul className="grid lg:grid-cols-3 gap-8 md:gap-16 max-w-7xl mx-auto py-16 md:py-24">
-        {itemKeys.map((key) => (
-          <li
+        {itemKeys.map((key, index) => (
+          <SlideIn
+            delay={0.5 + 0.2 * index}
+            direction="right"
             key={key}
             className="bg-lightblue rounded-[40px] px-10 py-8 flex flex-col items-center gap-y-6"
           >
@@ -39,7 +41,7 @@ export default function FeedbackSection() {
                 {t(`items.${key}.name`)}
               </span>
             </div>
-          </li>
+          </SlideIn>
         ))}
       </ul>
     </section>

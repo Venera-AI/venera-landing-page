@@ -30,7 +30,7 @@ export default function HealthcareDataSection() {
           {itemKeys.map((itemKey, index) => (
             <SlideIn
               as="li"
-              direction="left"
+              direction="right"
               delay={0.8 + 0.2 * index}
               key={index}
               className={clsx(
