@@ -52,6 +52,19 @@
       "body": "At Venera AI, we're transforming healthcare by making it accessible, intuitive, and data-driven. With Venera AI, proactive healthcare is now within reach for everyone.",
       "image": "/images/intro.webp"
     },
+    "dashboard1": {
+      "headline": "AI interactive dashboard for healthcare providers",
+      "alt": "Dashboard Feature 1",
+      "body": "Venera AI's interactive dashboard enables doctors and medical staff to efficiently manage patient data, visualize health insights, and leverage AI diagnosis recommendations.",
+      "image": "/images/patient-list.png",
+      "circleColor": "linear-gradient(135deg,#f8ddc6,#efefef)"
+    },
+    "dashboard2": {
+      "headline": "Secure public health monitoring",
+      "alt": "Dashboard Feature 1",
+      "body": "Monitor healthcare trends, detect anomalies, and track key health metrics through advanced analytics and AI-powered simulations.",
+      "image": "/images/Public-Health.webp"
+    },
     "functionalities": {
       "headline": "Take control of your health, all in one place",
       "items": [
@@ -77,6 +90,32 @@
         }
       ]
     },
+    "features": {
+      "headline": "Take control of your health, all in one place",
+      "items": {
+        "1": {
+          "headline": "Upload your medical records effortlessly",
+          "image": "/images/feature-report.png",
+          "body": "Easily upload your medical records by scanning documents, images, or syncing with patient portals."
+        },
+        "2": {
+          "headline": "Store your medical records with simple explanations",
+          "image": "/images/glucose.png",
+          "body": "Store all your medical records in one place. Venera AI translates lengthy and complex medical terms into easy-to-understand insights."
+        },
+        "3": {
+          "headline": "Track your health trends",
+          "image": "/images/calories-count.png",
+          "body": "Stay on top of your well-being by tracking key health metrics like heart rate, sleep, symptoms, and medications. Get clear trends and insights to better understand your health over time."
+        },
+        "4": {
+          "headline": "AI Health assistant at your fingertips",
+          "image": "/images/assistant-chat.png",
+          "body": "Have questions about your medical reports, lab test results, or symptoms? Venera AI's chatbot is available 24/7 to provide instant guidance."
+        }
+      }
+    },
+
     "why": {
       "headline": "Why people prefer us",
       "actionButton": {
