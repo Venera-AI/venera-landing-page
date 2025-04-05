@@ -21,7 +21,6 @@ export default function DashboardSectionTemplate({
         <div className="flex-1">
           <SlideIn
             as="h2"
-            delay={0.7}
             className="text-4xl font-medium text-center lg:text-start leading-12"
           >
             {headline}

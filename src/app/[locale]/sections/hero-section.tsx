@@ -60,7 +60,7 @@ export default function HeroSection() {
                 as="button"
                 delay={1.2}
                 duration={0.8}
-                className="relative block mx-auto items-center max-w-[150px] sm:max-w-[180px] lg:max-w-[200px] w-full mb-5 rounded-lg cursor-pointer"
+                className="relative block mx-auto max-w-[150px] sm:max-w-[180px] lg:max-w-[200px] w-full mb-5 rounded-lg cursor-pointer"
               >
                 <Image
                   src={t("buttons.buttonAppStore.img")}
@@ -87,7 +87,7 @@ export default function HeroSection() {
             </SlideIn>
             <SlideIn
               direction="right"
-              className="z-30 w-full"
+              className="z-30"
               delay={0.5}
               duration={0.5}
             >
