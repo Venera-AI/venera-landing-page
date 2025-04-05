@@ -4,6 +4,7 @@ import { db } from "@/services/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useTranslations } from "next-intl";
 import { UserLocation } from "@/types";
+import SlideIn from "@/components/slide-in";
 
 export default function ContactSection() {
   const t = useTranslations("homePage.contact");
@@ -88,11 +89,16 @@ export default function ContactSection() {
   };
 
   return (
-    <div className="bg-blue-100 lg:pt-10 lg:pb-25 px-8 py-8">
-      <div className="max-w-5xl mx-auto text-4xl text-center lg:text-left font-medium">
-        <h2>{t("headline")}</h2>
-      </div>
-      <form
+    <div className="bg-blue-100 px-8 pt-8 pb-10 lg:pt-16 lg:pb-25">
+      <SlideIn
+        as="h2"
+        className="max-w-5xl mx-auto text-4xl text-center lg:text-left font-medium"
+      >
+        {t("headline")}
+      </SlideIn>
+      <SlideIn
+        as="form"
+        delay={0.5}
         onSubmit={handleSubmit}
         className="lg:space-y-6 space-y-3 max-w-5xl mx-auto mt-13"
       >
@@ -135,7 +141,7 @@ export default function ContactSection() {
             {status.success}
           </div>
         )}
-      </form>
+      </SlideIn>
     </div>
   );
 }
