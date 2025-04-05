@@ -6,28 +6,24 @@ export default function PrivacySection() {
   const t = useTranslations("homePage.privacy");
 
   return (
-    <section className="bg-[#ecf5ff] p-16 max-w-full mx-auto border-white border-[80px] rounded-lg">
-      <div className="flex flex-col items-center justify-center py-12 px-6 md:p-16 max-w-4xl m-auto">
+    <section className="p-6 md:p-12 xl:p-20">
+      <div className="mx-auto max-w-7xl bg-[#ecf5ff] flex flex-col items-center py-14 px-4 lg:px-8">
         <Image
           src={t("image")}
           alt="Privacy Icon"
-          width={150}
-          height={150}
-          className="mb-6 w-[150px] h-[150px]"
+          width={0}
+          height={0}
+          className="mb-6 w-[150px]"
         />
-
-        <h2 className="font-medium text-2xl md:text-3xl text-center text-[#1a1a1a]">
+        <h2 className="mb-6 font-medium text-4xl text-center">
           {t("headline")}
         </h2>
-        <div className="mt-4 mx-auto max-w-2xl">
-          <p className="mt-2 text-center text-xl md:text-2xl leading-relaxed text-black">
-            {t("body")}
-          </p>
-        </div>
-
+        <p className="mb-16 lg:px-8 text-center text-xl md:text-2xl leading-relaxed">
+          {t("body")}
+        </p>
         <Link
           href={t("actionButton.link")}
-          className="bg-[#158d6a] text-white md:px-16 md:py-5 px-12 py-4 md:text-xl rounded-2xl font-bold mt-8"
+          className="bg-[#158d6a] text-white px-12 md:px-16 py-4 md:py-5 md:text-xl rounded-2xl font-bold"
         >
           {t("actionButton.label")}
         </Link>
