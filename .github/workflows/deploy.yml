@@ -114,4 +114,4 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ env.FIREBASE_SERVICE_ACCOUNT_ENV == 'STAGING' && secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_STAGING || secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_DEV }}
           projectId: ${{ env.FIREBASE_PROJECT_ID }}
-          channelId: ${{ github.event_name == 'pull_request' && '' || 'live' }}
+          channelId: ${{ github.event_name != 'pull_request' && 'live' || '' }}
