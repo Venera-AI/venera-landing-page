@@ -1,3 +1,4 @@
+import SlideIn from "@/components/slide-in";
 import { useMessages, useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -10,7 +11,9 @@ export default function FeedbackSection() {
 
   return (
     <section className="py-16 px-8 md:p-16 bg-white">
-      <h2 className="font-medium text-4xl text-center">{t("headline")}</h2>
+      <SlideIn as="h2" className="font-medium text-4xl text-center">
+        {t("headline")}
+      </SlideIn>
       <ul className="grid lg:grid-cols-3 gap-8 md:gap-16 max-w-7xl mx-auto py-16 md:py-24">
         {itemKeys.map((key) => (
           <li
