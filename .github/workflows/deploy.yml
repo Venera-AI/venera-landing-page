@@ -99,7 +99,9 @@ jobs:
 
       - name: Set Firebase Service Account
         if: github.event_name == 'pull_request'
-        run: echo "FIREBASE_SERVICE_ACCOUNT=${{ secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_DEV }}" >> $GITHUB_ENV
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_VENERA_BUSINESS_DEV }}
+        run: echo "FIREBASE_SERVICE_ACCOUNT=$FIREBASE_SERVICE_ACCOUNT" >> $GITHUB_ENV
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
