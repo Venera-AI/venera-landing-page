@@ -52,31 +52,6 @@
       "body": "Venera AI cách mạng hóa ngành y tế bằng cách làm cho việc chăm sóc sức khỏe trở nên dễ dàng, trực quan và hoàn toàn dựa trên dữ liệu cá nhân. Với Venera AI, tất cả mọi người đều có thể chủ động chăm sóc sức khỏe hiệu quả.",
       "image": "/images/intro.webp"
     },
-    "functionalities": {
-      "headline": "Quản lý sức khỏe toàn diện tại một nơi duy nhất",
-      "items": [
-        {
-          "headline": "",
-          "body": "",
-          "image": ""
-        },
-        {
-          "headline": "",
-          "body": "",
-          "image": ""
-        },
-        {
-          "headline": "",
-          "body": "",
-          "image": ""
-        },
-        {
-          "headline": "",
-          "body": "",
-          "image": ""
-        }
-      ]
-    },
     "privacy": {
       "headline": "Chính sách bảo vệ dữ liệu cá nhân",
       "body": "Chúng tôi không bán hoặc chia sẻ dữ liệu của bạn với bên thứ ba và không lưu trữ dữ liệu sức khỏe cá nhân trên hệ thống. Bạn hoàn toàn kiểm soát quyền riêng tư của mình.",
@@ -107,6 +82,43 @@
           "headline": "Chuyên gia y tế đầu ngành",
           "body": "Chúng tôi hợp tác với các chuyên gia y tế hàng đầu để đảm bảo sự hỗ trợ toàn diện và đáng tin cậy cho người dùng.",
           "image": "/images/trusted-experts.svg"
+        }
+      }
+    },
+    "dashboard1": {
+      "headline": "Bảng điều khiển tương tác AI dành cho bác sĩ",
+      "alt": "",
+      "body": "Giúp các bác sĩ và nhân viên y tế quản lý dữ liệu bệnh nhân một cách hiệu quả. Hiển thị thông tin sức khỏe trực quan và đề xuất chẩn đoán dựa trên AI.",
+      "image": "/images/patient-list.png"
+    },
+    "dashboard2": {
+      "headline": "Giám sát sức khỏe cộng đồng an toàn",
+      "alt": "",
+      "body": "Theo dõi các xu hướng y tế, phát hiện bất thường và phân tích các chỉ số sức khỏe chính bằng AI & phân tích dữ liệu nâng cao.",
+      "image": "/images/Public-Health.webp"
+    },
+    "features": {
+      "headline": "Quản lý sức khỏe toàn diện tại một nơi duy nhất",
+      "items": {
+        "1": {
+          "headline": "Tải lên hồ sơ y tế dễ dàng",
+          "image": "/images/feature-report.png",
+          "body": "Bạn có thể tải lên hồ sơ y tế của mình bằng cách quét tài liệu, hình ảnh hoặc đồng bộ với cổng thông tin bệnh nhân."
+        },
+        "2": {
+          "headline": "Lưu trữ hồ sơ y tế cùng với giải thích dễ hiểu",
+          "image": "/images/glucose.png",
+          "body": "Tất cả hồ sơ y tế của bạn sẽ được lưu trữ một cách có tổ chức. Venera AI tự động chuyển đổi các thuật ngữ y khoa phức tạp thành thông tin đơn giản, dễ hiểu."
+        },
+        "3": {
+          "headline": "Theo dõi xu hướng sức khỏe",
+          "image": "/images/calories-count.png",
+          "body": "Giám sát nhịp tim, giấc ngủ, triệu chứng và thuốc của bạn. Nhận phân tích xu hướng và thông tin chi tiết giúp bạn hiểu rõ hơn về sức khỏe của mình theo thời gian."
+        },
+        "4": {
+          "headline": "Trợ lý sức khỏe AI trong tầm tay",
+          "image": "/images/assistant-chat.png",
+          "body": "Bạn có thắc mắc về hồ sơ y tế, kết quả xét nghiệm hoặc triệu chứng? Chatbot AI của Venera AI hoạt động 24/7, cung cấp phản hồi ngay lập tức để hỗ trợ bạn."
         }
       }
     },
