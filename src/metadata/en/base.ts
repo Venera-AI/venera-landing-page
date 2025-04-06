@@ -57,6 +57,7 @@ export const baseMetadata: Metadata = {
     site: "https://viai.io/",
     creator: "Venerai AI Team",
     card: "summary_large_image",
+    images: "/icons/embed.png",
   },
   openGraph: {
     type: "website",
@@ -66,5 +67,6 @@ export const baseMetadata: Metadata = {
       "Venera AI is an AI-powered health platform that helps users track, analyze their health data, and receive timely insights for better well-being.",
     siteName: "Venera AI",
     locale: "en_US",
+    images: "/icons/embed.png",
   },
 };

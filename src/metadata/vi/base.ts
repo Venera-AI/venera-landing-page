@@ -63,6 +63,7 @@ export const baseMetadata: Metadata = {
     site: "https://viai.io/",
     creator: "Venerai AI Team",
     card: "summary_large_image",
+    images: "/icons/embed.png",
   },
   openGraph: {
     type: "website",
@@ -72,5 +73,6 @@ export const baseMetadata: Metadata = {
       "Venera AI là nền tảng chăm sóc sức khỏe sử dụng AI giúp người dùng theo dõi, phân tích dữ liệu sức khỏe và đề xuất điều chỉnh kịp thời.",
     siteName: "Venera AI",
     locale: "vi_VN",
+    images: "/icons/embed.png",
   },
 };
