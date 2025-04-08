@@ -18,6 +18,12 @@ Install dependencies:
 pnpm install
 ```
 
+### Environment Variables
+
+Create a `.env.local` file in the root directory using the `.env.example` file as a template.
+
+### Development
+
 Run the development server:
 
 ```bash
