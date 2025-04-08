@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import EmbedImage from "@/../public/icons/embed.png";
 
 export const baseMetadata: Metadata = {
   metadataBase: new URL("https://viai.io"),
@@ -57,10 +58,12 @@ export const baseMetadata: Metadata = {
     site: "https://viai.io/",
     creator: "Venerai AI Team",
     card: "summary_large_image",
+    images: [EmbedImage.src],
   },
   openGraph: {
     type: "website",
     url: "https://viai.io/",
+    images: [EmbedImage.src],
     title: "Venera AI",
     description:
       "Venera AI is an AI-powered health platform that helps users track, analyze their health data, and receive timely insights for better well-being.",

@@ -26,6 +26,17 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Run production build locally
+
+To run the production build locally, you can use the following commands:
+
+```bash
+pnpm build
+pnpm serve out
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
 ## Scripts
 
 - `pnpm lint`: Lint the code using ESLint and Prettier.
