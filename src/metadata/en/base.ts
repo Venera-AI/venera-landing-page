@@ -1,13 +1,18 @@
 import { Metadata } from "next";
 
 export const baseMetadata: Metadata = {
-  metadataBase: new URL("https://viai.io"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL as string),
   title: "Venera AI - Your Smart Health Companion",
   description:
     "Venera AI is an AI-powered health platform that helps users track, analyze their health data, and receive timely insights for better well-being.",
   keywords: ["venera", "healthcare", "AI", "EHR", "digital health"],
   applicationName: "Venera AI",
-  authors: [{ name: "Venera AI Team", url: "https://viai.io/en/team" }],
+  authors: [
+    {
+      name: "Venera AI Team",
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/team`,
+    },
+  ],
   creator: "Venera AI Team",
   category: "Healthcare & Medical",
   classification: "Health",
@@ -54,13 +59,15 @@ export const baseMetadata: Metadata = {
   ],
   manifest: "/icons/site.webmanifest",
   twitter: {
-    site: "https://viai.io/",
+    site: process.env.NEXT_PUBLIC_BASE_URL,
     creator: "Venerai AI Team",
     card: "summary_large_image",
+    images: ["/en/og.png"],
   },
   openGraph: {
     type: "website",
-    url: "https://viai.io/",
+    url: process.env.NEXT_PUBLIC_BASE_URL,
+    images: ["/en/og.png"],
     title: "Venera AI",
     description:
       "Venera AI is an AI-powered health platform that helps users track, analyze their health data, and receive timely insights for better well-being.",

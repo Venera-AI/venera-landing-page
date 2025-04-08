@@ -18,10 +18,27 @@ Install dependencies:
 pnpm install
 ```
 
+### Environment Variables
+
+Create a `.env.local` file in the root directory using the `.env.example` file as a template.
+
+### Development
+
 Run the development server:
 
 ```bash
 pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Run production build locally
+
+To run the production build locally, you can use the following commands:
+
+```bash
+pnpm build
+pnpm serve out
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
