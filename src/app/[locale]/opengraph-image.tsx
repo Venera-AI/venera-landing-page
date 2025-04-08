@@ -5,6 +5,10 @@ export function generateStaticParams() {
   return [...routing.locales].map((locale) => ({ locale }));
 }
 
+export const contentType = "image/png";
+export const size = { width: 1200, height: 630 };
+export const alt = "Venera AI";
+
 export default function OpengraphImage() {
   return new ImageResponse(
     (
@@ -22,14 +26,14 @@ export default function OpengraphImage() {
           src="https://viai.io/icons/embed.png"
           alt="Venera AI"
           width={1200}
-          height={600}
-          style={{ objectFit: "contain" }}
+          height={630}
+          style={{ objectFit: "cover" }}
         />
       </div>
     ),
     {
       width: 1200,
-      height: 600,
+      height: 630,
     },
   );
 }
