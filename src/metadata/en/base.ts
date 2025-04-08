@@ -10,7 +10,7 @@ export const baseMetadata: Metadata = {
   authors: [
     {
       name: "Venera AI Team",
-      url: `${process.env.NEXT_PUBLIC_BASRE_URL}/en/team`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/team`,
     },
   ],
   creator: "Venera AI Team",
