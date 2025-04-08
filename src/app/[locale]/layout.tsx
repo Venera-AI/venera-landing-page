@@ -3,7 +3,7 @@ import { getMetadata } from "@/utils/getMetadata";
 import type { Metadata } from "next";
 import { Poppins, Nunito } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getLocale, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import clsx from "clsx";
 import NavBar from "@/app/components/nav-bar";
@@ -25,8 +25,12 @@ const localeFont: Record<Locale, string> = {
   en: "font-poppins",
 };
 
-export async function generateMetadata(): Promise<Metadata> {
-  const locale = (await getLocale()) as Locale;
+type Props = {
+  params: Promise<{ locale: Locale }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
   const metadata = getMetadata(locale);
   return metadata;
 }
