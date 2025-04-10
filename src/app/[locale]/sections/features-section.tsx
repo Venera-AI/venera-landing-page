@@ -56,13 +56,10 @@ export default function FeaturesSection() {
                 )}
               />
               <div className="h-full flex flex-col justify-center">
-                <SlideIn
-                  duration={0.5}
-                  className="text-[42px] text-center lg:text-start leading-12"
-                >
+                <SlideIn className="text-[42px] text-center lg:text-start leading-12">
                   {t(`items.${key}.headline`)}
                 </SlideIn>
-                <SlideIn className="font-light text-[32px] mt-4 lg:w-[80%] text-center lg:text-start leading-normal">
+                <SlideIn className="font-light text-[24px] lg:text-[32px] mt-4 lg:w-[80%] text-center lg:text-start leading-normal">
                   {t(`items.${key}.body`)}
                 </SlideIn>
               </div>
