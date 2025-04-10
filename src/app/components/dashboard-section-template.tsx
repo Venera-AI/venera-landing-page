@@ -32,12 +32,11 @@ export default function DashboardSectionTemplate({
 
         <div className="relative">
           <SlideIn
-            delay={0.6}
             direction="right"
             className="hidden lg:block absolute z-0 rounded-full aspect-square h-[120%] lg:h-[140%] top-1/2 -translate-y-1/2 left-[30%]"
             style={{ background: circleColor }}
           />
-          <SlideIn delay={0.5} direction="right">
+          <SlideIn direction="right" delay={0.1}>
             <Image
               src={image}
               alt={alt}

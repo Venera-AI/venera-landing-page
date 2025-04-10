@@ -21,7 +21,6 @@ export default function HealthcareDataSection() {
       <div className="max-w-7xl mx-auto space-y-10 lg:space-y-16">
         <SlideIn
           as="h2"
-          delay={0.5}
           className="text-center font-medium text-3xl lg:text-4xl"
         >
           {t("headline")}
@@ -31,7 +30,7 @@ export default function HealthcareDataSection() {
             <SlideIn
               as="li"
               direction="right"
-              delay={0.8 + 0.2 * index}
+              delay={0.2 + 0.2 * index}
               key={index}
               className={clsx(
                 "h-full p-5 md:p-4 lg:p-6 space-y-4 lg:space-y-6 rounded-3xl overflow-hidden",
