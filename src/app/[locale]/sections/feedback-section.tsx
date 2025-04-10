@@ -10,7 +10,8 @@ export default function FeedbackSection() {
   ) as readonly (keyof typeof feedbackMessages.items)[];
 
   return (
-    <section className="py-16 px-8 md:p-16 bg-white">
+    // TODO: remove "hidden" when we have actual feedback data
+    <section className="py-16 px-8 md:p-16 bg-white hidden">
       <SlideIn as="h2" className="font-medium text-4xl text-center">
         {t("headline")}
       </SlideIn>
