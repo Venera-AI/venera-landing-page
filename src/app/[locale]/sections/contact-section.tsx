@@ -98,7 +98,6 @@ export default function ContactSection() {
       </SlideIn>
       <SlideIn
         as="form"
-        delay={0.5}
         onSubmit={handleSubmit}
         className="lg:space-y-6 space-y-3 max-w-5xl mx-auto mt-13"
       >

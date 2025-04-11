@@ -19,25 +19,17 @@ export default function PrivacySection() {
           />
         </SlideIn>
 
-        <SlideIn
-          as="h2"
-          delay={0.2}
-          className="mb-6 font-medium text-4xl text-center"
-        >
+        <SlideIn as="h2" className="mb-6 font-medium text-4xl text-center">
           {t("headline")}
         </SlideIn>
         <SlideIn
-          delay={0.3}
           as="h2"
           className="mb-16 lg:px-8 text-center text-xl md:text-2xl leading-relaxed"
         >
           {t("body")}
         </SlideIn>
 
-        <SlideIn
-          delay={0.4}
-          className="bg-[#158d6a] text-white px-12 md:px-16 py-4 md:py-5 md:text-xl rounded-2xl font-bold"
-        >
+        <SlideIn className="bg-[#158d6a] text-white px-12 md:px-16 py-4 md:py-5 md:text-xl rounded-2xl font-bold">
           <Link href={t("actionButton.link")}>{t("actionButton.label")}</Link>
         </SlideIn>
       </div>
