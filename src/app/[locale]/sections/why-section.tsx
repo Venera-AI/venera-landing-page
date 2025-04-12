@@ -24,7 +24,7 @@ export default function WhySection() {
             <SlideIn
               key={index}
               as="li"
-              delay={0.5 + 0.2 * index}
+              delay={0.2 * index}
               direction="right"
               className="flex flex-col items-center p-8"
             >
