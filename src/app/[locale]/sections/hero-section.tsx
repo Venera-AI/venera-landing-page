@@ -15,7 +15,7 @@ export default function HeroSection() {
             <div className="w-full sm:top-[-30] md:top-0 md:h-auto md:pl-0 lg:top-0 lg:h-auto top-0 left-1/2">
               <SlideIn
                 direction="down"
-                delay={0.8}
+                delay={0.3}
                 className="relative mx-auto aspect-square w-full max-w-[500px]"
               >
                 <Image
@@ -28,7 +28,7 @@ export default function HeroSection() {
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full lg:pt-20 z-10 transform">
                 <SlideIn
                   direction="right"
-                  delay={1}
+                  delay={0.5}
                   duration={0.5}
                   className="text-white text-center lg:text-left text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-7"
                 >
@@ -37,7 +37,7 @@ export default function HeroSection() {
                 <SlideIn
                   as="div"
                   direction="right"
-                  delay={1.2}
+                  delay={0.7}
                   duration={0.5}
                   className="text-white text-center lg:text-left text-xl md:text-2xl lg:text-[54px]"
                 >
