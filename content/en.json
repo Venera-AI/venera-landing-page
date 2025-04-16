@@ -10,7 +10,8 @@
         "phoneEffect": "/images/phone-effect.png"
       },
       "logos": {
-        "logoNavBar": "/images/venera-logo.svg"
+        "logoNavBar": "/images/venera-logo.svg",
+        "link": "/home"
       },
       "buttons": {
         "buttonLogIn": {
