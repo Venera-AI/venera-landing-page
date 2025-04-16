@@ -121,7 +121,7 @@
       "image": "/images/shield.png",
       "actionButton": {
         "label": "Read more",
-        "link": ""
+        "link": "/privacy"
       }
     },
     "feedback": {
