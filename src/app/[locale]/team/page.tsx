@@ -3,12 +3,16 @@ import { getMetadata } from "@/utils/getMetadata";
 import { withLocale } from "@/with-locale";
 import { Metadata } from "next";
 import { useMessages } from "next-intl";
-import { getLocale } from "next-intl/server";
 import Image from "next/image";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const locale = (await getLocale()) as Locale;
-  return getMetadata(locale, "team");
+type Props = {
+  params: Promise<{ locale: Locale }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const metadata = getMetadata(locale);
+  return metadata;
 }
 
 export default withLocale(function Team() {
