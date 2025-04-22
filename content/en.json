@@ -10,8 +10,7 @@
         "phoneEffect": "/images/phone-effect.png"
       },
       "logos": {
-        "logoNavBar": "/images/venera-logo.svg",
-        "link": "/home"
+        "logoNavBar": "/images/venera-logo.svg"
       },
       "buttons": {
         "buttonLogIn": {
@@ -64,7 +63,7 @@
       "headline": "Secure public health monitoring",
       "alt": "Dashboard Feature 1",
       "body": "Monitor healthcare trends, detect anomalies, and track key health metrics through advanced analytics and AI-powered simulations.",
-      "image": "/images/public-health.webp"
+      "image": "/images/publichealth.webp"
     },
     "features": {
       "headline": "Take control of your health, all in one place",
@@ -122,7 +121,7 @@
       "image": "/images/shield.png",
       "actionButton": {
         "label": "Read more",
-        "link": ""
+        "link": "/privacy"
       }
     },
     "feedback": {
