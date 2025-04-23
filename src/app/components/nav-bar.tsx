@@ -1,6 +1,7 @@
 import LocaleSwitcher from "@/app/components/locale-switcher";
 import SlideIn from "@/components/slide-in";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 
 export default function NavBar() {
@@ -10,13 +11,15 @@ export default function NavBar() {
     <nav className="flex justify-between items-center w-full py-3 px-3 md:px-6 lg:p-3 lg:px-8 shadow-md bg-gradient-to-r from-[#83a3cb] to-[#5162b2]">
       <div className="flex justify-center md:justify-start">
         <SlideIn direction="right" duration={0.5}>
-          <Image
-            src={t("logos.logoNavBar")}
-            alt="Venera Logo"
-            width={200}
-            height={80}
-            className="w-full max-w-full h-auto sm:min-w-[200px]"
-          />
+          <Link href="/">
+            <Image
+              src={t("logos.logoNavBar")}
+              alt="Venera Logo"
+              width={200}
+              height={80}
+              className="w-full max-w-full h-auto sm:min-w-[200px]"
+            />
+          </Link>
         </SlideIn>
       </div>
 
