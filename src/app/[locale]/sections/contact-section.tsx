@@ -1,6 +1,6 @@
 "use client";
+
 import React, { useState } from "react";
-import { db } from "@/services/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useTranslations } from "next-intl";
 import { UserLocation } from "@/types";
@@ -61,6 +61,8 @@ export default function ContactSection() {
     }
 
     try {
+      // import firebase here to avoid server-side rendering issues
+      const { db } = await import("@/services/firebase");
       // If location is null, it's ok to continue without it
       const currentLocation = location || (await fetchLocation());
       const messagesRef = collection(db, "messages");
