@@ -24,20 +24,18 @@ const nextConfig: NextConfig = {
     removeConsole:
       process.env.NODE_ENV === "production" ? { exclude: ["error"] } : false,
   },
-  experimental: {
-    turbo: {
-      rules: {
-        "*.md": {
-          as: "*.js",
-          loaders: [
-            {
-              loader: "frontmatter-markdown-loader",
-              options: {
-                mode: ["react-component", "html", "body", "meta"],
-              },
+  turbopack: {
+    rules: {
+      "*.md": {
+        as: "*.js",
+        loaders: [
+          {
+            loader: "frontmatter-markdown-loader",
+            options: {
+              mode: ["react-component", "html", "body", "meta"],
             },
-          ],
-        },
+          },
+        ],
       },
     },
   },
