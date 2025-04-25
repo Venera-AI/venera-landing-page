@@ -47,6 +47,13 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    const formData = new FormData(e.currentTarget as HTMLFormElement);
+    const hannibotField = formData.get("nickname");
+    if (hannibotField) {
+      // If the honeypot field is filled, it's likely a bot
+      return;
+    }
+
     const trimmedName = name.trim();
     const trimmedEmail = email.trim();
     const trimmedMessage = message.trim();
@@ -63,7 +70,7 @@ export default function ContactSection() {
     try {
       // import firebase here to avoid server-side rendering issues
       const { db } = await import("@/services/firebase");
-      // If location is null, it's ok to continue without it
+      // It's ok to continue without location
       const currentLocation = location || (await fetchLocation());
       const messagesRef = collection(db, "messages");
       await addDoc(messagesRef, {
@@ -126,6 +133,13 @@ export default function ContactSection() {
           value={message}
           placeholder={t("messageInput")}
           rows={3}
+        />
+        {/* Honeypot field */}
+        <input
+          className="hidden"
+          type="text"
+          name="nickname"
+          autoComplete="off"
         />
         <div className="lg:justify-end flex justify-center mt-3">
           <button className="cursor-pointer lg:p-3 lg:w-1/4 lg:text-xl w-1/2 px-6 py-2 bg-gradient-to-r from-[#2d44ad] to-[#9ec5f7] text-white rounded-xl font-bold">
