@@ -182,6 +182,17 @@
           }
         }
       }
+    },
+    "sponsorship": {
+      "headline": "Cảm ơn những nhà tài trợ",
+      "images": {
+        "nvidia": "/images/NVIDIA.png",
+        "google": "/images/google.png",
+        "aws": "/images/aws.png",
+        "atlassian": "/images/atlassian.png",
+        "mongoDB": "/images/mongoDB.png",
+        "azure": "/images/azure.png"
+      }
     }
   },
   "teamPage": {
