@@ -184,6 +184,17 @@
       "actionButton": {
         "label": "Send"
       }
+    },
+    "sponsorship": {
+      "headline": "Our product was built on the generosity of our sponsors, partners, supporters",
+      "images": {
+        "nvidia": "/images/NVIDIA.png",
+        "google": "/images/google.png",
+        "aws": "/images/aws.png",
+        "atlassian": "/images/atlassian.png",
+        "mongoDB": "/images/mongoDB.png",
+        "azure": "/images/azure.png"
+      }
     }
   },
   "teamPage": {

@@ -8,6 +8,7 @@ import HeroSection from "@/app/[locale]/sections/hero-section";
 import IntroSection from "@/app/[locale]/sections/intro-section";
 import PrivacySection from "@/app/[locale]/sections/privacy-section";
 import WhySection from "@/app/[locale]/sections/why-section";
+import SponsorshipSection from "@/app/[locale]/sections/sponsorship-section";
 import { withLocale } from "@/with-locale";
 
 export default withLocale(function Home() {
@@ -23,6 +24,7 @@ export default withLocale(function Home() {
       <PrivacySection />
       <WhySection />
       <FeedbackSection />
+      <SponsorshipSection />
       <ContactSection />
     </main>
   );
