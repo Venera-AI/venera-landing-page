@@ -286,6 +286,11 @@
         "name": "Tuan Anh Luu",
         "position": "Software Engineer",
         "image": "/images/team/tuan-anh.jpg"
+      },
+      "kienTran": {
+        "name": "Kien Tran",
+        "position": "AI Engineer",
+        "image": "/images/team/kien-tran.jpg"
       }
     }
   }
