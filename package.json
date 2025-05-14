@@ -3,23 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "preemulator": "pnpm build",
     "emulator": "firebase emulators:start",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "lint": "(next lint && npm run prettier) || npm run prettier",
-    "lint:fix": "(next lint --fix && npm run prettier:fix) || npm run prettier:fix",
+    "lint": "(next lint && pnpm prettier) || pnpm prettier",
+    "lint:fix": "(next lint --fix && pnpm prettier:fix) || pnpm prettier:fix",
     "prepare": "husky",
-    "deploy:staging": "firebase deploy -P staging"
+    "deploy:staging": "firebase deploy -P staging",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "clsx": "^2.1.1",
     "firebase": "^11.4.0",
     "framer-motion": "^12.6.2",
     "ipinfo": "^1.5.2",
-    "next": "15.2.2",
+    "next": "15.3.0",
     "next-intl": "^4.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -49,6 +51,11 @@
     "onlyBuiltDependencies": [
       "sharp"
     ]
+  },
+  "engines": {
+    "npm": "please use pnpm",
+    "yarn": "please use pnpm",
+    "pnpm": ">= 10.6.5"
   },
   "packageManager": "pnpm@10.6.5+sha512.cdf928fca20832cd59ec53826492b7dc25dc524d4370b6b4adbf65803d32efaa6c1c88147c0ae4e8d579a6c9eec715757b50d4fa35eea179d868eada4ed043af"
 }

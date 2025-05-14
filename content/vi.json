@@ -95,7 +95,7 @@
       "headline": "Giám sát sức khỏe cộng đồng an toàn",
       "alt": "",
       "body": "Theo dõi các xu hướng y tế, phát hiện bất thường và phân tích các chỉ số sức khỏe chính bằng AI & phân tích dữ liệu nâng cao.",
-      "image": "/images/public-health.webp"
+      "image": "/images/publichealth.webp"
     },
     "features": {
       "headline": "Quản lý sức khỏe toàn diện tại một nơi duy nhất",
@@ -286,11 +286,6 @@
         "name": "Tuan Anh Luu",
         "position": "Software Engineer",
         "image": "/images/team/tuan-anh.jpg"
-      },
-      "kienTran": {
-        "name": "Kien Tran",
-        "position": "AI Engineer",
-        "image": "/images/team/kien-tran.jpg"
       }
     }
   }
