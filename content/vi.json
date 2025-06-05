@@ -182,6 +182,35 @@
           }
         }
       }
+    },
+    "sponsorship": {
+      "headline": "Sản phẩm của chúng tôi được xây dựng và hoàn thiện với sự giúp đỡ của các nhà tài trợ, đối tác và cộng đồng",
+      "logos": {
+        "1": {
+          "image": "/images/NVIDIA.svg",
+          "alt": "NVIDIA"
+        },
+        "2": {
+          "image": "/images/google.svg",
+          "alt": "Google"
+        },
+        "3": {
+          "image": "/images/aws.svg",
+          "alt": "AWS"
+        },
+        "4": {
+          "image": "/images/atlassian.svg",
+          "alt": "Atlassian"
+        },
+        "5": {
+          "image": "/images/mongoDB.svg",
+          "alt": "MongoDB"
+        },
+        "6": {
+          "image": "/images/azure.svg",
+          "alt": "Azure"
+        }
+      }
     }
   },
   "teamPage": {
