@@ -1,89 +1,37 @@
 import Image from "next/image";
 import SlideIn from "@/components/slide-in";
-import { useTranslations } from "next-intl";
+import { useTranslations, useMessages } from "next-intl";
 export default function SponsorshipSection() {
   const t = useTranslations("homePage.sponsorship");
+  const sponsorshipMessages = useMessages().homePage.sponsorship;
+  const imageKeys = Object.keys(
+    sponsorshipMessages.logos,
+  ) as readonly (keyof typeof sponsorshipMessages.logos)[];
   return (
-    <section className="py-16 px-3 flex flex-col gap-7">
-      <div className="flex 1 pb-5 m-auto">
+    <section>
+      <div className="flex flex-col items-center justify-center py-16 px-8 md:p-16 max-w-7xl m-auto">
         <SlideIn
           as="h2"
-          className="text-4xl font-medium text-center leading-12"
+          className="text-4xl font-medium text-center text-navyblue"
         >
           {t("headline")}
         </SlideIn>
-      </div>
-      <div className="flex flex-col lg:gap-10 gap-4 m-auto">
-        <div className="lg:flex lg:flex-row lg:m-auto lg:gap-10">
-          <div>
-            <SlideIn delay={0.2}>
+        <ul className="flex flex-wrap justify-center gap-7">
+          {imageKeys.map((key) => (
+            <li
+              key={key}
+              className="relative size-50 max-w-[250px] md:max-w-none lg:size-70"
+            >
+              <span className="sr-only">{`${sponsorshipMessages.logos[key].alt} sponsor`}</span>
               <Image
-                src={t("images.nvidia")}
-                alt="nvidia"
-                width={280}
-                height={280}
-                className="max-w-[400px] md:max-w-[500px]"
+                src={sponsorshipMessages.logos[key].image}
+                alt={sponsorshipMessages.logos[key].alt}
+                className="size-full"
+                fill
               />
-            </SlideIn>
-          </div>
-          <div>
-            <SlideIn delay={0.2}>
-              <Image
-                src={t("images.atlassian")}
-                alt="atlassian"
-                width={280}
-                height={280}
-                className="max-w-[400px] md:max-w-[500px]"
-              />
-            </SlideIn>
-          </div>
-          <div>
-            <SlideIn delay={0.2}>
-              <Image
-                src={t("images.google")}
-                alt="gcp"
-                width={280}
-                height={280}
-                className="max-w-[400px] md:max-w-[500px]"
-              />
-            </SlideIn>
-          </div>
-        </div>
-        <div className="gap-5 lg:flex lg:flex-row lg:m-auto lg:gap-10">
-          <div>
-            <SlideIn delay={0.2}>
-              <Image
-                src={t("images.aws")}
-                alt="aws"
-                width={280}
-                height={280}
-                className="max-w-[300px] md:max-w-[450px]"
-              />
-            </SlideIn>
-          </div>
-          <div>
-            <SlideIn delay={0.2}>
-              <Image
-                src={t("images.azure")}
-                alt="azure"
-                width={280}
-                height={280}
-                className="max-w-[300px] md:max-w-[450px]"
-              />
-            </SlideIn>
-          </div>
-          <div>
-            <SlideIn delay={0.2}>
-              <Image
-                src={t("images.mongoDB")}
-                alt="mongoDB"
-                width={280}
-                height={280}
-                className="max-w-[400px] md:max-w-[500px]"
-              />
-            </SlideIn>
-          </div>
-        </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

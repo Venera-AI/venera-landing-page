@@ -187,13 +187,31 @@
     },
     "sponsorship": {
       "headline": "Our product was built on the generosity of our sponsors, partners, supporters",
-      "images": {
-        "nvidia": "/images/NVIDIA.png",
-        "google": "/images/google.png",
-        "aws": "/images/aws.png",
-        "atlassian": "/images/atlassian.png",
-        "mongoDB": "/images/mongoDB.png",
-        "azure": "/images/azure.png"
+      "logos": {
+        "1": {
+          "image": "/images/NVIDIA.svg",
+          "alt": "NVIDIA"
+        },
+        "2": {
+          "image": "/images/google.svg",
+          "alt": "Google"
+        },
+        "3": {
+          "image": "/images/aws.svg",
+          "alt": "AWS"
+        },
+        "4": {
+          "image": "/images/atlassian.svg",
+          "alt": "Atlassian"
+        },
+        "5": {
+          "image": "/images/mongoDB.svg",
+          "alt": "MongoDB"
+        },
+        "6": {
+          "image": "/images/azure.svg",
+          "alt": "Azure"
+        }
       }
     }
   },
