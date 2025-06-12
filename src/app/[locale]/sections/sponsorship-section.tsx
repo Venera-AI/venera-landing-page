@@ -16,11 +16,11 @@ export default function SponsorshipSection() {
         >
           {t("headline")}
         </SlideIn>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-7">
+        <ul className="flex flex-wrap flex-row justify-center gap-x-8">
           {imageKeys.map((key) => (
             <li
               key={key}
-              className="relative size-50 max-w-[230px] md:max-w-none lg:size-65"
+              className="relative size-50 max-w-[180px] md:max-w-none lg:size-45 mb-[-25]"
             >
               <span className="sr-only">{`${sponsorshipMessages.logos[key].alt} sponsor`}</span>
               <Image

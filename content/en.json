@@ -211,6 +211,10 @@
         "6": {
           "image": "/images/azure.svg",
           "alt": "Azure"
+        },
+        "7": {
+          "image": "/images/lambda.svg",
+          "alt": "Lambda"
         }
       }
     }
