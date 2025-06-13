@@ -2,12 +2,13 @@ import React from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import SlideIn from "@/components/slide-in";
+import Link from "next/link";
 
 export default function HeroSection() {
   const t = useTranslations("homePage.hero");
 
   return (
-    <div className="bg-gradient-to-r from-[#9ec5f7] to-darkblue">
+    <div className="bg-gradient-to-r from-[#9ec5f7] to-darkblue overflow-hidden">
       <div className="flex flex-col lg:flex-row gap-5 py-10 lg:py-15 md:justify-between mx-auto lg:max-w-7xl">
         {/* Left Section */}
         <div className="w-full lg:w-[60%] p-3 md:p-10 lg:p-0 lg:pl-20 text-center">
@@ -39,7 +40,7 @@ export default function HeroSection() {
                   direction="right"
                   delay={0.7}
                   duration={0.5}
-                  className="text-white text-center lg:text-left text-xl md:text-2xl lg:text-[54px]"
+                  className="text-white text-center lg:text-left text-xl md:text-2xl lg:text-[54px] bg-transparent"
                 >
                   {t("subheadline")}
                 </SlideIn>
@@ -49,25 +50,23 @@ export default function HeroSection() {
         </div>
 
         {/* Right Section */}
-        <div className="lg:relative lg:flex w-full lg:w-[40%] md:py-20 md:mt-0 lg:py-0 overflow-hidden">
+        <div className="lg:relative lg:flex w-full lg:w-[40%] md:py-20 md:mt-0 lg:py-0 overflow-visible">
           <div className="relative flex flex-col mx-auto items-center justify-center">
-            <div className="lg:absolute lg:z-40 w-full lg:top-[70%] lg:left-[0] lg:translate-x-[-60%]">
-              <SlideIn
-                direction="right"
-                as="button"
-                delay={1.2}
-                duration={0.8}
-                // TODO remove "hidden" when url is ready
-                className="relative hidden mx-auto max-w-[150px] sm:max-w-[180px] lg:max-w-[200px] w-full mb-5 rounded-lg cursor-pointer"
-              >
-                <Image
-                  src={t("buttons.buttonAppStore.img")}
-                  alt="App Store button"
-                  className="object-contain w-full h-auto"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                />
+            <div className="lg:absolute lg:z-40 w-full lg:top-[70%] lg:left-[0] lg:translate-x-[-60%] mb-5">
+              <SlideIn direction="right" delay={1.2} duration={0.8}>
+                <Link
+                  href={t("buttons.buttonAppStore.link")}
+                  target="_blank"
+                  className="relative block mx-auto max-w-[150px] sm:max-w-[180px] lg:max-w-[200px] w-full"
+                >
+                  <Image
+                    src={t("buttons.buttonAppStore.img")}
+                    alt="App Store button"
+                    className="object-contain w-full h-auto"
+                    width={0}
+                    height={0}
+                  />
+                </Link>
               </SlideIn>
             </div>
             <SlideIn

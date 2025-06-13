@@ -28,7 +28,7 @@ export default function FeaturesSection() {
         <SlideIn
           duration={1}
           as="h2"
-          className="mb-12 xl:mb-20 text-[56px] text-center lg:text-left leading-tight"
+          className="mb-12 xl:mb-20 text-3xl lg:text-4xl text-center lg:text-left leading-tight"
         >
           {separatedHeadlineChunks.map((chunk, index) =>
             chunk === "," ? (
@@ -56,10 +56,10 @@ export default function FeaturesSection() {
                 )}
               />
               <div className="h-full flex flex-col justify-center">
-                <SlideIn className="text-[42px] text-center lg:text-start leading-12">
+                <SlideIn className="text-[32px] text-center lg:text-start leading-12">
                   {t(`items.${key}.headline`)}
                 </SlideIn>
-                <SlideIn className="font-light text-[24px] lg:text-[32px] mt-4 lg:w-[80%] text-center lg:text-start leading-normal">
+                <SlideIn className="font-light text-2xl mt-4 lg:w-[80%] text-center lg:text-start leading-normal">
                   {t(`items.${key}.body`)}
                 </SlideIn>
               </div>

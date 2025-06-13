@@ -23,7 +23,7 @@
         },
         "buttonAppStore": {
           "img": "/images/appstore-button-EN.svg",
-          "link": ""
+          "link": "https://apps.apple.com/us/app/venera/id6745420477"
         }
       }
     },
@@ -153,11 +153,11 @@
       "businessHours": {
         "1": {
           "day": "Monday to Saturday",
-          "time": "8:00am to 8:00pm"
+          "time": "8:00 am to 8:00 pm EST"
         },
         "2": {
-          "day": "Sundays",
-          "time": "12:00 noon to 8:00pm"
+          "day": "Sunday",
+          "time": "12:00 noon to 8:00 pm EST"
         }
       },
       "contact": {
