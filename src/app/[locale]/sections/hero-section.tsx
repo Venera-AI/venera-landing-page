@@ -8,7 +8,7 @@ export default function HeroSection() {
   const t = useTranslations("homePage.hero");
 
   return (
-    <div className="bg-gradient-to-r from-[#9ec5f7] to-darkblue">
+    <div className="bg-gradient-to-r from-[#9ec5f7] to-darkblue overflow-hidden">
       <div className="flex flex-col lg:flex-row gap-5 py-10 lg:py-15 md:justify-between mx-auto lg:max-w-7xl">
         {/* Left Section */}
         <div className="w-full lg:w-[60%] p-3 md:p-10 lg:p-0 lg:pl-20 text-center">
