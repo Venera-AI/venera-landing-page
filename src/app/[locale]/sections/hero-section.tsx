@@ -52,7 +52,7 @@ export default function HeroSection() {
         {/* Right Section */}
         <div className="lg:relative lg:flex w-full lg:w-[40%] md:py-20 md:mt-0 lg:py-0 overflow-visible">
           <div className="relative flex flex-col mx-auto items-center justify-center">
-            <div className="lg:absolute lg:z-40 w-full lg:top-[70%] lg:left-[0] lg:translate-x-[-60%] mb-5">
+            <div className="z-20 lg:absolute lg:z-40 w-full lg:top-[70%] lg:left-[0] lg:translate-x-[-60%] mb-5">
               <SlideIn direction="right" delay={1.2} duration={0.8}>
                 <Link
                   href={t("buttons.buttonAppStore.link")}
