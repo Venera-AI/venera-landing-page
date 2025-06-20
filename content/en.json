@@ -234,6 +234,16 @@
         "position": "AI Engineer",
         "image": "/images/team/quan-le.jpg"
       },
+      "kienTran": {
+        "name": "Kien Tran",
+        "position": "ML Engineer",
+        "image": "/images/team/kien-tran.png"
+      },
+      "trucLe": {
+        "name": "Truc Le",
+        "position": "ML Engineer",
+        "image": "/images/team/truc-le.png"
+      },
       "ducNguyen": {
         "name": "Duc Nguyen",
         "position": "Software Engineer",
@@ -264,9 +274,14 @@
         "position": "Software Engineer",
         "image": "/images/team/hung-nguyen.jpg"
       },
+      "tuanAnhLuu": {
+        "name": "Tuan Anh Luu",
+        "position": "Software Engineer",
+        "image": "/images/team/tuan-anh.jpg"
+      },
       "anhVu": {
         "name": "Anh Vu",
-        "position": "Developer",
+        "position": "Software Engineer",
         "image": "/images/team/anh-vu.png"
       },
       "datNguyen": {
@@ -283,16 +298,6 @@
         "name": "Phuong Anh Nguyen",
         "position": "UX/UI Designer",
         "image": "/images/team/phuong-anh-nguyen.jpg"
-      },
-      "tuanAnhLuu": {
-        "name": "Tuan Anh Luu",
-        "position": "Software Engineer",
-        "image": "/images/team/tuan-anh.jpg"
-      },
-      "kienTran": {
-        "name": "Kien Tran",
-        "position": "AI Engineer",
-        "image": "/images/team/kien-tran.jpg"
       }
     }
   }
