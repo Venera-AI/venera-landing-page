@@ -11,8 +11,8 @@ export default function HeroSection() {
     <div className="bg-gradient-to-r from-[#9ec5f7] to-darkblue overflow-hidden">
       <div className="flex flex-col lg:flex-row gap-5 py-10 lg:py-15 md:justify-between mx-auto lg:max-w-7xl">
         {/* Left Section */}
-        <div className="w-full lg:w-[60%] p-3 md:p-10 lg:p-0 lg:pl-20 text-center">
-          <div className="relative">
+        <div className="w-full lg:w-[50%] xl:w-[60%] p-3 md:p-10 lg:p-0 lg:pl-20 text-center">
+          <div className="relative w-full">
             <div className="w-full sm:top-[-30] md:top-0 md:h-auto md:pl-0 lg:top-0 lg:h-auto top-0 left-1/2">
               <SlideIn
                 direction="down"
@@ -50,9 +50,19 @@ export default function HeroSection() {
         </div>
 
         {/* Right Section */}
-        <div className="lg:relative lg:flex w-full lg:w-[40%] md:py-20 md:mt-0 lg:py-0 overflow-visible">
+        <div className="lg:relative lg:flex w-full lg:w-[40%] md:mt-4 lg:mt-0 overflow-visible">
           <div className="relative flex flex-col mx-auto items-center justify-center">
-            <div className="z-20 lg:absolute lg:z-40 w-full lg:top-[70%] lg:left-[0] lg:translate-x-[-60%] mb-5">
+            <div className="z-20 lg:absolute lg:z-40 w-full lg:top-[50%] lg:left-[0] lg:translate-x-[-60%] mb-5 space-y-4">
+              <SlideIn direction="right" delay={1.2} duration={0.8}>
+                <div className="aspect-square relative block mx-auto w-[120px] sm:w-[140px] lg:w-[150px] shadow-2xl">
+                  <Image
+                    src="/images/app-store-qr-code.svg"
+                    alt="App Store button"
+                    className="object-contain w-full rounded-lg border-2 border-black"
+                    fill
+                  />
+                </div>
+              </SlideIn>
               <SlideIn direction="right" delay={1.2} duration={0.8}>
                 <Link
                   href={t("buttons.buttonAppStore.link")}
