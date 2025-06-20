@@ -49,6 +49,8 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "@firebase/util",
+      "protobufjs",
       "sharp"
     ]
   },
