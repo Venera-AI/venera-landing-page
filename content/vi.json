@@ -187,28 +187,40 @@
       "headline": "Sản phẩm của chúng tôi được xây dựng và hoàn thiện với sự giúp đỡ của các nhà tài trợ, đối tác và cộng đồng",
       "logos": {
         "1": {
-          "image": "/images/NVIDIA.svg",
+          "image": "/images/nvidia.png",
           "alt": "NVIDIA"
         },
         "2": {
-          "image": "/images/google.svg",
+          "image": "/images/google-cloud.png",
           "alt": "Google"
         },
         "3": {
-          "image": "/images/aws.svg",
+          "image": "/images/aws.png",
           "alt": "AWS"
         },
         "4": {
-          "image": "/images/atlassian.svg",
+          "image": "/images/atlassian.png",
           "alt": "Atlassian"
         },
         "5": {
-          "image": "/images/mongoDB.svg",
+          "image": "/images/mongodb.png",
           "alt": "MongoDB"
         },
         "6": {
-          "image": "/images/azure.svg",
+          "image": "/images/azure.png",
           "alt": "Azure"
+        },
+        "7": {
+          "image": "/images/lambda.png",
+          "alt": "Lambda"
+        },
+        "8": {
+          "image": "/images/cmu.png",
+          "alt": "Carnegie Mellon University"
+        },
+        "9": {
+          "image": "/images/fpt.svg",
+          "alt": "FPT"
         }
       }
     }
